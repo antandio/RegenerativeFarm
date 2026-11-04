@@ -1,0 +1,20 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{{ obj.name }}</h1>
+<p>{{ obj.get_species_display }}{% if obj.breed_label %} ({{ obj.breed_label }}){% endif %} — {% trans "Létszám" %}: {{ obj.headcount }}</p>
+{% if obj.housing_property %}<p>{% trans "Szállás" %}: {{ obj.housing_property.name }} ({{ obj.housing_property.get_kind_display }})</p>{% endif %}
+{% if obj.notes %}<p>{{ obj.notes }}</p>{% endif %}
+{% if not obj.is_active %}<p class="muted">{% trans "Archivált csoport — az előzmények megmaradtak." %}</p>{% endif %}
+{% if can_manage %}<p>{% if obj.is_active %}<a class="btn" href="{% url 'livestock_edit' pk=obj.pk %}">{% trans "Szerkesztés" %}</a> <a class="btn secondary" href="{% url 'livestock_archive' pk=obj.pk %}">{% trans "Archiválás" %}</a>{% else %}<a class="btn" href="{% url 'livestock_archive' pk=obj.pk %}">{% trans "Visszaállítás" %}</a>{% endif %} <a class="btn secondary" href="{% url 'livestock_delete' pk=obj.pk %}">{% trans "Törlés" %}</a></p>{% endif %}
+<p><a href="{% url 'livestock_list' %}">{% trans "Vissza a listához" %}</a></p>
+</div>
+<div class="card"><h2>{% trans "Dátumozott események" %}</h2>
+<ul class="entity-list">{% for e in events %}<li class="entity-row">{{ e.event_date }} — {{ e.get_kind_display }} ({{ e.headcount_delta }}){% if e.target_group %} → {{ e.target_group.name }}{% endif %}{% if e.property %} @ {{ e.property.name }}{% endif %}{% if e.farming_event %} <a class="row-action" href="{% url 'event_list' %}?type=other">{% trans "Napló" %}</a>{% endif %}{% if can_manage %} <a class="row-action" href="{% url 'livestock_event_delete' ek=e.pk %}">{% trans "Visszavonás" %}</a>{% endif %}</li>{% empty %}<li class="muted">{% trans "Nincs esemény." %}</li>{% endfor %}</ul>
+{% if can_record and obj.is_active %}<p><a class="btn" href="{% url 'livestock_event_new' pk=obj.pk %}">{% trans "Új esemény" %}</a></p>{% endif %}
+</div>
+<div class="card"><h2>{% trans "Naplókapcsolat (tényleges)" %}</h2>
+<ul class="entity-list">{% for j in journal_entries %}<li class="entity-row">{{ j.event_date }} — {{ j.description }} ({{ j.property.name }})</li>{% empty %}<li class="muted">{% trans "Nincs kapcsolt naplóbejegyzés." %}</li>{% endfor %}</ul>
+</div>
+<div class="card"><h2>{% trans "Tervezett feladatok" %}</h2>
+<ul class="entity-list">{% for t in planned_items %}<li class="entity-row">{{ t.start_date }}–{{ t.end_date }} — {{ t.title }}{% if t.livestock_group_id %} ({{ t.get_livestock_kind_display }}){% if t.status == "done" %} — {% trans "Kész" %}{% endif %} {% if can_manage %}<a class="row-action" href="{% url 'livestock_work_edit' pk=t.pk %}">{% trans "Szerkesztés" %}</a>{% endif %}{% if can_record and t.status != "done" %} <a class="row-action" href="{% url 'livestock_work_done' pk=t.pk %}">{% trans "Elvégzés" %}</a>{% endif %}{% if can_manage %} <a class="row-action" href="{% url 'livestock_work_delete' pk=t.pk %}">{% trans "Törlés" %}</a>{% endif %}{% endif %}</li>{% empty %}<li class="muted">{% trans "Nincs tervezett feladat." %}</li>{% endfor %}</ul>
+{% if can_manage and obj.is_active %}<p><a class="btn" href="{% url 'livestock_work_new' pk=obj.pk %}">{% trans "Új tervezett állatmunka" %}</a></p>{% endif %}
+</div>
+{% endblock %}

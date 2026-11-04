@@ -1,0 +1,27 @@
+{% extends "portal/base.html" %}{% load i18n static %}
+{% block title %}{% trans "Külső kapcsolattartók" %}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'portal/external_contacts.css' %}?v=20261104-task4">
+<h1 class="ec-head">{% blocktrans with name=farm.name %}Külső kapcsolattartók — {{ name }}{% endblocktrans %} <span class="ec-count" aria-label="{{ items|length }}">({{ items|length }})</span></h1>
+<p class="muted">{% trans "Bérmunkára felbérelhető külső személyek. Nem tagok: nem kapnak belépést, meghívót vagy szerepet." %}</p>
+<p><a class="btn" href="{% url 'external_contact_new' %}">{% trans "Új külső kapcsolattartó" %}</a>
+<a class="btn secondary" href="{% url 'members' %}">{% trans "Tagok" %}</a></p>
+<h2>{% trans "Kérhető munkák szerint" %}</h2>
+{% if items %}
+<div class="ec-grid">
+{% for c in items %}
+<article class="ec-card" aria-label="{{ c.name }}">
+<div class="ec-top"><span class="ec-initials" aria-hidden="true">{{ c.name|first|upper }}</span><p class="ec-name ec-wrap"><a href="{% url 'external_contact_detail' pk=c.pk %}">{{ c.name }}</a></p></div>
+<ul class="ec-chips">{% for s in c.service_list %}<li class="ec-chip ec-wrap">{{ s }}</li>{% endfor %}</ul>
+<p class="ec-contact">{% if c.phone %}<a class="ec-wrap" href="tel:{{ c.phone|cut:" " }}">{{ c.phone }}</a>{% endif %}{% if c.email %}<a class="ec-wrap" href="mailto:{{ c.email }}">{{ c.email }}</a>{% endif %}</p>
+{% if c.availability %}<p class="ec-meta ec-wrap">{{ c.availability }}</p>{% endif %}
+{% if c.notes %}<p class="ec-meta ec-wrap">{{ c.notes|truncatechars:120 }}</p>{% endif %}
+<p class="ec-actions"><a class="btn small secondary" href="{% url 'external_contact_detail' pk=c.pk %}">{% trans "Részletek" %}</a>
+<a class="btn small secondary" href="{% url 'external_contact_edit' pk=c.pk %}">{% trans "Szerkesztés" %}</a></p>
+</article>
+{% endfor %}
+</div>
+{% else %}
+<p class="muted ec-empty">{% trans "Még nincs külső kapcsolattartó." %}</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+Leaflet + Leaflet.draw vendored locally (no runtime CDN).
+
+Sources:
+- leaflet-1.9.4: https://github.com/Leaflet/Leaflet/releases/tag/v1.9.4
+- leaflet-draw-1.0.4: https://github.com/Leaflet/Leaflet.draw/releases/tag/v1.0.4
+  (also tagged 1.0.4 on npm as leaflet-draw@1.0.4)
+
+Files (sha256):
+- leaflet-1.9.4/leaflet.js: db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a
+- leaflet-1.9.4/leaflet.css: a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6
+- leaflet-draw-1.0.4/leaflet.draw.js: b22a1f7385308e5adadd85a4c2d84e9fc523ebd70d37868cba0fe2387362460b
+- leaflet-draw-1.0.4/leaflet.draw.css: 5f30f74696873efee5cd7f6ab7eda7d63e5c5a3e3c5b6e0ab2068662928df31f
+- leaflet-draw-1.0.4/images/spritesheet.png: a8978a1d3d21d8ee6f16cce342ff67fc47c4241f52161f05baf88f15e1058199
+- leaflet-draw-1.0.4/images/spritesheet-2x.png: fa2c95e0610f3787c879645e42b86ad010c305f8312e116841730d00d4ab72b7
+- leaflet-draw-1.0.4/images/spritesheet.svg: 7077bae968047180921324df351d95fe2f021cdaefa01e20645162402f767da4
+
+Note: map templates reference these via {% static %} only; no unpkg/cdnjs/jsdelivr
+at runtime. Tile images are fetched from OpenStreetMap at runtime (see privacy
+notice in templates); JS/CSS themselves are local.

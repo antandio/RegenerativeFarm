@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% if obj %}{% blocktrans with name=obj.name %}Dokumentum szerkesztése — {{ name }}{% endblocktrans %}{% else %}{% trans "Új dokumentum" %}{% endif %}{% endblock %}
+{% block content %}
+<h1>{% if obj %}{% blocktrans with name=obj.name %}Dokumentum szerkesztése — {{ name }}{% endblocktrans %}{% else %}{% trans "Új dokumentum" %}{% endif %}</h1>
+<p class="muted">{% trans "Add meg a dokumentum nevét, válaszd ki a láthatóságot, és tölts fel PDF, TXT, MD, CSV vagy DOCX fájlt (legfeljebb 10 MiB). Tárolt fájl: a rendszer nem dolgozza fel és nem hajtja végre." %}</p>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}{{ form.as_p }}<button type="submit" class="btn">{% trans "Mentés" %}</button>
+<a class="btn secondary" href="{% if obj %}{% url 'document_detail' pk=obj.pk %}{% else %}{% url 'document_list' %}{% endif %}">{% trans "Mégse" %}</a></form>
+{% endblock %}

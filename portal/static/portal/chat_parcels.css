@@ -1,0 +1,22 @@
+/* Task 3 parcel picker: compact rows, internal scroll, scoped resets only. */
+.parcel-picker { border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; margin: 8px 0; background: var(--card); }
+.parcel-picker legend { font-weight: 700; }
+.parcel-picker .parcel-count { font-weight: 600; margin: 6px 0; }
+.parcel-picker .parcel-hint { font-size: 0.875rem; color: var(--muted); margin: 4px 0; }
+/* Named scroll region: many rows scroll inside, the page does not grow. */
+.parcel-list-scroll { max-height: 220px; overflow-y: auto; overscroll-behavior: contain; border-radius: 8px; }
+.parcel-list-scroll:focus-visible { outline: 3px solid #FFD98A; outline-offset: 2px; }
+.parcel-list { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+/* Compact row: 44px touch target + 2px vertical padding = ~48px total. */
+.parcel-item { display: flex; align-items: center; min-height: 44px; border: 1px solid var(--border); border-radius: 8px; padding: 2px 8px; background: #fff; }
+/* Beat the global `label` / `input[type=checkbox]` styles inside the picker. */
+.parcel-picker .parcel-item label { display: flex; align-items: center; gap: 8px; width: 100%; margin: 0; padding: 0; min-height: 44px; font-size: 0.9375rem; font-weight: 400; color: var(--ink); }
+.parcel-picker .parcel-item input[type="checkbox"] { width: auto; min-width: 20px; height: 20px; margin: 0; flex: none; accent-color: var(--forest); }
+.parcel-meta { display: block; font-size: 0.8125rem; color: var(--muted); }
+.parcel-count output { display: inline-block; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; }
+.quota-details { margin: 6px 0; }
+.quota-details > summary { min-height: 44px; display: inline-flex; align-items: center; cursor: pointer; color: var(--forest); font-weight: 700; }
+/* Container-responsive: columns follow the picker content width, not the
+   viewport. At 768px viewport the 232px sidebar leaves narrow content, so a
+   viewport 2-column rule wraps names to ~73px rows; auto-fit keeps 1 column
+   until ~500px content fits two 240px tracks. No clipping: names wrap. */

@@ -1,0 +1,3 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{{ title }}</h1>
+<form method="post">{% csrf_token %}{% if obj %}<p>{% trans "Jelenlegi létszám" %}: {{ obj.headcount }} — {% trans "a létszám csak dátumozott eseménnyel mozog." %}</p>{% endif %}{{ form.as_p }}<button type="submit" class="btn">{% trans "Mentés" %}</button> <a href="{% url 'livestock_list' %}">{% trans "Mégse" %}</a></form>
+</div>{% endblock %}

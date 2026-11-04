@@ -1,0 +1,75 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Gazdaságom" %}</h1>
+<div class="card farm-card">
+{% if farm %}<p class="muted">{% blocktrans with ver=farm.profile_version %}Fiókonként egy gazdaság. Profilverzió: {{ ver }}. A hiányzó mezők „nincs megadva” jelöléssel maradnak – a rendszer nem talál ki értékeket.{% endblocktrans %}</p>{% endif %}
+{% if not farm or global_active_role == "owner" or global_active_role == "manager" %}
+<form method="post" class="farm-form">{% csrf_token %}
+{{ form.non_field_errors }}
+<section class="farm-section" aria-labelledby="farm-identity-title">
+<h2 id="farm-identity-title">{% trans "Azonosítás" %}</h2>
+<div class="farm-grid">
+<div class="farm-field">{{ form.name.errors }}{{ form.name.label_tag }}{{ form.name }}{% if form.name.help_text %}<p class="helptext">{{ form.name.help_text }}</p>{% endif %}</div>
+</div>
+</section>
+<section class="farm-section" aria-labelledby="farm-main-title">
+<h2 id="farm-main-title">{% trans "Főbb adatok" %}</h2>
+<div class="farm-grid">
+<div class="farm-field">{{ form.region_text.errors }}{{ form.region_text.label_tag }}{{ form.region_text }}{% if form.region_text.help_text %}<p class="helptext">{{ form.region_text.help_text }}</p>{% endif %}</div>
+<div class="farm-field">{{ form.climate_text.errors }}{{ form.climate_text.label_tag }}{{ form.climate_text }}{% if form.climate_text.help_text %}<p class="helptext">{{ form.climate_text.help_text }}</p>{% endif %}</div>
+<div class="farm-field">{{ form.farming_direction_text.errors }}{{ form.farming_direction_text.label_tag }}{{ form.farming_direction_text }}{% if form.farming_direction_text.help_text %}<p class="helptext">{{ form.farming_direction_text.help_text }}</p>{% endif %}</div>
+</div>
+</section>
+<section class="farm-section" aria-labelledby="farm-desc-title">
+<h2 id="farm-desc-title">{% trans "Leírás" %}</h2>
+<div class="farm-grid">
+<div class="farm-field">{{ form.soil_notes.errors }}{{ form.soil_notes.label_tag }}{{ form.soil_notes }}{% if form.soil_notes.help_text %}<p class="helptext">{{ form.soil_notes.help_text }}</p>{% endif %}</div>
+<div class="farm-field">{{ form.water_notes.errors }}{{ form.water_notes.label_tag }}{{ form.water_notes }}{% if form.water_notes.help_text %}<p class="helptext">{{ form.water_notes.help_text }}</p>{% endif %}</div>
+<div class="farm-field">{{ form.crops_livestock_notes.errors }}{{ form.crops_livestock_notes.label_tag }}{{ form.crops_livestock_notes }}{% if form.crops_livestock_notes.help_text %}<p class="helptext">{{ form.crops_livestock_notes.help_text }}</p>{% endif %}</div>
+<div class="farm-field">{{ form.equipment_labour_notes.errors }}{{ form.equipment_labour_notes.label_tag }}{{ form.equipment_labour_notes }}{% if form.equipment_labour_notes.help_text %}<p class="helptext">{{ form.equipment_labour_notes.help_text }}</p>{% endif %}</div>
+</div>
+</section>
+<section class="farm-section" aria-labelledby="farm-goals-title">
+<h2 id="farm-goals-title">{% trans "Célok és korlátok" %}</h2>
+<div class="farm-grid">
+<div class="farm-field">{{ form.goals_notes.errors }}{{ form.goals_notes.label_tag }}{{ form.goals_notes }}{% if form.goals_notes.help_text %}<p class="helptext">{{ form.goals_notes.help_text }}</p>{% endif %}</div>
+<div class="farm-field">{{ form.constraints_notes.errors }}{{ form.constraints_notes.label_tag }}{{ form.constraints_notes }}{% if form.constraints_notes.help_text %}<p class="helptext">{{ form.constraints_notes.help_text }}</p>{% endif %}</div>
+</div>
+</section>
+{% if extra_formset %}
+<section class="farm-section" aria-labelledby="farm-custom-title">
+<h2 id="farm-custom-title">{% trans "Saját mezők" %}</h2>
+<p class="muted">{% trans "Legfeljebb 20 saját mező, egyedi megnevezéssel." %}</p>
+{{ extra_formset.management_form }}{{ extra_formset.non_form_errors }}
+{% for f in extra_formset.forms %}<div class="farm-custom-row">{{ f.id }}{{ f.non_field_errors }}<div class="farm-field">{{ f.key.errors }}{{ f.key.label_tag }}{{ f.key }}{% if f.key.help_text %}<p class="helptext">{{ f.key.help_text }}</p>{% endif %}</div><div class="farm-field">{{ f.value.errors }}{{ f.value.label_tag }}{{ f.value }}{% if f.value.help_text %}<p class="helptext">{{ f.value.help_text }}</p>{% endif %}</div>{% if f.instance.pk %}<p class="farm-delete">{{ f.DELETE }} {{ f.DELETE.label_tag }}</p>{% endif %}</div>{% endfor %}
+</section>
+{% endif %}
+<button class="btn" type="submit">{% if farm %}{% trans "Profil mentése" %}{% else %}{% trans "Gazdaság létrehozása" %}{% endif %}</button>
+</form>
+{% else %}
+<p class="muted farm-readonly-note">{% trans "Önnek csak olvasási joga van ehhez a gazdasághoz, ezért a mezők nem szerkeszthetők." %}</p>
+<section class="farm-section farm-readonly" aria-labelledby="farm-identity-title">
+<h2 id="farm-identity-title">{% trans "Azonosítás" %}</h2>
+<dl class="farm-values"><div><dt>{{ form.name.label }}</dt><dd>{{ form.name.value|default:"–" }}</dd></div></dl>
+</section>
+<section class="farm-section farm-readonly" aria-labelledby="farm-main-title">
+<h2 id="farm-main-title">{% trans "Főbb adatok" %}</h2>
+<dl class="farm-values"><div><dt>{{ form.region_text.label }}</dt><dd>{{ form.region_text.value|default:"–" }}</dd></div><div><dt>{{ form.climate_text.label }}</dt><dd>{{ form.climate_text.value|default:"–" }}</dd></div><div><dt>{{ form.farming_direction_text.label }}</dt><dd>{{ form.farming_direction_text.value|default:"–" }}</dd></div></dl>
+</section>
+<section class="farm-section farm-readonly" aria-labelledby="farm-desc-title">
+<h2 id="farm-desc-title">{% trans "Leírás" %}</h2>
+<dl class="farm-values"><div><dt>{{ form.soil_notes.label }}</dt><dd>{{ form.soil_notes.value|default:"–" }}</dd></div><div><dt>{{ form.water_notes.label }}</dt><dd>{{ form.water_notes.value|default:"–" }}</dd></div><div><dt>{{ form.crops_livestock_notes.label }}</dt><dd>{{ form.crops_livestock_notes.value|default:"–" }}</dd></div><div><dt>{{ form.equipment_labour_notes.label }}</dt><dd>{{ form.equipment_labour_notes.value|default:"–" }}</dd></div></dl>
+</section>
+<section class="farm-section farm-readonly" aria-labelledby="farm-goals-title">
+<h2 id="farm-goals-title">{% trans "Célok és korlátok" %}</h2>
+<dl class="farm-values"><div><dt>{{ form.goals_notes.label }}</dt><dd>{{ form.goals_notes.value|default:"–" }}</dd></div><div><dt>{{ form.constraints_notes.label }}</dt><dd>{{ form.constraints_notes.value|default:"–" }}</dd></div></dl>
+</section>
+<section class="farm-section farm-readonly" aria-labelledby="farm-custom-title">
+<h2 id="farm-custom-title">{% trans "Saját mezők" %}</h2>
+<dl class="farm-values">{% for e in farm.extra_fields.all %}<div><dt>{{ e.key }}</dt><dd>{{ e.value|default:"–" }}</dd></div>{% empty %}<div><dt>{% trans "Saját mezők" %}</dt><dd>–</dd></div>{% endfor %}</dl>
+</section>
+{% endif %}
+{% if farm %}<p class="muted">{% trans "Hiányok jelenleg:" %} {% for f in farm.completeness_missing_labels %}{{ f }}; {% empty %}{% trans "nincs hiányzó csoport" %}{% endfor %}</p>{% endif %}
+<p class="muted">{% trans "A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan." %}</p>
+</div>
+{% endblock %}

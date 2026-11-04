@@ -1,0 +1,7 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{{ title }} — {{ obj.name }}</h1>
+{% if work %}<p>{{ work.start_date }}–{{ work.end_date }} — {{ work.title }} ({{ work.get_livestock_kind_display }})</p>{% endif %}
+{% if form %}<p class="muted">{% trans "Az elvégzés egy dátumozott állateseményt is rögzít (létszámmozgatás nélkül)." %}</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit" class="btn">{% trans "Készre jelölés" %}</button> <a href="{% url 'livestock_detail' pk=obj.pk %}">{% trans "Mégse" %}</a></form>
+{% else %}<p class="muted">{% trans "Ehhez a munkához már tartozik rögzített esemény." %}</p>
+<p><a href="{% url 'livestock_detail' pk=obj.pk %}">{% trans "Vissza a csoporthoz" %}</a></p>{% endif %}
+</div>{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "portal/base.html" %}{% load i18n static %}
+{% block title %}{% trans "Csevegés" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Csevegés" %}</h1>
+<link rel="stylesheet" href="{% static 'portal/chat_parcels.css' %}?v=20261104-task3compact2">
+<div class="card">
+<h2>{% trans "Üzenet küldése" %}</h2>
+<form method="post" action="{% url 'chat' %}">{% csrf_token %}
+<input type="hidden" name="idempotency_key" value="{{ idem_key }}">
+<input type="hidden" name="language" value="{{ LANGUAGE_CODE }}">
+<fieldset class="parcel-picker">
+<legend>{% trans "Parcellák kiválasztása" %}</legend>
+<p class="parcel-hint">{% trans "Ha nincs kiválasztva semmi, az egész gazdaság a hatókör." %}</p>
+<p class="parcel-count"><output id="parcel-count" role="status" aria-live="polite" data-whole-text="{% trans "Egész gazdaság — nincs parcella kiválasztva" %}" data-selected-template="{% trans "Kiválasztva: {n} parcella" %}">{% if selected_ids %}{% blocktrans count n=selected_ids|length %}Kiválasztva: {{ n }} parcella{% plural %}Kiválasztva: {{ n }} parcella{% endblocktrans %}{% else %}{% trans "Egész gazdaság — nincs parcella kiválasztva" %}{% endif %}</output></p>
+<div class="parcel-list-scroll" tabindex="0" role="region" aria-label="{% trans "Parcellák listája" %}">
+<ul class="parcel-list">
+{% for p in parcel_props %}
+<li class="parcel-item"><label><input type="checkbox" name="selected_property_ids" value="{{ p.id }}"{% if p.id in selected_set %} checked{% endif %}{% if role == "viewer" %} disabled{% endif %}> {{ p.name }} <span class="parcel-meta">{{ p.get_kind_display }} · {{ p.area_hectares }} ha</span></label></li>
+{% empty %}<li class="muted">{% trans "Nincs parcella." %}</li>
+{% endfor %}
+</ul>
+</div>
+</fieldset>
+<p class="muted">{% trans "Költség csak a kifejezett küldéssel keletkezik." %}</p>
+<details class="quota-details"><summary>{% trans "Keret és környezeti részletek" %}</summary>
+<p class="muted">{% blocktrans with n=context_chars %}Környezet mérete: {{ n }} karakter. A GET nézet nem hív szolgáltatót és nem ír adatbázisba; költség csak a kifejezett küldéssel keletkezik.{% endblocktrans %}</p>
+<p class="muted">{% blocktrans with hc=hour_count mh=max_hour dc=day_count md=max_day %}Keret (tanáccsal közös, a tanácsoldallal azonos lekérdezési logika): elmúlt órában {{ hc }}/{{ mh }}, elmúlt 24 órában {{ dc }}/{{ md }} (a függő és sikertelen kísérletek is számítanak). Pénzben kifejezett költség nem ismert, a rendszer díjfigurát nem közöl.{% endblocktrans %}</p>
+<p class="muted">{% trans "Keretadatok időpontja:" %} {{ quota_checked_at|date:"DATETIME_FORMAT" }}</p>
+</details>
+<label for="chat-msg">{% trans "Kérdés (legfeljebb 2000 karakter)" %}</label>
+<textarea id="chat-msg" name="message" rows="4" cols="60" maxlength="2000" required>{{ prefill }}</textarea>
+{% if role != "viewer" %}
+<label><input type="checkbox" name="cost_consent" value="on" required> {% trans "Kifejezetten megerősítem a küldést és a költség/hozzájárulás feltételeit." %}</label>
+<button class="btn" type="submit">{% trans "Küldés" %}</button>
+{% endif %}
+</form>
+<script>
+(function(){var f=document.querySelector('form[action$="/chat/"]');if(!f)return;var o=document.getElementById('parcel-count');if(!o||!o.dataset)return;function u(){var n=f.querySelectorAll('input[name="selected_property_ids"]:checked').length;o.textContent=n===0?(o.dataset.wholeText||o.textContent):(o.dataset.selectedTemplate||'{n}').replace('{n}',n);}f.addEventListener('change',u);})();
+</script>
+<p class="muted">{% trans "A válasz csak adat-előnézet: az írási javaslatok külön jóváhagyó gombbal, ellenőrzött POST-tal hajthatók végre." %}</p>
+<p class="muted">{% trans "Részleges hatókörben a válasz szöveges tervjavaslatot is tartalmazhat, de végrehajtható írási javaslat nem készül; végrehajtható javaslatként csak navigáció érhető el." %}</p>
+</div>
+<div class="card">
+<h2>{% trans "Előzmények (utolsó 5 kísérlet)" %}</h2>
+{% for att in attempts %}
+<div class="attempt chat-bubble">
+<h3>#{{ att.id }} · {{ att.get_status_display }} · {{ att.attempt_started_at }}</h3>
+<p class="attempt-scope">{% if att.scope_mode == "subset" %}{% trans "Hatókör:" %} {{ att.scope_names|join:", " }}<br>{% trans "Részleges hatókörben a válasz szöveges tervjavaslatot is tartalmazhat, de végrehajtható írási javaslat nem készül; végrehajtható javaslatként csak navigáció érhető el." %}{% else %}{% trans "Hatókör:" %} {% trans "Egész gazdaság" %}{% endif %}</p>
+<p><strong>{% trans "Kérdés:" %}</strong> {{ att.user_message|truncatechars:500 }}</p>
+{% if att.answer_text %}<div class="chat-answer"><p><strong>{% trans "Válasz (adat, nem végrehajtás):" %}</strong></p>{{ att.answer_text|linebreaks }}</div>{% endif %}
+{% if att.error_message_safe %}<p class="muted">{{ att.error_message_safe }}</p>{% endif %}
+{% include "portal/_provenance.html" with prov=att.prov %}
+{% for p in proposals %}{% if p.attempt_id == att.id %}
+<div class="proposal">
+<p>{% trans "Javaslat" %} #{{ p.id }} · {{ p.get_kind_display }} · {{ p.get_status_display }}{% if p.kind == "action_create" and p.payload_text %} · {{ p.payload_text|truncatechars:200 }}{% elif p.kind == "action_toggle" %}{% if p.snapshot_text %} · {{ p.snapshot_text|truncatechars:200 }}{% elif p.payload_text %} · {{ p.payload_text|truncatechars:200 }}{% endif %}{% if p.snapshot_status == "open" %} · {% trans "cél: kész" %}{% elif p.snapshot_status == "done" %} · {% trans "cél: nyitott" %}{% endif %}{% elif p.kind == "plans_generate" %} · {% trans "Tervkészítés hatása: munkaterv-tervezet" %}{% elif p.kind == "navigate" %} · <a href="{{ p.nav_dest }}">{{ p.nav_human }}</a>{% endif %}</p>
+{% if p.status == "pending" %}
+{% if role != "viewer" %}
+<form method="post" action="{% url 'chat_proposal_confirm' p.id %}">{% csrf_token %}<button class="btn" type="submit">{% trans "Javaslat végrehajtása" %}</button></form>
+{% endif %}
+{% endif %}
+</div>
+{% endif %}{% endfor %}
+</div>
+{% empty %}<p class="muted">{% trans "Még nincs csevegési előzmény." %}</p>{% endfor %}
+<p class="muted">{% trans "Az előzmény kiszolgálói renderelés, külön GET API-hívás nélkül." %} <a href="{% url 'info' %}">{% trans "Segítség: kérdés és tanács különbsége" %}</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+# portal-config.example.toml — versioned configuration template (safe defaults).
+# Copy to portal-config.toml (chmod 600, gitignored) and customize as needed.
+# Precedence: PORTAL_<ENV> process env > explicit TOML > legacy env/.env > default.
+
+config_version = 1
+
+[site]
+debug = false
+allowed_hosts = ["localhost", "127.0.0.1"]
+language_code = "hu"
+time_zone = "Europe/Budapest"
+
+[meta]
+base_url = "https://api.meta.ai/v1"
+model = "muse-spark-1.3"
+api_key = ""
+
+[limits]
+advice_max_per_hour_per_farm = 5
+advice_max_per_day_per_farm = 20
+advice_global_max_per_day = 200
+advice_request_timeout_seconds = 120
+advice_pending_stale_minutes = 15
+advice_max_input_chars = 8000
+advice_max_output_tokens = 6000
+chat_request_timeout_seconds = 45
+chat_max_output_tokens = 6000
+chat_max_input_chars = 15000
+chat_max_message_chars = 2000

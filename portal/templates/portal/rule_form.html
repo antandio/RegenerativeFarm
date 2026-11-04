@@ -1,0 +1,9 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% if obj %}{% blocktrans with name=obj.name %}Szabályleírás szerkesztése — {{ name }}{% endblocktrans %}{% else %}{% trans "Új szabályleírás" %}{% endif %}{% endblock %}
+{% block content %}
+<h1>{% if obj %}{% blocktrans with name=obj.name %}Szabályleírás szerkesztése — {{ name }}{% endblocktrans %}{% else %}{% trans "Új szabályleírás" %}{% endif %}</h1>
+<p class="muted">{% trans "Add meg a leírás nevét, válassz saját kategóriát vagy hozz létre újat, és mentsd el a hosszú szöveget. Tárolt leírás: a rendszer nem ellenőrzi és nem hajtja végre." %}</p>
+<p><a class="btn secondary" href="{% url 'rule_category_new' %}">{% trans "Új kategória" %}</a></p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit" class="btn">{% trans "Mentés" %}</button>
+<a class="btn secondary" href="{% if obj %}{% url 'rule_detail' pk=obj.pk %}{% else %}{% url 'rule_list' %}{% endif %}">{% trans "Mégse" %}</a></form>
+{% endblock %}

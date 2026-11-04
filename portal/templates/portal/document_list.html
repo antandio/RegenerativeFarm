@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% trans "Dokumentumtár" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Dokumentumtár" %}</h1>
+<p class="muted">{% trans "Saját dokumentumaid, valamint mások nyilvános dokumentumai. Tárolt fájlok: a rendszer nem dolgozza fel és nem hajtja végre őket." %}</p>
+<p><a class="btn" href="{% url 'document_new' %}">{% trans "Új dokumentum" %}</a></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Dokumentumtár" %}"><table class="domain-table knowledge-table"><caption>{% trans "Dokumentumtár" %}</caption><thead><tr><th scope="col">{% trans "Név" %}</th><th scope="col">{% trans "Típus" %}</th><th scope="col">{% trans "Állapot" %}</th><th scope="col">{% trans "Műveletek" %}</th></tr></thead><tbody>{% for d in items %}<tr><th scope="row"><a href="{% url 'document_detail' pk=d.pk %}">{{ d.name }}</a></th><td>{{ d.extension }}</td><td>{% if d.owner_id == user.id %}<span class="muted">{% trans "Saját" %}</span>{% else %}<span class="muted">{% trans "Megosztott" %}</span>{% endif %} {% if d.is_public %}<span class="badge">{% trans "Nyilvános" %}</span>{% else %}<span class="muted">{% trans "Privát" %}</span>{% endif %}</td><td><a class="row-action" href="{% url 'document_detail' pk=d.pk %}">{% trans "Megnyitás" %}</a></td></tr>{% empty %}<tr><td colspan="4" class="muted">{% trans "Még nincs dokumentum." %}</td></tr>{% endfor %}</tbody></table></div><p class="scroll-hint">{% trans "A táblázatok vízszintesen görgethetők." %}</p>
+{% endblock %}

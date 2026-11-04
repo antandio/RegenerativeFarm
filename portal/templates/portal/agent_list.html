@@ -1,0 +1,60 @@
+{% extends "portal/base.html" %}{% load i18n static %}
+{% block title %}{% trans "Ügynök" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Ügynök" %}</h1>
+<p class="muted">{% trans "Oktatási célú tanácsadás – nem helyettesíti a szakértői véleményt. A tanácsok teljességére és minden kockázat felismerésére garancia nincs." %}</p>
+<div class="card">
+<h2>{% trans "Új futás indítása" %}</h2>
+<form method="post" action="{% url 'agent_home' %}">{% csrf_token %}
+<label for="agent-goal">{% trans "Cél (legfeljebb 2000 karakter)" %}</label>
+<textarea id="agent-goal" name="goal" rows="4" cols="60" maxlength="2000" required></textarea>
+<input type="hidden" name="language" value="{{ LANGUAGE_CODE }}">
+<fieldset class="parcel-picker">
+<legend>{% trans "Parcellák kiválasztása" %}</legend>
+<p class="parcel-hint">{% trans "Ha nincs kiválasztva semmi, az egész gazdaság a hatókör." %}</p>
+<div class="parcel-list-scroll" tabindex="0" role="region" aria-label="{% trans "Parcellák listája" %}">
+<ul class="parcel-list">
+{% for p in properties %}
+<li class="parcel-item"><label><input type="checkbox" name="selected_property_ids" value="{{ p.id }}"> {{ p.name }} <span class="parcel-meta">{{ p.get_kind_display }} · {{ p.area_hectares }} ha</span></label></li>
+{% empty %}<li class="muted">{% trans "Nincs parcella." %}</li>
+{% endfor %}
+</ul>
+</div>
+</fieldset>
+<fieldset class="parcel-picker">
+<legend>{% trans "Dokumentumok kiválasztása" %}</legend>
+<p class="parcel-hint">{% trans "Csak az aktív, engedélyezett dokumentumok választhatók. A felhőbe küldéshez külön jelölőnégyzet kell dokumentumonként." %}</p>
+<div class="parcel-list-scroll" tabindex="0" role="region" aria-label="{% trans "Dokumentumok listája" %}">
+<ul class="parcel-list">
+{% for fd in farm_docs %}
+<li class="parcel-item"><label><input type="checkbox" name="selected_doc_ids" value="{{ fd.document_id }}"> {{ fd.document.name }}</label>
+<label class="cloud-grant"><input type="checkbox" name="granted_doc_ids" value="{{ fd.document_id }}"> {% trans "felhőbe engedhető" %}</label></li>
+{% empty %}<li class="muted">{% trans "Nincs dokumentum." %}</li>
+{% endfor %}
+</ul>
+</div>
+</fieldset>
+<details class="quota-details"><summary>{% trans "Keret és költség" %}</summary>
+<p class="muted">{% blocktrans with c=limits.max_calls t=limits.max_tokens s=limits.max_wall_seconds m=limits.max_cost %}Futtatási keret: legfeljebb {{ c }} hívás, {{ t }} token, {{ s }} másodperc, {{ m }} USD.{% endblocktrans %}</p>
+<p class="muted">{% trans "A keret a kiosztáskor (dispatch), nem a sorban várakozás alatt indul." %}</p>
+</details>
+<label><input type="checkbox" name="cost_consent" value="on" required> {% trans "Kifejezetten megerősítem az indítást és a költség/hozzájárulás feltételeit." %}</label>
+<button class="btn" type="submit">{% trans "Indítás" %}</button>
+</form>
+</div>
+<div class="card">
+<h2>{% trans "Futások" %}</h2>
+{% if own_active_run %}<p><a href="{% url 'agent_detail' own_active_run.id %}">{% trans "Legutóbbi aktív futásom" %} #{{ own_active_run.id }} · {{ own_active_run.status }}</a></p>{% endif %}
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Futások táblázata" %}">
+<table>
+<thead><tr><th>ID</th><th>{% trans "Állapot" %}</th><th>{% trans "Szakasz" %}</th><th>{% trans "Létrehozva" %}</th><th></th></tr></thead>
+<tbody>
+{% for r in runs %}
+<tr><td>#{{ r.id }}</td><td>{{ r.status }}</td><td>#{{ r.stage }} · {% if r.stage == 0 %}{% trans "Sorba állítva" %}{% elif r.stage == 1 %}{% trans "Környezet" %}{% elif r.stage == 2 %}{% trans "Cél" %}{% elif r.stage == 3 %}{% trans "Tervjelölt" %}{% elif r.stage == 4 %}{% trans "Ellenőrzés" %}{% elif r.stage == 5 %}{% trans "Előnézet" %}{% elif r.stage == 6 %}{% trans "Alkalmazás" %}{% elif r.stage == 7 %}{% trans "Lezárva" %}{% else %}{% trans "Ismeretlen szakasz" %}{% endif %}</td><td>{{ r.created_at|date:"DATETIME_FORMAT" }}</td><td><a href="{% url 'agent_detail' r.id %}">{% trans "Megnyitás" %}</a></td></tr>
+{% empty %}<tr><td colspan="5" class="muted">{% trans "Nincs futás." %}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+{% endblock %}

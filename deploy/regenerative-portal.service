@@ -1,0 +1,23 @@
+[Unit]
+Description=Regenerative portal (Django/Gunicorn, SQLite)
+After=network.target
+
+[Service]
+Type=simple
+User=portal
+Group=portal
+WorkingDirectory=/opt/regenerative_portal
+EnvironmentFile=/opt/regenerative_portal/.env
+ExecStartPre=/opt/regenerative_portal/.venv/bin/python manage.py collectstatic --noinput
+ExecStart=/opt/regenerative_portal/.venv/bin/gunicorn config.wsgi:application --bind 0.0.0.0:8080 --workers 2 --timeout 60
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/regenerative_portal
+ProtectHome=read-only
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

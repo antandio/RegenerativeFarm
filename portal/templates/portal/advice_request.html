@@ -1,0 +1,34 @@
+{% extends "portal/base.html" %}{% load i18n static %}
+{% block content %}
+<h1>{% trans "Tanács kérése" %}</h1>
+<div class="card">
+<h2>{% trans "Küldendő profilösszefoglaló" %}</h2>
+<p><strong>{{ farm.name }}</strong> ({% trans "profilverzió:" %} {{ farm.profile_version }})</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans 'Küldendő profilösszefoglaló' %}"><table>
+<tr><th>{% trans "Mező" %}</th><th>{% trans "Érték" %}</th></tr>
+<tr><td>{% trans "Régió" %}</td><td>{{ farm.region_text|default:_("nincs megadva") }}</td></tr>
+<tr><td>{% trans "Éghajlat" %}</td><td>{{ farm.climate_text|default:_("nincs megadva") }}</td></tr>
+<tr><td>{% trans "Irány" %}</td><td>{{ farm.farming_direction_text|default:_("nincs megadva") }}</td></tr>
+<tr><td>{% trans "Talaj" %}</td><td>{{ farm.soil_notes|default:_("nincs megadva")|truncatechars:200 }}</td></tr>
+<tr><td>{% trans "Víz" %}</td><td>{{ farm.water_notes|default:_("nincs megadva")|truncatechars:200 }}</td></tr>
+</table></div>
+<p class="muted">{% trans "Csak a tanácshoz szükséges profiladatok mennek a modellszolgáltatóhoz. A profilszövegben szereplő utasításokat a rendszer adatként kezeli." %}</p>
+<p class="muted">{% trans "A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan." %}</p>
+</div>
+<div class="card">
+<h2>{% trans "Feltételek" %}</h2>
+<p>{% trans "Hozzájárulás:" %} {% if consent_granted %}<strong>{% trans "megadva" %}</strong>{% else %}<strong>{% trans "nincs megadva" %}</strong> – {% trans "tanács nem kérhető." %} <a href="{% url 'account' %}">{% trans "Megadás a Fiók oldalon" %}</a>{% endif %}</p>
+<p class="muted">{% blocktrans with hc=hour_count mh=max_hour dc=day_count md=max_day %}Keret (tanáccsal közös, a csevegőoldallal azonos lekérdezési logika): elmúlt órában {{ hc }}/{{ mh }}, elmúlt 24 órában {{ dc }}/{{ md }} kísérlet (a függő és sikertelen kísérletek is számítanak). Pénzben kifejezett költség nem ismert, a rendszer díjfigurát nem közöl. Egy kérés időkorlátja érvényes; hiba esetén profilja nem vész el.{% endblocktrans %}</p>
+<p class="muted">{% trans "Keretadatok időpontja:" %} {{ quota_checked_at|date:"DATETIME_FORMAT" }}</p>
+{% include "portal/_provenance.html" with prov=prov %}
+<form method="post" data-advice-form>{% csrf_token %}
+<input type="hidden" name="idempotency_key" value="{{ idem_key }}">
+<button class="btn" type="submit" {% if not consent_granted %}disabled{% endif %}>{% trans "Tanács kérése (pontosan 3 lépés)" %}</button>
+</form>
+{% if pending_run %}<div data-advice-poll data-status-url="{{ pending_status_url }}" data-phase="{{ pending_phase }}">{% endif %}<p id="advice-status" role="status" aria-live="polite" aria-busy="{% if pending_run %}true{% else %}false{% endif %}" data-advice-status data-phase="{{ pending_phase }}" data-msg-sending="{% trans 'Kérés küldése…' %}" data-msg-generating="{% trans 'A tanács generálása folyamatban…' %}" data-msg-waiting="{% trans 'Várakozás az eredményre…' %}" data-msg-done="{% trans 'A tanács elkészült.' %}" data-msg-failed="{% trans 'A tanácskérés sikertelen.' %}" data-msg-session="{% trans 'A munkamenet lejárt, kérjük, jelentkezzen be újra.' %}" data-msg-unknown="{% trans 'Hálózati hiba: az eredmény ismeretlen. Próbálja újra ugyanazzal a kéréskulccsal.' %}">{% if pending_run %}{% trans "Várakozás az eredményre…" %}{% endif %}</p>{% if pending_run %}</div>{% endif %}
+<p><a class="btn small" data-advice-new href="{% url 'advice_request' %}">{% trans "Új kérés új kulccsal" %}</a> <button class="btn small secondary" type="button" data-advice-retry hidden>{% trans "Folytatás ugyanazzal a kulccsal" %}</button></p>
+<div data-advice-result></div>
+<script src="{% static 'portal/advice.js' %}?v=task1durable20261104"></script>
+<p class="muted">{% trans "Dupla kattintás nem dupláz: ugyanaz a kéréskulcs ugyanazt a kísérletet adja vissza." %} <a href="{% url 'info' %}">{% trans "Segítség: kérdés és tanács különbsége" %}</a></p>
+</div>
+{% endblock %}

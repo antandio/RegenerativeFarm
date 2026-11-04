@@ -1,0 +1,22 @@
+[Unit]
+Description=Regenerative advice worker (durable DB claim queue)
+After=network.target
+
+[Service]
+Type=simple
+User=portal
+Group=portal
+WorkingDirectory=/opt/regenerative_portal
+EnvironmentFile=/opt/regenerative_portal/.env
+ExecStart=/opt/regenerative_portal/.venv/bin/python manage.py run_advice_worker
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/opt/regenerative_portal
+ProtectHome=read-only
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

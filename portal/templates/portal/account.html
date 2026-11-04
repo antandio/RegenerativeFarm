@@ -1,0 +1,15 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Fiók és adatvédelem" %}</h1>
+<div class="card"><h2>{% trans "Fiók" %}</h2><p>{% trans "E-mail:" %} {{ user.email }}</p>
+<h2>{% trans "Felhőadat-kezelési hozzájárulás" %}</h2>
+<p>{% trans "Állapot:" %} {% if consent_granted %}<strong>{% trans "megadva" %}</strong>{% else %}<strong>{% trans "nincs megadva / visszavonva" %}</strong>{% endif %} {% if last_event %}· {% trans "Utolsó esemény:" %} {% if last_event.event_type == 'granted' %}{% trans "megadva" %}{% else %}{% trans "visszavonva" %}{% endif %} ({{ last_event.policy_version }}, {{ last_event.occurred_at|date:"DATETIME_FORMAT" }}){% endif %}</p>
+<p class="muted">{% trans "A hozzájárulás csak a profiladatok modellfelhőbe küldésére vonatkozik tanácsadás céljából. Nem azonos az ÁSZF elfogadással. Visszavonás után új tanács nem kérhető; korábbi tanácsai és teendői megmaradnak." %}</p>
+<form method="post" action="{% url 'consent' %}">{% csrf_token %}
+{% if consent_granted %}<input type="hidden" name="consent_action" value="revoke"><button class="btn secondary" type="submit">{% trans "Hozzájárulás visszavonása" %}</button>{% else %}<input type="hidden" name="consent_action" value="grant"><button class="btn" type="submit">{% trans "Hozzájárulás megadása" %}</button>{% endif %}
+</form>
+</div>
+<div class="card"><h2>{% trans "Saját adatok exportja" %}</h2><p>{% trans "Profil, pillanatképek, tanácsok lépésekkel, teendők és hozzájárulási események JSON formában." %}</p><p><a class="btn secondary" href="{% url 'export_info' %}">{% trans "Export tájékoztató" %}</a></p>
+<h2>{% trans "Elfogadott tájékoztató-verziók" %}</h2>{% for t in terms %}<p class="muted">{{ t.terms_version }} / {{ t.privacy_notice_version }} – {{ t.accepted_at|date:"DATETIME_FORMAT" }}</p>{% empty %}<p class="muted">{% trans "Nincs rögzített elfogadás." %}</p>{% endfor %}</div>
+<div class="card danger"><h2>{% trans "Veszélyzóna – fiók törlése" %}</h2><p>{% trans "A fiók törlése véglegesen törli gazdaságát, tanácsait, teendőit és munkameneteit érvényteleníti." %}</p><a class="btn danger" href="{% url 'account_delete' %}">{% trans "Fiókom törlése…" %}</a></div>
+{% endblock %}

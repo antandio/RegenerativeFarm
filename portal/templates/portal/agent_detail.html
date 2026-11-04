@@ -1,0 +1,236 @@
+{% extends "portal/base.html" %}{% load i18n static %}
+{% block title %}{% trans "Ügynökfutás" %} #{{ run.id }}{% endblock %}
+{% block content %}
+<h1>{% trans "Ügynökfutás" %} #{{ run.id }}</h1>
+<p class="muted">{% trans "Oktatási célú tanácsadás – nem helyettesíti a szakértői véleményt. A tanácsok teljességére és minden kockázat felismerésére garancia nincs." %}</p>
+<div class="card">
+<h2>{% trans "Állapot" %}</h2>
+<dl>
+<dt>{% trans "Állapot" %}</dt><dd id="run-status">{{ run.status }}</dd>
+<dt>{% trans "Szakasz" %}</dt><dd id="run-stage">#{{ run.stage }} · {% if run.stage == 0 %}{% trans "Sorba állítva" %}{% elif run.stage == 1 %}{% trans "Környezet" %}{% elif run.stage == 2 %}{% trans "Cél" %}{% elif run.stage == 3 %}{% trans "Tervjelölt" %}{% elif run.stage == 4 %}{% trans "Ellenőrzés" %}{% elif run.stage == 5 %}{% trans "Előnézet" %}{% elif run.stage == 6 %}{% trans "Alkalmazás" %}{% elif run.stage == 7 %}{% trans "Lezárva" %}{% else %}{% trans "Ismeretlen szakasz" %}{% endif %}</dd>
+<dt>{% trans "Nyelv" %}</dt><dd>{{ run.language }}</dd>
+<dt>{% trans "Létrehozva" %}</dt><dd>{{ run.created_at|date:"DATETIME_FORMAT" }}</dd>
+{% if run.completed_at %}<dt>{% trans "Befejezve" %}</dt><dd>{{ run.completed_at|date:"DATETIME_FORMAT" }}</dd>{% endif %}
+{% if run.error_message_safe %}<dt>{% trans "Hiba" %}</dt><dd id="run-error">{{ run.error_message_safe }}</dd>{% endif %}
+</dl>
+<p class="muted" id="run-summary">{{ run.candidate.summary|default:"" }}</p>
+{% if run.candidate.risk %}<p class="muted">{% trans "Kockázat" %}: {{ run.candidate.risk }}</p>{% endif %}
+{% if run.candidate.unknowns %}<p class="muted">{% trans "Ismeretlenek" %}: {{ run.candidate.unknowns|join:", " }}</p>{% endif %}
+<div id="run-events" class="muted" aria-live="polite">
+{% for ev in run.stage_events %}
+<p>{% trans "Szakasz" %} {{ ev.stage }} · {{ ev.code }}</p>
+{% endfor %}
+</div>
+<div class="btn-row">
+{% if run.status == "queued" or run.status == "running" %}
+<form method="post" action="{% url 'agent_cancel' run.id %}">{% csrf_token %}<button class="btn secondary" type="submit">{% trans "Megszakítás" %}</button></form>
+{% endif %}
+<form method="post" action="{% url 'agent_delete' run.id %}" onsubmit="return confirm('{% trans "Végleg törli a futás kérdését, válaszát, forrásait és környezetét? A minimális audit- és költségadatok megmaradnak." %}');">{% csrf_token %}<button class="btn danger" type="submit">{% trans "Törlés" %}</button></form>
+</div>
+</div>
+{# English comments per project convention; user-visible text stays HU. #}
+<div class="card">
+<h2>{% trans "Tervjelölt lépései" %}</h2>
+{% for step in run.candidate.steps %}
+<div class="proposal">
+<p><strong>{{ step.title|default:"" }}</strong>{% if step.risk %} · {% trans "Kockázat" %}: {{ step.risk }}{% endif %}</p>
+{% if step.action_text %}<p>{{ step.action_text }}</p>{% endif %}
+{% if step.rationale %}<p class="muted">{% trans "Indoklás" %}: {{ step.rationale }}</p>{% endif %}
+{% if step.evidence %}<p class="muted">{% trans "Bizonyíték" %}: {{ step.evidence|join:", " }}</p>{% endif %}
+{% if step.policy_sections %}<p class="muted">{% trans "Szabályzati szakaszok" %}: {{ step.policy_sections|join:", " }}</p>{% endif %}
+{% if step.policy_cited_sections %}<p class="muted">{% trans "Szabályzati szakaszok" %}: {{ step.policy_cited_sections|join:", " }}</p>{% endif %}
+{% if step.uncertainties %}<p class="muted">{% trans "Bizonytalanságok" %}: {{ step.uncertainties|join:", " }}</p>{% endif %}
+</div>
+{% empty %}<p class="muted">{% trans "Nincs tervlépés." %}</p>{% endfor %}
+</div>
+<div class="card">
+<h2>{% trans "Szakértői ellenőrzés" %}</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Ellenőrzési táblázat" %}">
+<table>
+<thead><tr><th>{% trans "Súlyosság" %}</th><th>{% trans "Lépés" %}</th><th>{% trans "Kód" %}</th><th>{% trans "Indok" %}</th></tr></thead>
+<tbody id="run-findings">
+{% for f in run.critic_findings %}
+<tr><td>{{ f.severity }}</td><td>{{ f.step }}</td><td>{{ f.code }}</td><td>{{ f.reason }}</td></tr>
+{% empty %}<tr><td colspan="4" class="muted">{% trans "Nincs ellenőrzési megállapítás." %}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+<div class="card">
+<h2>{% trans "Források" %}</h2>
+<p class="muted">{% trans "Szabályzat" %}: {{ run.policy_version }} · <code>{{ run.policy_sha256 }}</code></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Források táblázata" %}">
+<table>
+<thead><tr><th>{% trans "Forrásazonosító" %}</th><th>{% trans "Kivonat" %}</th><th>{% trans "Változat" %}</th><th>{% trans "Hely" %}</th><th>{% trans "Bizalom" %}</th></tr></thead>
+<tbody>
+{% for item in run.context_manifest.items %}
+<tr><td>{{ item.source_id }}</td><td><code>{{ item.hash }}</code></td><td>{{ item.revision }}</td><td>{{ item.locator }}</td><td>{{ item.trust }}</td></tr>
+{% empty %}<tr><td colspan="5" class="muted">{% trans "Nincs forrás." %}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% if run.context_manifest.omissions %}<p class="muted">{% trans "Kihagyások" %}: {{ run.context_manifest.omissions|join:", " }}</p>{% endif %}
+</div>
+<div class="card">
+<h2>{% trans "Hívások és keret" %}</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Hívások táblázata" %}">
+<table>
+<thead><tr><th>{% trans "Fajta" %}</th><th>{% trans "Állapot" %}</th><th>{% trans "Modell" %}</th></tr></thead>
+<tbody id="run-calls">
+{% for c in calls %}
+<tr><td>{{ c.kind }}</td><td>{{ c.status }}</td><td>{{ c.model }}</td></tr>
+{% empty %}<tr><td colspan="3" class="muted">{% trans "Nincs hívás." %}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+<div class="card">
+<h2>{% trans "Változáscsomagok" %}</h2>
+{% for cs in previews %}
+<div class="proposal">
+<p>#{{ cs.id }} · {{ cs.state }} · <code>{{ cs.payload_hash }}</code> · {% trans "lejár" %}: {{ cs.expires_at|date:"DATETIME_FORMAT" }}</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Parancsok táblázata" %}">
+<table>
+<thead><tr><th>{% trans "Cél" %}</th><th>{% trans "Művelet" %}</th><th>{% trans "Azonosító" %}</th><th>{% trans "Mezők" %}</th></tr></thead>
+<tbody>
+{% for cmd in cs.commands %}
+<tr><td>{{ cmd.target }}</td><td>{{ cmd.op }}</td><td>{{ cmd.id|default:"—" }}</td><td>{{ cmd.fields }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% for cmd in cs.commands %}
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Előtte–utána táblázat" %}">
+<table>
+<thead><tr><th>{% trans "Mező" %}</th><th>{% trans "Előtte" %}</th><th>{% trans "Utána" %}</th></tr></thead>
+<tbody>
+{% if cmd.op == "create" %}
+{% for fname, fvalue in cmd.fields.items %}
+<tr><td>{{ fname }}</td><td>{% trans "Nincs (új sor)" %}</td><td>{{ fvalue }}</td></tr>
+{% endfor %}
+<tr><td colspan="3" class="muted">{% trans "Kiszolgáló-oldali alapértékek az alkalmazáskor lépnek életbe." %}</td></tr>
+{% elif cmd.op == "update" %}
+{% for target, rows in cs.before_snapshot.items %}
+{% if target == cmd.target %}
+{% for row in rows %}
+{% if row.id == cmd.id %}
+{% for fname, fvalue in row.items %}
+<tr><td>{{ fname }}</td><td>{{ fvalue }}</td><td>{% for k, v in cmd.fields.items %}{% if k == fname %}{{ v }}{% endif %}{% endfor %}</td></tr>
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+<tr><td colspan="3" class="muted">{% trans "Kért módosítás" %}: {{ cmd.fields }}</td></tr>
+{% elif cmd.op == "delete" %}
+{% for target, rows in cs.before_snapshot.items %}
+{% if target == cmd.target %}
+{% for row in rows %}
+{% if row.id == cmd.id %}
+{% for fname, fvalue in row.items %}
+<tr><td>{{ fname }}</td><td>{{ fvalue }}</td><td>{% trans "Törölve" %}</td></tr>
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endif %}
+</tbody>
+</table>
+</div>
+{% endfor %}
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Ellenőrzések táblázata" %}">
+<table>
+<thead><tr><th>{% trans "Ellenőrzés" %}</th><th>{% trans "Érték" %}</th></tr></thead>
+<tbody>
+<tr><td>{% trans "Csomagkivonat" %}</td><td><code>{{ cs.payload_hash }}</code></td></tr>
+<tr><td>{% trans "Előtte-kivonat" %}</td><td><code>{{ cs.before_hash }}</code></td></tr>
+{% if cs.after_hash %}<tr><td>{% trans "Utána-kivonat" %}</td><td><code>{{ cs.after_hash }}</code></td></tr>{% endif %}
+<tr><td>{% trans "Állapot" %}</td><td>{{ cs.state }}</td></tr>
+</tbody>
+</table>
+</div>
+{% if cs.receipt %}
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Nyugta táblázata" %}">
+<table>
+<thead><tr><th>{% trans "Nyugta mező" %}</th><th>{% trans "Érték" %}</th></tr></thead>
+<tbody>
+{% for k, v in cs.receipt.items %}
+<tr><td>{{ k }}</td><td>{{ v }}</td></tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% else %}
+<p class="muted">{% trans "Még nincs nyugta; az alkalmazás után jelenik meg." %}</p>
+{% endif %}
+{% if cs.state == "preview" %}<div class="btn-row">
+<form method="post" action="{% url 'agent_changeset_approve' run.id cs.id %}">{% csrf_token %}<input type="hidden" name="token" value="{{ cs.approve_token }}"><input type="hidden" name="payload_hash" value="{{ cs.payload_hash }}"><button class="btn" type="submit">{% trans "Jóváhagyás és alkalmazás" %}</button></form>
+<form method="post" action="{% url 'agent_changeset_reject' run.id cs.id %}">{% csrf_token %}<button class="btn secondary" type="submit">{% trans "Visszautasítás" %}</button></form>
+</div>{% endif %}
+</div>
+{% empty %}<p class="muted">{% trans "Nincs előnézeti csomag." %}</p>
+{% endfor %}
+</div>
+<script>
+(function(){
+  var runId = "{{ run.id }}";
+  try { localStorage.setItem("agent_last_run_id", String(runId)); } catch (e) {}
+  var statusEl = document.getElementById("run-status");
+  var stageEl = document.getElementById("run-stage");
+  var summaryEl = document.getElementById("run-summary");
+  var eventsEl = document.getElementById("run-events");
+  var errorEl = document.getElementById("run-error");
+  var initial = statusEl ? statusEl.textContent : "";
+  var reloaded = false;
+  function setText(el, v){ if (el) { el.textContent = (v === null || v === undefined) ? "" : String(v); } }
+  function terminal(s){ return s !== "queued" && s !== "running"; }
+  async function poll(){
+    try {
+      var resp = await fetch("{% url 'agent_status' run.id %}", {headers: {"Accept": "application/json"}});
+      if (!resp.ok) { return; }
+      var data = await resp.json();
+      if (terminal(String(data.status)) && !terminal(String(initial)) && !reloaded) {
+        reloaded = true;
+        window.location.reload();
+        return;
+      }
+      setText(statusEl, data.status);
+      setText(stageEl, data.stage);
+      setText(summaryEl, data.summary || "");
+      if (data.error_message_safe && !errorEl) {
+        var dl = statusEl ? statusEl.closest("dl") : null;
+        if (dl) {
+          var dt = document.createElement("dt");
+          dt.textContent = "Hiba";
+          var dd = document.createElement("dd");
+          dd.id = "run-error";
+          dd.textContent = String(data.error_message_safe);
+          dl.appendChild(dt);
+          dl.appendChild(dd);
+          errorEl = dd;
+        }
+      } else {
+        setText(errorEl, data.error_message_safe || "");
+      }
+      if (eventsEl && Array.isArray(data.stage_events)) {
+        eventsEl.textContent = "";
+        data.stage_events.forEach(function(ev){
+          var p = document.createElement("p");
+          p.textContent = "stage " + ev.stage + " · " + ev.code;
+          eventsEl.appendChild(p);
+        });
+      }
+      if (data.status === "queued" || data.status === "running") {
+        setTimeout(poll, 3000);
+      }
+    } catch (e) {}
+  }
+  var s = statusEl ? statusEl.textContent : "";
+  if (s === "queued" || s === "running") { setTimeout(poll, 3000); }
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,4 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{{ title }}</h1>
+<p>{{ work.start_date }}–{{ work.end_date }} — {{ work.title }}</p>
+<form method="post">{% csrf_token %}<button type="submit" class="btn">{% trans "Törlés" %}</button> <a href="{% url 'livestock_detail' pk=obj.pk %}">{% trans "Mégse" %}</a></form>
+</div>{% endblock %}

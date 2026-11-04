@@ -1,0 +1,70 @@
+{% load i18n static %}{% get_current_language as LANGUAGE_CODE %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ page_title|default:"Regeneratív átállás \u2013 gazdaportál" }}{% endblock %}</title>
+<link rel="stylesheet" href="{% static 'portal/app.css' %}?v=20261104-knowledge-tables">
+</head>
+<body>
+<a class="skip" href="#main-content">{% trans "Ugrás a tartalomra" %}</a>
+<header class="top">
+<a class="brand" href="{% url 'dashboard' %}">{% trans "Regeneratív átállás" %}</a>
+<nav class="lang-switch" aria-label="{% trans 'Nyelvválasztás' %}">
+<form method="post" action="{% url 'set_language' %}">{% csrf_token %}<input name="next" type="hidden" value="{{ request.path }}"><input name="language" type="hidden" value="hu"><button type="submit" class="lang{% if LANGUAGE_CODE == 'hu' %} active{% endif %}"{% if LANGUAGE_CODE == 'hu' %} aria-current="true"{% endif %} aria-label="Magyar HU">Magyar HU</button></form>
+<form method="post" action="{% url 'set_language' %}">{% csrf_token %}<input name="next" type="hidden" value="{{ request.path }}"><input name="language" type="hidden" value="en"><button type="submit" class="lang{% if LANGUAGE_CODE == 'en' %} active{% endif %}"{% if LANGUAGE_CODE == 'en' %} aria-current="true"{% endif %} aria-label="English EN">English EN</button></form>
+</nav>
+{% if user.is_authenticated %}
+{% if global_farms and global_farms|length > 1 %}
+<form method="post" action="{% url 'select_active_farm' %}" id="select_active_farm" class="farm-switch">{% csrf_token %}<label for="farm_id">{% trans "Gazdaság" %}</label><select name="farm_id" id="farm_id">{% for f in global_farms %}<option value="{{ f.id }}"{% if f.id == global_active_farm_id %} selected{% endif %}>{{ f.name }}</option>{% endfor %}</select><button type="submit" class="btn small">{% trans "Váltás" %}</button></form>
+{% elif global_active_farm %}<p class="muted top-farm">{{ global_active_farm.name }}{% if global_active_role_label %} ({{ global_active_role_label }}){% endif %}</p>{% endif %}
+{% endif %}
+</header>
+<div class="layout">
+{% if user.is_authenticated %}
+{% with current=request.resolver_match.url_name %}
+<details class="mobile-nav" id="mobile-nav" open>
+<summary>{% trans "Menü" %}</summary>
+<aside class="app-sidebar" aria-label="{% trans 'Fő navigáció' %}">
+<nav aria-label="{% trans 'Fő navigáció' %}">
+<section aria-labelledby="nav-overview"><h2 id="nav-overview">{% trans "Áttekintés" %}</h2><a href="{% url 'dashboard' %}"{% if current == 'dashboard' %} aria-current="page"{% endif %}>{% trans "Áttekintés" %}</a></section>
+<section aria-labelledby="nav-farm"><h2 id="nav-farm">{% trans "Gazdaság" %}</h2><a href="{% url 'farm' %}"{% if current == 'farm' %} aria-current="page"{% endif %}>{% trans "Gazdaságom" %}</a><a href="{% url 'location_list' %}"{% if current == 'location_list' or current == 'location_new' or current == 'location_edit' or current == 'location_delete' %} aria-current="page"{% endif %}>{% trans "Helyszínek" %}</a><a href="{% url 'property_list' %}"{% if current == 'property_list' or current == 'property_new' or current == 'property_edit' or current == 'property_delete' %} aria-current="page"{% endif %}>{% trans "Területek" %}</a><a href="{% url 'equipment_list' %}"{% if current == 'equipment_list' or current == 'equipment_new' or current == 'equipment_edit' or current == 'equipment_delete' %} aria-current="page"{% endif %}>{% trans "Gépek" %}</a><a href="{% url 'cycle_list' %}"{% if current == 'cycle_list' or current == 'cycle_new' or current == 'cycle_edit' or current == 'cycle_delete' or current == 'cycle_observe' or current == 'sowing_retry' or current == 'sowing_retain' or current == 'sowing_hide' %} aria-current="page"{% endif %}>{% trans "Vetésforgó" %}{% if sowing_mismatch_count %} <span class="nav-badge" aria-label="{% trans 'Megerősített eltérések' %}: {{ sowing_mismatch_count }}">{{ sowing_mismatch_count }}</span>{% endif %}{% if sowing_retained_count %} <span class="nav-retained-badge" aria-label="{% trans 'Megtartott eltérések' %}: {{ sowing_retained_count }}">{{ sowing_retained_count }}</span>{% endif %}</a><a href="{% url 'event_list' %}"{% if current == 'event_list' or current == 'event_new' or current == 'event_edit' or current == 'event_delete' %} aria-current="page"{% endif %}>{% trans "Gazdálkodási napló" %}</a><a href="{% url 'livestock_list' %}"{% if current == 'livestock_list' or current == 'livestock_new' or current == 'livestock_detail' or current == 'livestock_edit' or current == 'livestock_archive' or current == 'livestock_delete' %} aria-current="page"{% endif %}>{% trans "Állatállomány" %}</a></section>
+<section aria-labelledby="nav-plan"><h2 id="nav-plan">{% trans "Tervezés" %}</h2><a href="{% url 'plans' %}"{% if current == 'plans' %} aria-current="page"{% endif %}>{% trans "Munkaterv" %}</a><a href="{% url 'utilization' %}"{% if current == 'utilization' %} aria-current="page"{% endif %}>{% trans "Kihasználtság" %}</a><a href="{% url 'weather' %}"{% if current == 'weather' or current == 'weather_refresh' %} aria-current="page"{% endif %}>{% trans "Időjárás" %}</a><a href="{% url 'actions' %}"{% if current == 'actions' or current == 'action_create' or current == 'action_edit' or current == 'action_delete' or current == 'action_toggle' or current == 'action_from_step' %} aria-current="page"{% endif %}>{% trans "Teendők" %}</a></section>
+<section aria-labelledby="nav-rules"><h2 id="nav-rules">{% trans "Tudástár" %}</h2><a href="{% url 'rule_list' %}"{% if current == 'rule_list' or current == 'rule_new' or current == 'rule_detail' or current == 'rule_edit' or current == 'rule_category_new' %} aria-current="page"{% endif %}>{% trans "Szabályleírások" %}</a><a href="{% url 'farm_rule_list' %}"{% if current == 'farm_rule_list' or current == 'farm_rule_activate' or current == 'farm_rule_deactivate' %} aria-current="page"{% endif %}>{% trans "Farm szabályai" %}</a><a href="{% url 'document_list' %}"{% if current == 'document_list' or current == 'document_new' or current == 'document_detail' or current == 'document_edit' or current == 'document_delete' %} aria-current="page"{% endif %}>{% trans "Dokumentumtár" %}</a><a href="{% url 'farm_knowledge_list' %}"{% if current == 'farm_knowledge_list' or current == 'farm_knowledge_add' or current == 'farm_knowledge_remove' %} aria-current="page"{% endif %}>{% trans "Farm tudásbázisa" %}</a><a href="{% url 'news_source_list' %}"{% if current == 'news_source_list' or current == 'news_source_new' or current == 'news_source_detail' or current == 'news_source_edit' or current == 'news_source_delete' %} aria-current="page"{% endif %}>{% trans "Hírforrások" %}</a><a href="{% url 'regenerative_guide' %}"{% if current == 'regenerative_guide' %} aria-current="page"{% endif %}>{% if LANGUAGE_CODE == 'hu' %}Regeneratív elvek{% else %}Regenerative principles{% endif %}</a></section>
+<section aria-labelledby="nav-help"><h2 id="nav-help">{% trans "Segítség" %}</h2><a href="{% url 'agent_home' %}"{% if current == 'agent_home' or current == 'agent_detail' %} aria-current="page"{% endif %}>{% trans "Ügynök" %}</a><a href="{% url 'chat' %}"{% if current == 'chat' or current == 'chat_proposal_confirm' %} aria-current="page"{% endif %}>{% trans "Csevegés" %}</a><a href="{% url 'advice_request' %}"{% if current == 'advice_request' %} aria-current="page"{% endif %}>{% trans "Tanács kérése" %}</a><a href="{% url 'advice_history' %}"{% if current == 'advice_history' or current == 'advice_detail' %} aria-current="page"{% endif %}>{% trans "Előzmények" %}</a></section>
+<section aria-labelledby="nav-team"><h2 id="nav-team">{% trans "Csapat és fiók" %}</h2>{% if is_farm_owner %}<a href="{% url 'members' %}"{% if current == 'members' or current == 'invite' or current == 'invite_revoke' or current == 'member_change' or current == 'member_remove' or current == 'invitation_accept' %} aria-current="page"{% endif %}>{% trans "Tagok" %}</a><a href="{% url 'external_contact_list' %}"{% if current == 'external_contact_list' or current == 'external_contact_new' or current == 'external_contact_detail' or current == 'external_contact_edit' or current == 'external_contact_delete' %} aria-current="page"{% endif %}>{% trans "Külső kapcsolattartók" %}</a>{% endif %}<a href="{% url 'account' %}"{% if current == 'account' or current == 'consent' or current == 'export' or current == 'account_delete' %} aria-current="page"{% endif %}>{% trans "Fiók" %}</a><form method="post" action="{% url 'logout' %}" class="logout-form">{% csrf_token %}<button type="submit" class="btn small secondary">{% trans "Kilépés" %}</button></form></section>
+</nav>
+</aside>
+</details>
+{% endwith %}
+{% endif %}
+<main id="main-content" class="content" tabindex="-1">
+{% if messages %}{% for m in messages %}<div class="msg {{ m.tags }}">{{ m }}</div>{% endfor %}{% endif %}
+{% block content %}{% endblock %}
+</main>
+</div>
+<footer>{% trans "Oktatási célú tanácsadás – nem helyettesíti a szakértői véleményt. A tanácsok teljességére és minden kockázat felismerésére garancia nincs." %}</footer>
+<script>
+const nav = document.querySelector('details.mobile-nav');
+if (nav) {
+  const desktop = window.matchMedia('(min-width: 701px)');
+  const syncNav = () => { nav.open = desktop.matches; };
+  syncNav(); desktop.addEventListener('change', syncNav);
+}
+
+function autosizeTextarea(el) { el.style.height = "auto"; el.style.height = (el.scrollHeight) + "px"; }
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("textarea").forEach(function (el) {
+    autosizeTextarea(el);
+    el.addEventListener("input", function () { autosizeTextarea(el); });
+  });
+});
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    var d = document.querySelector("details.mobile-nav");
+    if (d && d.open) { d.open = false; var s = d.querySelector("summary"); if (s) { s.focus(); } }
+  }
+});
+</script>
+</body>
+</html>

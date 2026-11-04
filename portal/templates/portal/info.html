@@ -1,0 +1,15 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<div class="card">
+<h1>{% trans "Tájékoztatók" %}</h1>
+<h2>{% trans "Adatkezelési tájékoztató (tajekoztato_v1) és ÁSZF (aszf_v1) – kivonat" %}</h2>
+<p>{% trans "Ez a portál bejelentkezett gazdák egyetlen gazdaságának profilját, az arra épülő tanácsokat és saját teendőket kezeli. Adatait kizárólag saját fiókjával érheti el. Bármikor exportálhatja és törölheti adatait a Fiók oldalon." %}</p>
+<h2>{% trans "Felhőadat-kezelési nyilatkozat (cloud_disclosure_v1)" %}</h2>
+<p>{% trans "Tanácskéréskor a mentett gazdaságprofil szükséges adatait a szerver a Meta modellszolgáltató felhőjébe (api.meta.ai) küldi, kizárólag a strukturált tanács előállítására. Kulcs vagy jelszó soha nem kerül a modellhez. Hozzájárulás nélkül tanács nem kérhető, de profilja és teendői használhatók. A hozzájárulás a Fiók oldalon bármikor megadható és visszavonható; a visszavonás a korábbi tanácsokat nem törli." %}</p>
+<h2>{% trans "Csevegés kérdése és a 3 lépéses tanács" %}</h2>
+<p>{% trans "A csevegés egyetlen kérdésre ad rövid adat-előnézetet, írás csak külön jóváhagyással történik. A tanácskérés pontosan 3 lépéses szerkezetű tervet készít a profilpillanatképből." %}</p>
+<h2>{% trans "A tanács határai" %}</h2>
+<p>{% trans "A tanács oktató jellegű: nem ad jogi megfelelési állítást, adagolást, diagnózist és nem garantál hozamot vagy bevételt. Szakmai határ esetén szakemberhez irányít. A rendszer a tiltott tartalom kiszűrésére törekszik, de minden káros tartalom felismerése nem garantálható." %}</p>
+<p class="muted">{% trans "A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan." %}</p>
+</div>
+{% endblock %}

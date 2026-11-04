@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Adatexport tájékoztató" %}</h1>
+<div class="card">
+<p>{% trans "Az export a profil, pillanatképek, tanácsok lépésekkel, teendők, hozzájárulási események, helyszínek, területek, gépek, vetésforgók és gazdálkodási-napló bejegyzések JSON állománya. A tájékoztató oldal csak magyaráz, a fájl letöltése külön hivatkozással indul." %}</p>
+<p><a class="btn" href="{% url 'export' %}">{% trans "Adataim letöltése (JSON fájl)" %}</a></p>
+</div>
+{% endblock %}

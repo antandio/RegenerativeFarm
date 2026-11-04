@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% if obj %}{% blocktrans with name=obj.name %}Kapcsolattartó szerkesztése — {{ name }}{% endblocktrans %}{% else %}{% trans "Új külső kapcsolattartó" %}{% endif %}{% endblock %}
+{% block content %}
+<h1>{% if obj %}{% blocktrans with name=obj.name %}Kapcsolattartó szerkesztése — {{ name }}{% endblocktrans %}{% else %}{% trans "Új külső kapcsolattartó" %}{% endif %}</h1>
+<p class="muted">{% trans "Külső személy: telefon vagy e-mail kötelező, legalább egy kérhető munka soronként." %}</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit" class="btn">{% trans "Mentés" %}</button>
+<a class="btn secondary" href="{% if obj %}{% url 'external_contact_detail' pk=obj.pk %}{% else %}{% url 'external_contact_list' %}{% endif %}">{% trans "Mégse" %}</a></form>
+{% endblock %}

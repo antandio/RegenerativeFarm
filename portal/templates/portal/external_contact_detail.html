@@ -1,0 +1,25 @@
+{% extends "portal/base.html" %}{% load i18n static %}
+{% block title %}{{ obj.name }}{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'portal/external_contacts.css' %}?v=20261104-task4">
+<div class="ec-identity"><span class="ec-initials" aria-hidden="true">{{ obj.name|first|upper }}</span><h1 class="ec-wrap">{{ obj.name }}</h1></div>
+<p class="ec-actions"><a class="btn secondary" href="{% url 'external_contact_list' %}">{% trans "Külső kapcsolattartók" %}</a>
+<a class="btn secondary" href="{% url 'external_contact_edit' pk=obj.pk %}">{% trans "Szerkesztés" %}</a>
+<a class="btn secondary" href="{% url 'external_contact_delete' pk=obj.pk %}">{% trans "Törlés" %}</a></p>
+<div class="ec-sections">
+<section class="ec-section" aria-label="{% trans "Elérhetőség" %}"><h2>{% trans "Elérhetőség" %}</h2>
+<ul>
+{% if obj.phone %}<li>{% trans "Telefonszám" %}: <a class="ec-wrap" href="tel:{{ obj.phone|cut:" " }}">{{ obj.phone }}</a></li>{% endif %}
+{% if obj.email %}<li>{% trans "E-mail" %}: <a class="ec-wrap" href="mailto:{{ obj.email }}">{{ obj.email }}</a></li>{% endif %}
+{% if obj.availability %}<li>{% trans "Elérhetőség" %}: <span class="ec-wrap">{{ obj.availability }}</span></li>{% endif %}
+</ul></section>
+<section class="ec-section" aria-label="{% trans "Kérhető munkák" %}"><h2>{% trans "Kérhető munkák" %}</h2>
+<ul class="ec-chips">{% for s in services %}<li class="ec-chip ec-wrap">{{ s }}</li>{% endfor %}</ul></section>
+{% if obj.notes %}
+<section class="ec-section" aria-label="{% trans "Rövid leírás" %}"><h2>{% trans "Rövid leírás" %}</h2>
+<p class="ec-wrap">{{ obj.notes|linebreaksbr }}</p></section>
+{% endif %}
+</div>
+<p class="ec-actions"><a class="btn secondary" href="{% url 'external_contact_edit' pk=obj.pk %}">{% trans "Szerkesztés" %}</a>
+<a class="btn secondary" href="{% url 'external_contact_delete' pk=obj.pk %}">{% trans "Törlés" %}</a></p>
+{% endblock %}

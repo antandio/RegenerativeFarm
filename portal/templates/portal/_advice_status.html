@@ -1,0 +1,11 @@
+{% load i18n %}<div class="advice-status" data-status="{{ effective_status }}" data-phase="{{ phase|default:effective_status }}"><p>{% if effective_status == "success" %}{% trans "sikeres" %}{% elif effective_status == "failed" %}{% trans "sikertelen" %}{% if error %}: {{ error }}{% endif %}{% elif phase == "running" %}{% trans "generálás folyamatban" %}{% elif phase == "queued" %}{% trans "sorban áll" %}{% else %}{% trans "függőben" %}{% endif %} · <a href="{{ detail_url }}">{% trans "Részletek" %}</a></p>{% if run.result_is_general %}<span class="pill general">{% trans "Általános, oktató jellegű tájékoztatás – nem gazdaságspecifikus előírás" %}</span>{% endif %}{% if effective_status == "success" and render_steps %}{% for s in run.steps.all %}
+<div class="step"><span class="pos">{{ s.position }}</span><strong>{{ s.title }}</strong>
+<p>{{ s.action_text }}</p>
+<p><strong>{% trans "Indoklás:" %}</strong> {{ s.rationale }}</p>
+<p><strong>{% trans "Feltételezések:" %}</strong> {% for a in s.assumptions %}{{ a }}{% if not forloop.last %}; {% endif %}{% empty %}{% trans "nincs megadva" %}{% endfor %}</p>
+<p><strong>{% trans "Kockázat:" %}</strong> {{ s.risk_note }}</p>
+{% if s.expert_referral %}<p><strong>{% trans "Szakértő:" %}</strong> {{ s.expert_referral }}</p>{% endif %}
+{% if saved_step_ids and s.id in saved_step_ids %}<span class="pill done">{% trans "Már teendőként mentve" %}</span>{% else %}
+<form method="post" action="{% url 'action_from_step' run.id s.id %}">{% csrf_token %}<button class="btn small" type="submit">{% trans "Akcióként mentem" %}</button></form>{% endif %}
+</div>
+{% endfor %}{% if run.result_assumptions %}<h3>{% trans "Közös feltételezések" %}</h3><ul>{% for a in run.result_assumptions %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}{% if run.result_focused_questions %}<h3>{% trans "Hiányzó adatok – célzott kérdések" %}</h3><ul>{% for q in run.result_focused_questions %}<li>{{ q }}</li>{% endfor %}</ul>{% endif %}<p class="muted">{% trans "Ez a tanács oktató jellegű; szakmai határnál kérje szakember (agronómus, növényorvos, állatorvos, talajtani szakember) véleményét. Nincs teljességi garancia." %}</p>{% endif %}</div>

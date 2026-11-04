@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% trans "Új kategória" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Új kategória" %}</h1>
+<p class="muted">{% trans "Saját kategória szabályleírásokhoz. Azonos nevű kategória más felhasználónál nem ütközik." %}</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit" class="btn">{% trans "Mentés" %}</button>
+<a class="btn secondary" href="{% url 'rule_new' %}">{% trans "Mégse" %}</a></form>
+{% endblock %}

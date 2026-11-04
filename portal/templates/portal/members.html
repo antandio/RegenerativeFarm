@@ -1,0 +1,22 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% trans "Tagok" %}{% endblock %}
+{% block content %}
+<h1>{% blocktrans with name=farm.name %}Tagok — {{ name }}{% endblocktrans %}</h1>
+<p id="own-farm-label">{% trans "Saját gazdaság — személyzet" %}</p>
+<p>{% trans "Fiókonként egy saját gazdaság hozható létre; tagság révén több gazdaságban is részt vehet." %}</p>
+<h2>{% trans "Szerepkörök és jogosultságok" %}</h2>
+<p class="muted">{% trans "A jogosultságokat a szerver oldali szerepkör-ellenőrzés adja (szerepkör-forrás: farm-tulajdonos, illetve aktív tagság)." %}</p>
+<ul><li>{% trans "Tulajdonos: teljes jog, meghívás és szerepváltás." %}</li><li>{% trans "Menedzser: profil, tanács, csevegés és tervek." %}</li><li>{% trans "Munkatárs: teendők és csevegés; a munkaterv olvasható, de nem készíthető újra. Meghívás nem." %}</li><li>{% trans "Megfigyelő: csak olvasás; csevegés-küldés és meghívás nem." %}</li></ul>
+{% if new_invite_link %}<p>{% blocktrans with email=new_invite_email %}Meghívó link ({{ email }}):{% endblocktrans %} <a href="{{ new_invite_link }}">{{ new_invite_link }}</a></p>{% endif %}
+<p id="invite-flow-help">{% trans "A meghívott e-mail-címével kell regisztrálni vagy bejelentkezni, majd a meghívólinket megnyitva elfogadni. E-mail értesítést nem küldünk; a linket itt adjuk át." %}</p>
+<h2>{% trans "Új meghívó" %}</h2>
+<form method="post" action="{% url 'invite' %}">{% csrf_token %}{{ form.as_p }}<button type="submit" class="btn secondary">{% trans "Meghívás" %}</button></form>
+<h2>{% trans "Aktív farm váltása" %}</h2>
+{% for f in farms %}<form method="post" action="{% url 'select_active_farm' %}">{% csrf_token %}<input type="hidden" name="farm_id" value="{{ f.id }}"><button type="submit" class="btn secondary">{{ f.name }}</button></form>{% endfor %}
+<h2>{% trans "Külső kapcsolattartók" %}</h2>
+<p><a class="btn secondary" href="{% url 'external_contact_list' %}">{% trans "Külső kapcsolattartók kezelése" %}</a></p>
+<h2>{% trans "Tagságok" %}</h2>
+<ul>{% for m in memberships %}<li>{{ m.user.email }} — {{ m.get_role_display }}</li>{% endfor %}</ul>
+<h2>{% trans "Függő meghívók" %}</h2>
+<ul>{% for i in invitations %}<li>{{ i.email }} — {{ i.get_role_display }}</li>{% endfor %}</ul>
+{% endblock %}

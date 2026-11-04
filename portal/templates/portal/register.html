@@ -1,0 +1,12 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<div class="card">
+<h1>{% trans "Regisztráció" %}</h1>
+<p class="muted">{% blocktrans %}Kérjük, regisztráció előtt olvassa el a <a href="/tudnivalok/">tájékoztatókat</a>. Az ÁSZF és az adatkezelési tájékoztató elfogadása kötelező; a felhőadat-kezelési hozzájárulás külön, önkéntes és később visszavonható.{% endblocktrans %}</p>
+<form method="post">{% csrf_token %}
+{{ form.as_p }}
+<button class="btn" type="submit">{% trans "Fiók létrehozása" %}</button>
+</form>
+<p class="muted">{% trans "Már van fiókja?" %} <a href="{% url 'login' %}">{% trans "Bejelentkezés" %}</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{{ title }}</h1>
+<p>{{ obj.event_date }} — {{ obj.get_kind_display }} ({{ obj.headcount_delta }})</p>
+<p>{% trans "A visszavonás visszafordítja a létszámmozgást. A kapcsolt naplóbejegyzés megmarad." %}</p>
+<form method="post">{% csrf_token %}<button type="submit" class="btn">{% trans "Visszavonás" %}</button> <a href="{% url 'livestock_detail' pk=obj.group_id %}">{% trans "Mégse" %}</a></form>
+</div>{% endblock %}

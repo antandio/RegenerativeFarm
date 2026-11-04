@@ -1,0 +1,12 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<div class="card">
+<h1>{% trans "Bejelentkezés" %}</h1>
+<form method="post">{% csrf_token %}
+{{ form.as_p }}
+<button class="btn" type="submit">{% trans "Belépés" %}</button>
+</form>
+<p class="muted">{% trans "Még nincs fiókja?" %} <a href="{% url 'register' %}">{% trans "Regisztráció" %}</a> · <a href="{% url 'info' %}">{% trans "Tájékoztatók" %}</a></p>
+<p class="muted">{% trans "A bejelentkezés kész, ellenőrzött keretrendszer-hitelesítéssel működik; jelszavát csak titkosított hash formában tároljuk." %}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% trans "Időjárás" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Időjárás" %}</h1>
+<p>{% trans "Forrás" %}: {{ source }} ({{ license }}) · {% trans "Olvasás gyorsítótárból; frissítés csak gombnyomásra." %}</p>
+<form method="post" action="{% url 'weather_refresh' %}">{% csrf_token %}
+<select name="scope" aria-label="{% trans 'Időjárás' %}">
+<option value="both">{% trans "Aktuális + éghajlati" %}</option>
+<option value="current">{% trans "Csak aktuális" %}</option>
+<option value="climate">{% trans "Csak éghajlati" %}</option>
+</select>
+<button type="submit">{% trans "Frissítés" %}</button>
+</form>
+{% include "portal/_weather_icons.html" %}
+{% for e in entries %}
+<section class="card weather-card">
+<h2>{{ e.loc.name }} ({{ e.loc.latitude }}, {{ e.loc.longitude }} · {{ e.loc.timezone }})</h2>
+{% if e.fstatus == "missing" %}
+<p class="warn">{% trans "Előrejelzés hiányzik – kérjen frissítést." %}</p>
+<p><span class="weather-cond"><svg class="weather-icon" aria-hidden="true"><use href="#wx-unknown"></use></svg><span>{% trans "Nem elérhető" %}</span></span></p>
+{% else %}
+{% if e.fstatus != "fresh" %}<p class="warn">{% trans "Gyorsítótárazott / elavult adat." %} ({{ e.fstatus }})</p>{% endif %}
+{% if e.forecast %}
+<p>{% trans "Aktuális" %}: {{ e.forecast.current.temperature }} {{ e.forecast.units.temperature }} ·
+{{ e.forecast.current.precipitation }} {{ e.forecast.units.precipitation }} ·
+{{ e.forecast.current.wind_speed }} {{ e.forecast.units.wind }} ·
+{{ e.forecast.current.time }} · <span class="weather-cond"><svg class="weather-icon" aria-hidden="true"><use href="#{{ e.current_icon.id }}"></use></svg><span>{{ e.current_icon.label }}</span></span> · {% trans "lekérve" %}: {{ e.forecast.fetched_at }}</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans 'Napi előrejelzés' %}"><table>
+<tr><th>{% trans "Nap" %}</th><th>{% trans "Max" %}</th><th>{% trans "Min" %}</th><th>{% trans "Csapadék" %}</th><th>{% trans "Szél max" %}</th><th>{% trans "Állapot" %}</th></tr>
+{% for d in e.days %}
+<tr><td>{{ d.date }}</td><td>{{ d.tmax }}</td><td>{{ d.tmin }}</td><td>{{ d.precip_sum }}</td><td>{{ d.wind_max }}</td><td><span class="weather-cond"><svg class="weather-icon" aria-hidden="true"><use href="#{{ d.icon_id }}"></use></svg><span>{{ d.icon_label }}</span></span></td></tr>
+{% endfor %}
+</table></div>
+<ul>{% for n in e.notes %}<li>{{ n }}</li>{% endfor %}</ul>
+{% else %}
+<p><span class="weather-cond"><svg class="weather-icon" aria-hidden="true"><use href="#{{ e.current_icon.id }}"></use></svg><span>{{ e.current_icon.label }}</span></span></p>
+{% endif %}
+{% endif %}
+{% if e.cstatus == "missing" %}
+<p class="warn">{% trans "Éghajlati alap hiányzik." %}</p>
+{% else %}
+{% if e.climate %}
+<p>{{ e.climate.label }} · {{ e.climate.period }} · {% trans "lekérve" %}: {{ e.climate.fetched_at }}</p>
+<p><em>{{ e.climate.limitation }}</em></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans 'Havi éghajlati átlagok' %}"><table>
+<tr><th>{% trans "Hó" %}</th><th>{% trans "Átlag max" %}</th><th>{% trans "Átlag min" %}</th><th>{% trans "Csapadék átlag" %}</th></tr>
+{% for m in e.climate.monthly %}
+<tr><td>{{ m.month }}</td><td>{{ m.tmax_mean }}</td><td>{{ m.tmin_mean }}</td><td>{{ m.precip_mean }}</td></tr>
+{% endfor %}
+</table></div>
+{% endif %}
+{% endif %}
+</section>
+{% empty %}
+<p>{% trans "Nincs helyszín." %}</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,4 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{{ title }}</h1>
+<p>{% if obj.is_active %}{% trans "Biztosan archiválja?" %} {{ obj.name }} — {% trans "Az előzmények megmaradnak." %}{% else %}{% trans "Biztosan visszaállítja?" %} {{ obj.name }}{% endif %}</p>
+<form method="post">{% csrf_token %}<button type="submit" class="btn">{% if obj.is_active %}{% trans "Archiválás" %}{% else %}{% trans "Visszaállítás" %}{% endif %}</button> <a href="{% url 'livestock_detail' pk=obj.pk %}">{% trans "Mégse" %}</a></form>
+</div>{% endblock %}

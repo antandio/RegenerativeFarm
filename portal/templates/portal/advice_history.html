@@ -1,0 +1,11 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Előzmények – utolsó 5 tanács" %}</h1>
+<div class="card">
+<p class="muted">{% trans "A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan." %}</p>
+{% for r in runs %}
+{% include "portal/_provenance.html" with prov=r.prov %}
+<p><a href="{% url 'advice_detail' r.id %}">{{ r.attempt_started_at|date:"DATETIME_FORMAT" }} – {% if r.status == 'success' %}{% trans "sikeres" %}{% elif r.status == 'failed' %}{% trans "sikertelen" %}{% else %}{% trans "függőben" %}{% endif %}</a> · {% trans "modell:" %} {{ r.actual_model|default:r.requested_model }} · {% trans "profilverzió:" %} {{ r.profile_snapshot.profile_version }} · {% trans "nyelv:" %} {{ r.language }} {% if r.source == 'seed' %}<span class="pill seed">seed</span>{% endif %} {% if r.status == 'failed' %}<span class="muted">{{ r.error_message_safe }}</span>{% endif %}</p>
+{% empty %}<p class="muted">{% trans "Még nincs tanácskísérlet." %}</p>{% endfor %}
+</div>
+{% endblock %}

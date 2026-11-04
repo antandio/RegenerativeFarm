@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% blocktrans with name=obj.name %}Hírforrás törlése — {{ name }}{% endblocktrans %}{% endblock %}
+{% block content %}
+<h1>{% blocktrans with name=obj.name %}Hírforrás törlése — {{ name }}{% endblocktrans %}</h1>
+<p>{% trans "Biztosan törlöd a hírforrást? A művelet nem vonható vissza." %}</p>
+<form method="post">{% csrf_token %}<button type="submit" class="btn">{% trans "Törlés" %}</button>
+<a class="btn secondary" href="{% url 'news_source_detail' pk=obj.pk %}">{% trans "Mégse" %}</a></form>
+{% endblock %}

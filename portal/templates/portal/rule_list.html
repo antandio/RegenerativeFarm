@@ -1,0 +1,9 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% trans "Szabályleírások" %}{% endblock %}
+{% block content %}
+<h1>{% trans "Szabályleírások" %}</h1>
+<p class="muted">{% trans "Saját leírásaid, valamint mások nyilvános leírásai. Tárolt szöveges leírás: a rendszer nem ellenőrzi és nem hajtja végre, jogi megfelelést nem garantál." %}</p>
+<p><a class="btn" href="{% url 'rule_new' %}">{% trans "Új szabályleírás" %}</a>
+<a class="btn secondary" href="{% url 'rule_category_new' %}">{% trans "Új kategória" %}</a></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{% trans "Szabályleírások" %}"><table class="domain-table knowledge-table"><caption>{% trans "Szabályleírások" %}</caption><thead><tr><th scope="col">{% trans "Név" %}</th><th scope="col">{% trans "Kategória" %}</th><th scope="col">{% trans "Állapot" %}</th><th scope="col">{% trans "Műveletek" %}</th></tr></thead><tbody>{% for r in items %}<tr><th scope="row"><a href="{% url 'rule_detail' pk=r.pk %}">{{ r.name }}</a></th><td>{% if r.category %}{{ r.category.name }}{% else %}—{% endif %}</td><td>{% if r.is_public %}<span class="badge">{% trans "Nyilvános" %}</span>{% else %}<span class="muted">{% trans "Privát" %}</span>{% endif %}</td><td><a class="row-action" href="{% url 'rule_detail' pk=r.pk %}">{% trans "Megnyitás" %}</a></td></tr>{% empty %}<tr><td colspan="4" class="muted">{% trans "Még nincs szabályleírás." %}</td></tr>{% endfor %}</tbody></table></div><p class="scroll-hint">{% trans "A táblázatok vízszintesen görgethetők." %}</p>
+{% endblock %}

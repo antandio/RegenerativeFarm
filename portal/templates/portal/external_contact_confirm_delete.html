@@ -1,0 +1,8 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{% blocktrans with name=obj.name %}Kapcsolattartó törlése — {{ name }}{% endblocktrans %}{% endblock %}
+{% block content %}
+<h1>{% blocktrans with name=obj.name %}Kapcsolattartó törlése — {{ name }}{% endblocktrans %}</h1>
+<p>{% trans "A törlés végleges, a személy előzmény nélkül eltűnik a listáról." %}</p>
+<form method="post">{% csrf_token %}<button type="submit" class="btn">{% trans "Törlés megerősítése" %}</button>
+<a class="btn secondary" href="{% url 'external_contact_detail' pk=obj.pk %}">{% trans "Mégse" %}</a></form>
+{% endblock %}

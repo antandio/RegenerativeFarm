@@ -1,0 +1,36 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<div class="page-heading"><h1>{% trans "Áttekintés" %}</h1><div class="actions"><a class="btn" href="{% url 'plans' %}">{% trans "Munkaterv" %}</a><a class="btn secondary" href="{% url 'actions' %}">{% trans "Teendők" %}</a><a class="btn secondary" href="{% url 'weather' %}">{% trans "Időjárás" %}</a><a class="btn secondary" href="{% url 'event_list' %}">{% trans "Gazdálkodási napló" %}</a></div></div>
+{% if not farm %}
+<div class="card"><h2>{% trans "Még nincs gazdasága" %}</h2><p>{% trans "Hozza létre egyetlen gazdaságát a kezdéshez." %}</p><a class="btn" href="{% url 'farm' %}">{% trans "Gazdaság létrehozása" %}</a></div>
+{% else %}
+<div class="card">
+<h2>{% trans "Következő teendő" %}</h2>{% if next_task %}<p>{{ next_task.text }}</p>{% else %}<p class="muted">{% trans "Nincs nyitott teendő." %}</p>{% endif %}
+<h2>{% trans "Időjárás-állapot" %}</h2>{% if weather_status %}<p class="muted">{{ weather_status }}</p>{% else %}<p class="muted">{% trans "Időjárás: nincs gyorsítótárazott adat." %}</p>{% endif %}
+<h2>{% trans "Utolsó tanács" %}</h2><p>{% if last_advice %}{{ last_advice.steps.first.title }}{% else %}{% trans "Még nincs sikeres tanács." %}{% endif %}</p>
+{% if last_prov %}{% include "portal/_provenance.html" with prov=last_prov %}{% endif %}
+</div>
+<div class="card">
+<h2>{{ farm.name }}</h2>
+<p class="muted">{% trans "Profilverzió:" %} {{ farm.profile_version }} · {% trans "Felhőhozzájárulás:" %} {% if consent_granted %}{% trans "megadva" %}{% else %}{% trans "nincs megadva" %}{% endif %}</p>
+{% if missing %}<p>{% trans "Hiányzó profiltények:" %} {% for m in missing_labels %}<span class="missing">{{ m }}: {% trans "nincs megadva" %}</span>{% if not forloop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+<p><a class="btn" href="{% url 'advice_request' %}">{% trans "Új tanács kérése" %}</a> <a class="btn secondary" href="{% url 'farm' %}">{% trans "Profil szerkesztése" %}</a></p>
+<p class="muted">{% trans "A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan." %}</p>
+</div>
+<div class="card"><details class="advice-summary"><summary>{% trans "Utolsó tanács" %}</summary>
+{% if last_advice %}
+{% if last_advice.result_is_general %}<span class="pill general">{% trans "Általános, oktató jellegű tájékoztatás – nem gazdaságspecifikus előírás" %}</span>{% endif %}
+{% if last_advice.source == 'seed' %}<span class="pill seed">{% trans "Minta (seed) – nem élő modelltanács" %}</span>{% endif %}
+{% for s in last_advice.steps.all %}
+<div class="step"><span class="pos">{{ s.position }}</span><strong>{{ s.title }}</strong><p>{{ s.action_text }}</p><p class="muted">{% trans "Indoklás:" %} {{ s.rationale }}</p><p class="muted">{% trans "Kockázat:" %} {{ s.risk_note }}</p></div>
+{% endfor %}
+<p><a href="{% url 'advice_detail' last_advice.id %}">{% trans "Részletek és eredetadatok" %}</a></p>
+{% else %}<p class="muted">{% trans "Még nincs sikeres tanács. Kérjen tanácsot a profilja alapján." %}</p>{% endif %}
+</details>
+</div>
+<div class="grid2">
+<div class="card"><h2>{% trans "Nyitott teendők" %}</h2>{% for a in open_actions %}<p>• {{ a.text }} <span class="pill open">{% trans "Nyitott" %}</span></p>{% empty %}<p class="muted">{% trans "Nincs nyitott teendő." %}</p>{% endfor %}<a href="{% url 'actions' %}">{% trans "Összes teendő" %}</a></div>
+<div class="card"><h2>{% trans "Kész teendők" %}</h2>{% for a in done_actions %}<p>• {{ a.text }} <span class="pill done">{% trans "Kész" %}</span></p>{% empty %}<p class="muted">{% trans "Még nincs kész teendő." %}</p>{% endfor %}</div>
+</div>
+{% endif %}
+{% endblock %}

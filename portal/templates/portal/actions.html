@@ -1,0 +1,7 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block content %}
+<h1>{% trans "Teendők" %}</h1>
+<div class="card"><h2>{% trans "Új saját teendő" %}</h2><form method="post" action="{% url 'action_create' %}">{% csrf_token %}{{ form.as_p }}<button class="btn" type="submit">{% trans "Teendő mentése" %}</button></form><p class="muted">{% trans "A teendő az Ön saját vállalása. Határidő és emlékeztető ebben a verzióban nincs." %}</p><p class="muted">{% trans "A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan." %}</p></div>
+<div class="card"><h2>{% trans "Nyitott" %}</h2>{% for a in open_actions %}<p>{{ a.text }} <span class="pill open">{% trans "Nyitott" %}</span> <a href="{% url 'action_edit' a.id %}">{% trans "Szerkesztés" %}</a></p><form method="post" action="{% url 'action_toggle' a.id %}" class="inline-action">{% csrf_token %}<button class="btn small" type="submit">{% trans "Késznek jelölöm" %}</button></form> <a href="{% url 'action_delete' a.id %}">{% trans "Törlés" %}</a>{% empty %}<p class="muted">{% trans "Nincs nyitott teendő." %}</p>{% endfor %}</div>
+<div class="card"><h2>{% trans "Kész" %}</h2>{% for a in done_actions %}<p>{{ a.text }} <span class="pill done">{% trans "Kész" %}</span></p><form method="post" action="{% url 'action_toggle' a.id %}" class="inline-action">{% csrf_token %}<button class="btn small secondary" type="submit">{% trans "Újranyitom" %}</button></form>{% empty %}<p class="muted">{% trans "Még nincs kész teendő." %}</p>{% endfor %}</div>
+{% endblock %}

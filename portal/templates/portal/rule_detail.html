@@ -1,0 +1,12 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{{ obj.name }}{% endblock %}
+{% block content %}
+<h1>{{ obj.name }}
+{% if obj.is_public %}<span class="badge">{% trans "Nyilvános" %}</span>{% else %}<span class="muted">{% trans "Privát" %}</span>{% endif %}</h1>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{{ obj.name }}"><table class="domain-table knowledge-meta"><caption>{{ obj.name }}</caption><tbody><tr><th scope="row">{% trans "Név" %}</th><td>{{ obj.name }}</td></tr>{% if obj.category %}<tr><th scope="row">{% trans "Kategória" %}</th><td>{{ obj.category.name }}</td></tr>{% endif %}<tr><th scope="row">{% trans "Állapot" %}</th><td>{% if obj.is_public %}<span class="badge">{% trans "Nyilvános" %}</span>{% else %}<span class="muted">{% trans "Privát" %}</span>{% endif %}</td></tr><tr><th scope="row">{% trans "Frissítve" %}</th><td>{{ obj.updated_at|date:"Y-m-d H:i" }}</td></tr></tbody></table></div><p class="scroll-hint">{% trans "A táblázatok vízszintesen görgethetők." %}</p>
+<p class="muted">{% trans "Tárolt szöveges leírás: a rendszer nem ellenőrzi és nem hajtja végre, jogi megfelelést nem garantál." %}</p>
+<h2>{% trans "Szabály szövege" %}</h2>
+<pre class="rule-body">{{ obj.body }}</pre>
+<p><a class="btn secondary" href="{% url 'rule_list' %}">{% trans "Szabályleírások" %}</a>{% if obj.owner_id == user.id %}
+<a class="btn secondary" href="{% url 'rule_edit' pk=obj.pk %}">{% trans "Szerkesztés" %}</a>{% endif %}</p>
+{% endblock %}

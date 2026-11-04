@@ -1,0 +1,4943 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-03 00:27+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: portal/chat.py:68 portal/templates/portal/base.html:30
+#: portal/templates/portal/dashboard.html:3
+msgid "Áttekintés"
+msgstr "Áttekintés"
+
+#: portal/chat.py:69 portal/templates/portal/base.html:31
+#: portal/templates/portal/farm.html:3
+msgid "Gazdaságom"
+msgstr "Gazdaságom"
+
+#: portal/chat.py:70 portal/templates/portal/base.html:31
+#: portal/templates/portal/domain_list.html:1
+msgid "Helyszínek"
+msgstr "Helyszínek"
+
+#: portal/chat.py:71 portal/domain_views.py:64
+#: portal/templates/portal/domain_list.html:13
+msgid "Új helyszín"
+msgstr "Új helyszín"
+
+#: portal/chat.py:72 portal/domain_forms.py:94
+#: portal/templates/portal/base.html:31
+#: portal/templates/portal/domain_list.html:1
+#: portal/templates/portal/domain_list.html:9
+#: portal/templates/portal/utilization.html:12
+msgid "Területek"
+msgstr "Területek"
+
+#: portal/chat.py:73 portal/domain_views.py:223
+#: portal/templates/portal/domain_list.html:13
+msgid "Új terület"
+msgstr "Új terület"
+
+#: portal/chat.py:74 portal/templates/portal/base.html:31
+#: portal/templates/portal/domain_list.html:1
+#: portal/templates/portal/utilization.html:12
+msgid "Gépek"
+msgstr "Gépek"
+
+#: portal/chat.py:75 portal/domain_views.py:297
+#: portal/templates/portal/domain_list.html:13
+msgid "Új gép"
+msgstr "Új gép"
+
+#: portal/chat.py:76 portal/domain_forms.py:279
+#: portal/templates/portal/base.html:31
+msgid "Vetésforgó"
+msgstr "Vetésforgó"
+
+#: portal/chat.py:77 portal/domain_views.py:368
+#: portal/templates/portal/domain_list.html:13
+msgid "Új vetésforgó"
+msgstr "Új vetésforgó"
+
+#: portal/chat.py:78 portal/templates/portal/base.html:35
+#: portal/templates/portal/external_contact_list.html:7
+#: portal/templates/portal/members.html:2
+msgid "Tagok"
+msgstr "Tagok"
+
+#: portal/chat.py:79 portal/templates/portal/members.html:13
+msgid "Meghívás"
+msgstr "Meghívás"
+
+#: portal/chat.py:80 portal/templates/portal/base.html:32
+#: portal/templates/portal/dashboard.html:3
+#: portal/templates/portal/plans.html:1
+msgid "Munkaterv"
+msgstr "Munkaterv"
+
+#: portal/chat.py:81 portal/templates/portal/base.html:32
+#: portal/templates/portal/dashboard.html:3
+#: portal/templates/portal/weather.html:2
+#: portal/templates/portal/weather.html:4
+#: portal/templates/portal/weather.html:7
+msgid "Időjárás"
+msgstr "Időjárás"
+
+#: portal/chat.py:82
+#, fuzzy
+#| msgid "Időjárási bizonyíték"
+msgid "Időjárás-frissítés"
+msgstr "Időjárási bizonyíték"
+
+#: portal/chat.py:83 portal/templates/portal/advice_request.html:3
+#: portal/templates/portal/base.html:34
+msgid "Tanács kérése"
+msgstr "Tanács kérése"
+
+#: portal/chat.py:84
+#, fuzzy
+#| msgid "Előzmények"
+msgid "Tanácselőzmények"
+msgstr "Előzmények"
+
+#: portal/chat.py:85 portal/templates/portal/actions.html:3
+#: portal/templates/portal/base.html:32
+#: portal/templates/portal/dashboard.html:3
+msgid "Teendők"
+msgstr "Teendők"
+
+#: portal/chat.py:86
+#, fuzzy
+#| msgid "Új saját teendő"
+msgid "Új teendő"
+msgstr "Új saját teendő"
+
+#: portal/chat.py:87 portal/templates/portal/account.html:4
+#: portal/templates/portal/base.html:35
+msgid "Fiók"
+msgstr "Fiók"
+
+#: portal/chat.py:88
+#, fuzzy
+#| msgid "Hozzájárulás:"
+msgid "Hozzájárulás"
+msgstr "Hozzájárulás:"
+
+#: portal/chat.py:89
+#, fuzzy
+#| msgid "Fiókom törlése…"
+msgid "Fiók törlése"
+msgstr "Fiókom törlése…"
+
+#: portal/chat.py:90
+#, fuzzy
+#| msgid "Adataim letöltése (JSON)"
+msgid "Adatok letöltése"
+msgstr "Adataim letöltése (JSON)"
+
+#: portal/chat.py:91 portal/templates/portal/base.html:34
+#: portal/templates/portal/chat.html:2 portal/templates/portal/chat.html:4
+msgid "Csevegés"
+msgstr "Csevegés"
+
+#: portal/chat.py:124
+msgid "A csevegés időtúllépés miatt nem sikerült. Kérjük, próbálja újra."
+msgstr "A csevegés időtúllépés miatt nem sikerült. Kérjük, próbálja újra."
+
+#: portal/chat.py:125
+msgid ""
+"A csevegő szolgáltatás átmenetileg nem elérhető. Kérjük, próbálja újra "
+"később."
+msgstr ""
+"A csevegő szolgáltatás átmenetileg nem elérhető. Kérjük, próbálja újra "
+"később."
+
+#: portal/chat.py:126
+msgid ""
+"A válasz formátuma nem volt megfelelő, ezért nem jelenítjük meg. Kérjük, "
+"próbálja újra."
+msgstr ""
+"A válasz formátuma nem volt megfelelő, ezért nem jelenítjük meg. Kérjük, "
+"próbálja újra."
+
+#: portal/chat.py:127 portal/chat_views.py:80
+msgid "Csevegéshez felhőadat-kezelési hozzájárulás szükséges."
+msgstr "Csevegéshez felhőadat-kezelési hozzájárulás szükséges."
+
+#: portal/chat.py:128
+msgid "A hozzájárulás visszavonásra került, ezért a válasz nem készült el."
+msgstr "A hozzájárulás visszavonásra került, ezért a válasz nem készült el."
+
+#: portal/chat.py:129
+msgid "Elérte a kérési keretet. Kérjük, próbálja később."
+msgstr "Elérte a kérési keretet. Kérjük, próbálja később."
+
+#: portal/chat.py:130 portal/services.py:20
+msgid "A szolgáltatás napi kerete betelt. Kérjük, próbálja holnap."
+msgstr "A szolgáltatás napi kerete betelt. Kérjük, próbálja holnap."
+
+#: portal/chat.py:131
+msgid "A korábbi csevegés megszakadt. Kérjük, próbálja újra."
+msgstr "A korábbi csevegés megszakadt. Kérjük, próbálja újra."
+
+#: portal/chat.py:132 portal/services.py:22
+msgid "A beküldött adatok érvénytelenek."
+msgstr "A beküldött adatok érvénytelenek."
+
+#: portal/chat.py:133
+msgid "Ehhez nincs jogosultsága."
+msgstr "Ehhez nincs jogosultsága."
+
+#: portal/chat.py:142 portal/services.py:31
+msgid "A kérés nem teljesíthető."
+msgstr "A kérés nem teljesíthető."
+
+#: portal/chat_models.py:13 portal/chat_models.py:52 portal/models.py:99
+#: portal/templates/portal/advice_detail.html:5
+#: portal/templates/portal/advice_history.html:8
+msgid "függőben"
+msgstr "függőben"
+
+#: portal/chat_models.py:13 portal/models.py:99
+#: portal/templates/portal/advice_detail.html:5
+#: portal/templates/portal/advice_history.html:8
+msgid "sikeres"
+msgstr "sikeres"
+
+#: portal/chat_models.py:13 portal/chat_models.py:52 portal/models.py:99
+#: portal/templates/portal/advice_detail.html:5
+#: portal/templates/portal/advice_history.html:8
+msgid "sikertelen"
+msgstr "sikertelen"
+
+#: portal/chat_models.py:50
+msgid "Teendő létrehozása"
+msgstr "Teendő létrehozása"
+
+#: portal/chat_models.py:50
+msgid "Teendő állapotváltása"
+msgstr "Teendő állapotváltása"
+
+#: portal/chat_models.py:51
+msgid "Tervkészítés"
+msgstr "Tervkészítés"
+
+#: portal/chat_models.py:51
+msgid "Navigáció"
+msgstr "Navigáció"
+
+#: portal/chat_models.py:52
+msgid "végrehajtva"
+msgstr "végrehajtva"
+
+#: portal/chat_views.py:76
+msgid ""
+"A küldéshez kifejezett költség- és hozzájárulási megerősítés szükséges."
+msgstr ""
+"A küldéshez kifejezett költség- és hozzájárulási megerősítés szükséges.A "
+"küldéshez kifejezett költség- és hozzájárulási megerősítés szükséges."
+
+#: portal/chat_views.py:100
+msgid "Válasz megérkezett. Az írási javaslatok jóváhagyásra várnak."
+msgstr "Válasz megérkezett. Az írási javaslatok jóváhagyásra várnak."
+
+#: portal/chat_views.py:102
+msgid "A válasz nem készült el."
+msgstr "A válasz nem készült el."
+
+#: portal/chat_views.py:120
+msgid "Tulajdonos"
+msgstr "Tulajdonos"
+
+#: portal/chat_views.py:120 portal/models.py:221
+msgid "Menedzser"
+msgstr "Menedzser"
+
+#: portal/chat_views.py:121 portal/models.py:221
+msgid "Munkatárs"
+msgstr "Munkatárs"
+
+#: portal/chat_views.py:121 portal/models.py:221
+msgid "Megfigyelő"
+msgstr "Megfigyelő"
+
+#: portal/chat_views.py:137 portal/templates/portal/chat.html:44
+msgid "Tervkészítés hatása: munkaterv-tervezet"
+msgstr "Tervkészítés hatása: munkaterv-tervezet"
+
+#: portal/chat_views.py:163
+msgid "Javaslat végrehajtva."
+msgstr "Javaslat végrehajtva."
+
+#: portal/context_processors.py:21
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Áttekintés – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:22
+msgid "Gazdaságom – gazdaportál"
+msgstr "Gazdaságom – gazdaportál"
+
+#: portal/context_processors.py:23
+msgid "Helyszínek – gazdaportál"
+msgstr "Helyszínek – gazdaportál"
+
+#: portal/context_processors.py:24
+#, fuzzy
+#| msgid "Új helyszín"
+msgid "Új helyszín – gazdaportál"
+msgstr "Új helyszín"
+
+#: portal/context_processors.py:25
+#, fuzzy
+#| msgid "Helyszín szerkesztése"
+msgid "Helyszín szerkesztése – gazdaportál"
+msgstr "Helyszín szerkesztése"
+
+#: portal/context_processors.py:26
+#, fuzzy
+#| msgid "Helyszín törlése"
+msgid "Helyszín törlése – gazdaportál"
+msgstr "Helyszín törlése"
+
+#: portal/context_processors.py:27
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Területek – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:28
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Új terület – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:29
+#, fuzzy
+#| msgid "Terület szerkesztése"
+msgid "Terület szerkesztése – gazdaportál"
+msgstr "Terület szerkesztése"
+
+#: portal/context_processors.py:30
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Terület törlése – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:31
+msgid "Gépek – gazdaportál"
+msgstr "Gépek – gazdaportál"
+
+#: portal/context_processors.py:32
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Új gép – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:33
+#, fuzzy
+#| msgid "Gép szerkesztése"
+msgid "Gép szerkesztése – gazdaportál"
+msgstr "Gép szerkesztése"
+
+#: portal/context_processors.py:34
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Gép törlése – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:35
+#, fuzzy
+#| msgid "Vetésforgó törlése"
+msgid "Vetésforgó – gazdaportál"
+msgstr "Vetésforgó törlése"
+
+#: portal/context_processors.py:36
+#, fuzzy
+#| msgid "Új vetésforgó"
+msgid "Új vetésforgó – gazdaportál"
+msgstr "Új vetésforgó"
+
+#: portal/context_processors.py:37
+#, fuzzy
+#| msgid "Vetésforgó szerkesztése"
+msgid "Vetésforgó szerkesztése – gazdaportál"
+msgstr "Vetésforgó szerkesztése"
+
+#: portal/context_processors.py:38
+#, fuzzy
+#| msgid "Vetésforgó törlése"
+msgid "Vetésforgó törlése – gazdaportál"
+msgstr "Vetésforgó törlése"
+
+#: portal/context_processors.py:39
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Megfigyelés – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:40
+msgid "Gazdálkodási napló – gazdaportál"
+msgstr "Gazdálkodási napló – gazdaportál"
+
+#: portal/context_processors.py:41
+msgid "Új bejegyzés – gazdaportál"
+msgstr "Új bejegyzés – gazdaportál"
+
+#: portal/context_processors.py:42
+msgid "Bejegyzés szerkesztése – gazdaportál"
+msgstr "Bejegyzés szerkesztése – gazdaportál"
+
+#: portal/context_processors.py:43
+msgid "Bejegyzés törlése – gazdaportál"
+msgstr "Bejegyzés törlése – gazdaportál"
+
+#: portal/context_processors.py:44
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Munkaterv – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:45
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Kihasználtság – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:46
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Időjárás – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:47
+msgid "Időjárás-frissítés – gazdaportál"
+msgstr "Időjárás-frissítés – gazdaportál"
+
+#: portal/context_processors.py:48
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Teendők – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:49
+msgid "Új teendő – gazdaportál"
+msgstr "Új teendő – gazdaportál"
+
+#: portal/context_processors.py:50
+#, fuzzy
+#| msgid "Teendő szerkesztése"
+msgid "Teendő szerkesztése – gazdaportál"
+msgstr "Teendő szerkesztése"
+
+#: portal/context_processors.py:51
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Teendő törlése – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:52
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Teendő állapota – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:53
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Mentés lépésből – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:54
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Csevegés – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:55
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Javaslat megerősítése – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:56
+#, fuzzy
+#| msgid "Tanács kérése"
+msgid "Tanács kérése – gazdaportál"
+msgstr "Tanács kérése"
+
+#: portal/context_processors.py:57
+msgid "Tanácselőzmények – gazdaportál"
+msgstr "Tanácselőzmények – gazdaportál"
+
+#: portal/context_processors.py:58
+#, fuzzy
+#| msgid "Tanács részletei"
+msgid "Tanács részletei – gazdaportál"
+msgstr "Tanács részletei"
+
+#: portal/context_processors.py:59
+msgid "Szabályleírások – gazdaportál"
+msgstr "Szabályleírások – gazdaportál"
+
+#: portal/context_processors.py:60
+msgid "Új szabályleírás – gazdaportál"
+msgstr "Új szabályleírás – gazdaportál"
+
+#: portal/context_processors.py:61
+msgid "Szabályleírás – gazdaportál"
+msgstr "Szabályleírás – gazdaportál"
+
+#: portal/context_processors.py:62
+msgid "Szabályleírás szerkesztése – gazdaportál"
+msgstr "Szabályleírás szerkesztése – gazdaportál"
+
+#: portal/context_processors.py:63
+msgid "Új kategória – gazdaportál"
+msgstr "Új kategória – gazdaportál"
+
+#: portal/context_processors.py:64
+msgid "Tagok – gazdaportál"
+msgstr "Tagok – gazdaportál"
+
+#: portal/context_processors.py:65
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Meghívás – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:66
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Meghívó visszavonása – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:67
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Szerepváltás – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:68
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Tag eltávolítása – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:69
+#, fuzzy
+#| msgid "Meghívó elfogadása"
+msgid "Meghívó elfogadása – gazdaportál"
+msgstr "Meghívó elfogadása"
+
+#: portal/context_processors.py:70
+msgid "Fiók – gazdaportál"
+msgstr "Fiók – gazdaportál"
+
+#: portal/context_processors.py:71
+#, fuzzy
+#| msgid "Hozzájárulás megadása"
+msgid "Hozzájárulás – gazdaportál"
+msgstr "Hozzájárulás megadása"
+
+#: portal/context_processors.py:72
+msgid "Adatexport – gazdaportál"
+msgstr "Adatexport – gazdaportál"
+
+#: portal/context_processors.py:73
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Adatexport tájékoztató – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:74
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Fiók törlése – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:75
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Tudnivalók – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:76
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Aktív farm váltása – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:77
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Belépés – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:78
+#, fuzzy
+#| msgid "Regeneratív átállás – gazdaportál"
+msgid "Regisztráció – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/context_processors.py:80
+msgid "Regeneratív átállás – gazdaportál"
+msgstr "Regeneratív átállás – gazdaportál"
+
+#: portal/document_forms.py:12
+msgid "Fájl"
+msgstr "Fájl"
+
+#: portal/document_forms.py:13
+msgid "PDF, TXT, MD, CSV, DOCX, legfeljebb 10 MiB."
+msgstr "PDF, TXT, MD, CSV, DOCX, legfeljebb 10 MiB."
+
+#: portal/document_forms.py:21
+msgid "Dokumentum neve"
+msgstr "Dokumentum neve"
+
+#: portal/document_forms.py:22 portal/domain_forms.py:284
+#: portal/templates/portal/event_list.html:19
+msgid "Leírás"
+msgstr "Leírás"
+
+#: portal/document_forms.py:23 portal/domain_forms.py:330
+msgid "Nyilvános mások számára"
+msgstr "Nyilvános mások számára"
+
+#: portal/document_forms.py:26
+#| msgid "Leírás"
+msgid "Rövid leírás a dokumentumról."
+msgstr "Rövid leírás a dokumentumról."
+
+#: portal/document_forms.py:39 portal/document_forms.py:48
+#| msgid "A név kötelező."
+msgid "A fájl kötelező."
+msgstr "A fájl kötelező."
+
+#: portal/document_storage.py:72
+msgid "Nem támogatott fájltípus. Engedélyezett: PDF, TXT, MD, CSV, DOCX."
+msgstr "Nem támogatott fájltípus. Engedélyezett: PDF, TXT, MD, CSV, DOCX."
+
+#: portal/document_storage.py:83
+msgid "A szöveges fájl nem tartalmazhat NUL-bájtot."
+msgstr "A szöveges fájl nem tartalmazhat NUL-bájtot."
+
+#: portal/document_storage.py:87
+msgid "A szöveges fájlnak UTF-8 kódolásúnak kell lennie."
+msgstr "A szöveges fájlnak UTF-8 kódolásúnak kell lennie."
+
+#: portal/document_storage.py:92
+#| msgid "Érvénytelen óraszám."
+msgid "Érvénytelen DOCX-aláírás."
+msgstr "Érvénytelen DOCX-aláírás."
+
+#: portal/document_storage.py:96 portal/document_storage.py:126
+#| msgid "Érvénytelen óraszám."
+msgid "Érvénytelen DOCX-archívum."
+msgstr "Érvénytelen DOCX-archívum."
+
+#: portal/document_storage.py:101
+msgid "A DOCX túl sok fájlt tartalmaz."
+msgstr "A DOCX túl sok fájlt tartalmaz."
+
+#: portal/document_storage.py:106 portal/document_storage.py:108
+#| msgid "Érvénytelen meghívó-adatok."
+msgid "A DOCX érvénytelen útvonalat tartalmaz."
+msgstr "A DOCX érvénytelen útvonalat tartalmaz."
+
+#: portal/document_storage.py:110
+msgid "A DOCX makrót tartalmaz, nem tölthető fel."
+msgstr "A DOCX makrót tartalmaz, nem tölthető fel."
+
+#: portal/document_storage.py:113
+msgid "Titkosított DOCX nem tölthető fel."
+msgstr "Titkosított DOCX nem tölthető fel."
+
+#: portal/document_storage.py:115
+msgid "A DOCX egyik tagja túl nagy."
+msgstr "A DOCX egyik tagja túl nagy."
+
+#: portal/document_storage.py:118
+msgid "A DOCX kicsomagolt mérete túl nagy."
+msgstr "A DOCX kicsomagolt mérete túl nagy."
+
+#: portal/document_storage.py:120
+msgid "A DOCX tömörítési aránya gyanús."
+msgstr "A DOCX tömörítési aránya gyanús."
+
+#: portal/document_storage.py:122
+#| msgid "Érvénytelen szerep."
+msgid "Érvénytelen DOCX-szerkezet."
+msgstr "Érvénytelen DOCX-szerkezet."
+
+#: portal/document_storage.py:136
+msgid "Üres fájl nem tölthető fel."
+msgstr "Üres fájl nem tölthető fel."
+
+#: portal/document_storage.py:138 portal/document_storage.py:149
+msgid "A fájl túl nagy (legfeljebb 10 MiB)."
+msgstr "A fájl túl nagy (legfeljebb 10 MiB)."
+
+#: portal/document_storage.py:152
+#| msgid "Érvénytelen óraszám."
+msgid "Érvénytelen PDF-aláírás."
+msgstr "Érvénytelen PDF-aláírás."
+
+#: portal/document_storage.py:186
+msgid "Belső tárolási hiba."
+msgstr "Belső tárolási hiba."
+
+#: portal/document_views.py:59 portal/document_views.py:95
+#| msgid "Érvénytelen kategóriaadatok."
+msgid "Érvénytelen dokumentumadatok."
+msgstr "Érvénytelen dokumentumadatok."
+
+#: portal/document_views.py:82
+msgid "Dokumentum feltöltve."
+msgstr "Dokumentum feltöltve."
+
+#: portal/document_views.py:103 portal/document_views.py:128
+#| msgid "Teendő frissítve."
+msgid "Dokumentum frissítve."
+msgstr "Dokumentum frissítve."
+
+#: portal/document_views.py:165
+#| msgid "Teendő törölve."
+msgid "Dokumentum törölve."
+msgstr "Dokumentum törölve."
+
+#: portal/domain_forms.py:18
+msgid "Név"
+msgstr "Név"
+
+#: portal/domain_forms.py:19
+#: portal/templates/portal/external_contact_detail.html:8
+msgid "Telefonszám"
+msgstr "Telefonszám"
+
+#: portal/domain_forms.py:20
+#: portal/templates/portal/external_contact_detail.html:9
+#, fuzzy
+#| msgid "E-mail:"
+msgid "E-mail"
+msgstr "E-mail:"
+
+#: portal/domain_forms.py:21
+#: portal/templates/portal/external_contact_detail.html:12
+msgid "Kérhető munkák"
+msgstr "Kérhető munkák"
+
+#: portal/domain_forms.py:22
+#: portal/templates/portal/external_contact_detail.html:15
+msgid "Rövid leírás"
+msgstr "Rövid leírás"
+
+#: portal/domain_forms.py:23
+msgid "Elérhetőség (pl. mikor hívható)"
+msgstr "Elérhetőség (pl. mikor hívható)"
+
+#: portal/domain_forms.py:26
+msgid "Soronként egy munka (pl. szántás, vetés)."
+msgstr "Soronként egy munka (pl. szántás, vetés)."
+
+#: portal/domain_forms.py:33
+msgid "Helyszín neve"
+msgstr "Helyszín neve"
+
+#: portal/domain_forms.py:33 portal/templates/portal/domain_list.html:4
+msgid "Szélesség"
+msgstr "Szélesség"
+
+#: portal/domain_forms.py:33 portal/templates/portal/domain_list.html:4
+msgid "Hosszúság"
+msgstr "Hosszúság"
+
+#: portal/domain_forms.py:33 portal/templates/portal/domain_list.html:4
+msgid "Időzóna"
+msgstr "Időzóna"
+
+#: portal/domain_forms.py:37
+msgid "Határvonal (GeoJSON)"
+msgstr "Határvonal (GeoJSON)"
+
+#: portal/domain_forms.py:38
+msgid ""
+"Egy zárt Polygon gyűrű WGS84-ben, max. 200 pont, 32 KiB. Üresen hagyva nincs"
+" polygon."
+msgstr ""
+"Egy zárt Polygon gyűrű WGS84-ben, max. 200 pont, 32 KiB. Üresen hagyva nincs"
+" polygon."
+
+#: portal/domain_forms.py:39
+msgid "Pont szélesség"
+msgstr "Pont szélesség"
+
+#: portal/domain_forms.py:40
+msgid "Pont hosszúság"
+msgstr "Pont hosszúság"
+
+#: portal/domain_forms.py:45 portal/templates/portal/domain_list.html:7
+msgid "Helyszín"
+msgstr "Helyszín"
+
+#: portal/domain_forms.py:45
+msgid "Terület neve"
+msgstr "Terület neve"
+
+#: portal/domain_forms.py:45
+msgid "Típus"
+msgstr "Típus"
+
+#: portal/domain_forms.py:45 portal/templates/portal/domain_list.html:7
+msgid "Terület (ha)"
+msgstr "Terület (ha)"
+
+#: portal/domain_forms.py:45 portal/domain_forms.py:158
+#: portal/domain_forms.py:195 portal/domain_forms.py:220
+#: portal/domain_forms.py:266 portal/domain_forms.py:284
+msgid "Megjegyzés"
+msgstr "Megjegyzés"
+
+#: portal/domain_forms.py:65 portal/geometry.py:55
+msgid "A polygon JSON túl nagy (max. 32 KiB)."
+msgstr "A polygon JSON túl nagy (max. 32 KiB)."
+
+#: portal/domain_forms.py:71 portal/geometry.py:61 portal/geometry.py:63
+msgid "Érvénytelen polygon GeoJSON."
+msgstr "Érvénytelen polygon GeoJSON."
+
+#: portal/domain_forms.py:89 portal/domain_models.py:100
+msgid "A helyszín csak azonos farmhoz tartozhat."
+msgstr "A helyszín csak azonos farmhoz tartozhat."
+
+#: portal/domain_forms.py:93 portal/templates/portal/domain_list.html:9
+msgid "Képességek"
+msgstr "Képességek"
+
+#: portal/domain_forms.py:98
+msgid "Gép neve"
+msgstr "Gép neve"
+
+#: portal/domain_forms.py:98 portal/templates/portal/domain_list.html:9
+msgid "Elérhető"
+msgstr "Elérhető"
+
+#: portal/domain_forms.py:98 portal/templates/portal/domain_list.html:9
+msgid "Napi óraszám"
+msgstr "Napi óraszám"
+
+#: portal/domain_forms.py:133 portal/domain_models.py:177
+msgid "A géphez csak azonos farm területe rendelhető."
+msgstr "A géphez csak azonos farm területe rendelhető."
+
+#: portal/domain_forms.py:143 portal/domain_forms.py:284
+#: portal/templates/portal/domain_list.html:11
+#: portal/templates/portal/event_list.html:8
+#: portal/templates/portal/event_list.html:17
+#: portal/templates/portal/plans.html:20
+#: portal/templates/portal/utilization.html:9
+#: portal/templates/portal/utilization.html:47
+msgid "Terület"
+msgstr "Terület"
+
+#: portal/domain_forms.py:143
+msgid "Növény neve"
+msgstr "Növény neve"
+
+#: portal/domain_forms.py:143 portal/templates/portal/utilization.html:47
+msgid "Állapot"
+msgstr "Állapot"
+
+#: portal/domain_forms.py:143 portal/templates/portal/domain_list.html:11
+msgid "Fejlődési szakasz"
+msgstr "Fejlődési szakasz"
+
+#: portal/domain_forms.py:143 portal/templates/portal/domain_list.html:11
+msgid "Vetés dátuma"
+msgstr "Vetés dátuma"
+
+#: portal/domain_forms.py:143 portal/templates/portal/domain_list.html:11
+msgid "Várható befejezés"
+msgstr "Várható befejezés"
+
+#: portal/domain_forms.py:143 portal/templates/portal/domain_list.html:11
+msgid "Megfigyelések"
+msgstr "Megfigyelések"
+
+#: portal/domain_forms.py:152
+msgid "Szállás (terület)"
+msgstr "Szállás (terület)"
+
+#: portal/domain_forms.py:156
+msgid "Csoport neve"
+msgstr "Csoport neve"
+
+#: portal/domain_forms.py:156
+msgid "Faj"
+msgstr "Faj"
+
+#: portal/domain_forms.py:157
+msgid "Fajta / egyedi megnevezés"
+msgstr "Fajta / egyedi megnevezés"
+
+#: portal/domain_forms.py:157
+msgid "Induló létszám"
+msgstr "Induló létszám"
+
+#: portal/domain_forms.py:167 portal/domain_models.py:657
+msgid "A szállás csak azonos farm területén lehet."
+msgstr "A szállás csak azonos farm területén lehet."
+
+#: portal/domain_forms.py:184 portal/domain_forms.py:284
+#: portal/templates/portal/event_list.html:16
+msgid "Dátum"
+msgstr "Dátum"
+
+#: portal/domain_forms.py:185
+msgid "Eseménytípus"
+msgstr "Eseménytípus"
+
+#: portal/domain_forms.py:186
+msgid "Létszámváltozás"
+msgstr "Létszámváltozás"
+
+#: portal/domain_forms.py:187
+msgid ""
+"Születés/vásárlás: pozitív; eladás/elhullás/átmozgatás: negatív; "
+"egészség/legeltetés/egyéb: 0."
+msgstr ""
+"Születés/vásárlás: pozitív; eladás/elhullás/átmozgatás: negatív; "
+"egészség/legeltetés/egyéb: 0."
+
+#: portal/domain_forms.py:190
+msgid "Célcsoport (átmozgatásnál)"
+msgstr "Célcsoport (átmozgatásnál)"
+
+#: portal/domain_forms.py:193
+msgid "Terület (pl. legeltetés helye)"
+msgstr "Terület (pl. legeltetés helye)"
+
+#: portal/domain_forms.py:198
+msgid "Naplóbejegyzés készítése"
+msgstr "Naplóbejegyzés készítése"
+
+#: portal/domain_forms.py:199
+msgid "Egy „Egyéb” típusú tényleges naplóbejegyzés a gazdálkodási naplóba."
+msgstr "Egy „Egyéb” típusú tényleges naplóbejegyzés a gazdálkodási naplóba."
+
+#: portal/domain_forms.py:215
+msgid "Munka típusa"
+msgstr "Munka típusa"
+
+#: portal/domain_forms.py:218
+msgid "Terület (pl. legelő)"
+msgstr "Terület (pl. legelő)"
+
+#: portal/domain_forms.py:227
+msgid "Munka megnevezése"
+msgstr "Munka megnevezése"
+
+#: portal/domain_forms.py:227 portal/templates/portal/utilization.html:7
+#: portal/templates/portal/utilization.html:47
+msgid "Kezdés"
+msgstr "Kezdés"
+
+#: portal/domain_forms.py:228 portal/templates/portal/utilization.html:8
+#: portal/templates/portal/utilization.html:47
+msgid "Befejezés"
+msgstr "Befejezés"
+
+#: portal/domain_forms.py:228 portal/templates/portal/plans.html:9
+#: portal/templates/portal/utilization.html:47
+msgid "Becsült óra"
+msgstr "Becsült óra"
+
+#: portal/domain_forms.py:246 portal/domain_models.py:200
+#: portal/domain_models.py:361 portal/domain_models.py:461
+#: portal/domain_models.py:497
+msgid "A terület csak azonos farmhoz tartozhat."
+msgstr "A terület csak azonos farmhoz tartozhat."
+
+#: portal/domain_forms.py:264
+msgid "Elvégzés dátuma"
+msgstr "Elvégzés dátuma"
+
+#: portal/domain_forms.py:270 portal/templates/portal/domain_list.html:11
+msgid "Megfigyelés"
+msgstr "Megfigyelés"
+
+#: portal/domain_forms.py:274
+msgid "A megfigyelés kötelező."
+msgstr "A megfigyelés kötelező."
+
+#: portal/domain_forms.py:284 portal/templates/portal/event_list.html:9
+#: portal/templates/portal/event_list.html:18
+msgid "Művelettípus"
+msgstr "Művelettípus"
+
+#: portal/domain_forms.py:284 portal/templates/portal/event_list.html:20
+msgid "Mennyiség"
+msgstr "Mennyiség"
+
+#: portal/domain_forms.py:284
+msgid "Mértékegység"
+msgstr "Mértékegység"
+
+#: portal/domain_forms.py:284
+msgid "Felhasznált anyagok"
+msgstr "Felhasznált anyagok"
+
+#: portal/domain_forms.py:284
+msgid "Kezelt terület (ha)"
+msgstr "Kezelt terület (ha)"
+
+#: portal/domain_forms.py:298
+msgid "Kategória neve"
+msgstr "Kategória neve"
+
+#: portal/domain_forms.py:305 portal/domain_models.py:43
+#: portal/domain_models.py:92 portal/domain_models.py:134
+#: portal/domain_models.py:646 portal/domain_models.py:694
+#: portal/domain_models.py:738 portal/domain_models.py:802
+#: portal/domain_models.py:921
+msgid "A név kötelező."
+msgstr "A név kötelező."
+
+#: portal/domain_forms.py:307
+msgid "Ilyen nevű kategóriád már van."
+msgstr "Ilyen nevű kategóriád már van."
+
+#: portal/domain_forms.py:317
+msgid "Kategória"
+msgstr "Kategória"
+
+#: portal/domain_forms.py:319
+#: portal/templates/portal/rule_category_form.html:2
+#: portal/templates/portal/rule_category_form.html:4
+#: portal/templates/portal/rule_form.html:6
+#: portal/templates/portal/rule_list.html:7
+msgid "Új kategória"
+msgstr "Új kategória"
+
+#: portal/domain_forms.py:320
+msgid "Ha nincs megfelelő kategória, írd be az új nevét."
+msgstr "Ha nincs megfelelő kategória, írd be az új nevét."
+
+#: portal/domain_forms.py:328
+msgid "Szabály neve"
+msgstr "Szabály neve"
+
+#: portal/domain_forms.py:329 portal/templates/portal/rule_detail.html:8
+msgid "Szabály szövege"
+msgstr "Szabály szövege"
+
+#: portal/domain_forms.py:333
+msgid ""
+"Hosszú szöveges leírás. Tárolt leírás: a rendszer nem ellenőrzi és nem "
+"hajtja végre."
+msgstr ""
+"Hosszú szöveges leírás. Tárolt leírás: a rendszer nem ellenőrzi és nem "
+"hajtja végre."
+
+#: portal/domain_forms.py:346 portal/domain_models.py:807
+msgid "A kategória csak saját kategória lehet."
+msgstr "A kategória csak saját kategória lehet."
+
+#: portal/domain_forms.py:351 portal/domain_models.py:805
+msgid "A szöveg legfeljebb 100000 karakter lehet."
+msgstr "A szöveg legfeljebb 100000 karakter lehet."
+
+#: portal/domain_forms.py:358
+msgid "Válassz kategóriát vagy hozz létre újat."
+msgstr "Válassz kategóriát vagy hozz létre újat."
+
+#: portal/domain_forms.py:360
+msgid "Egyszerre csak az egyik: válassz kategóriát vagy adj meg újat."
+msgstr "Egyszerre csak az egyik: válassz kategóriát vagy adj meg újat."
+
+#: portal/domain_models.py:11 portal/domain_models.py:327
+msgid "Talajművelés"
+msgstr "Talajművelés"
+
+#: portal/domain_models.py:11 portal/domain_models.py:322
+#: portal/planning.py:32
+msgid "Vetés"
+msgstr "Vetés"
+
+#: portal/domain_models.py:12 portal/domain_models.py:326
+#: portal/planning.py:36
+msgid "Betakarítás"
+msgstr "Betakarítás"
+
+#: portal/domain_models.py:12 portal/domain_models.py:325
+msgid "Öntözés"
+msgstr "Öntözés"
+
+#: portal/domain_models.py:13
+msgid "Szállítás"
+msgstr "Szállítás"
+
+#: portal/domain_models.py:13
+msgid "Állattartás"
+msgstr "Állattartás"
+
+#: portal/domain_models.py:14 portal/domain_models.py:23
+#: portal/domain_models.py:329 portal/domain_models.py:392
+#: portal/domain_models.py:612
+msgid "Egyéb"
+msgstr "Egyéb"
+
+#: portal/domain_models.py:19
+msgid "Szántóföld"
+msgstr "Szántóföld"
+
+#: portal/domain_models.py:19
+msgid "Gyümölcsös"
+msgstr "Gyümölcsös"
+
+#: portal/domain_models.py:20
+msgid "Kert"
+msgstr "Kert"
+
+#: portal/domain_models.py:20
+msgid "Üvegház/fóliasátor"
+msgstr "Üvegház/fóliasátor"
+
+#: portal/domain_models.py:21
+msgid "Feldolgozó"
+msgstr "Feldolgozó"
+
+#: portal/domain_models.py:21
+msgid "Iroda"
+msgstr "Iroda"
+
+#: portal/domain_models.py:22
+msgid "Gépszín"
+msgstr "Gépszín"
+
+#: portal/domain_models.py:22
+msgid "Istálló/ól"
+msgstr "Istálló/ól"
+
+#: portal/domain_models.py:23
+msgid "Legelő"
+msgstr "Legelő"
+
+#: portal/domain_models.py:28 portal/templates/portal/weather.html:22
+msgid "Aktuális"
+msgstr "Aktuális"
+
+#: portal/domain_models.py:28
+msgid "Tervezett"
+msgstr "Tervezett"
+
+#: portal/domain_models.py:28
+msgid "Előzmény"
+msgstr "Előzmény"
+
+#: portal/domain_models.py:47
+msgid "Érvénytelen szélesség."
+msgstr "Érvénytelen szélesség."
+
+#: portal/domain_models.py:51
+msgid "Érvénytelen hosszúság."
+msgstr "Érvénytelen hosszúság."
+
+#: portal/domain_models.py:53 portal/geometry.py:85 portal/geometry.py:148
+msgid "A szélesség -90 és 90 között legyen."
+msgstr "A szélesség -90 és 90 között legyen."
+
+#: portal/domain_models.py:55 portal/geometry.py:83 portal/geometry.py:150
+msgid "A hosszúság -180 és 180 között legyen."
+msgstr "A hosszúság -180 és 180 között legyen."
+
+#: portal/domain_models.py:60
+msgid "Érvénytelen időzóna."
+msgstr "Érvénytelen időzóna."
+
+#: portal/domain_models.py:96
+msgid "Érvénytelen terület."
+msgstr "Érvénytelen terület."
+
+#: portal/domain_models.py:98
+msgid "A terület nem lehet negatív."
+msgstr "A terület nem lehet negatív."
+
+#: portal/domain_models.py:137
+msgid "Érvénytelen képességlista."
+msgstr "Érvénytelen képességlista."
+
+#: portal/domain_models.py:139
+msgid "Legfeljebb 20 képesség."
+msgstr "Legfeljebb 20 képesség."
+
+#: portal/domain_models.py:142
+#, python-format
+msgid "Ismeretlen képesség: %s"
+msgstr "Ismeretlen képesség: %s"
+
+#: portal/domain_models.py:146
+msgid "Érvénytelen óraszám."
+msgstr "Érvénytelen óraszám."
+
+#: portal/domain_models.py:148
+msgid "A napi óraszám 0 és 24 között legyen."
+msgstr "A napi óraszám 0 és 24 között legyen."
+
+#: portal/domain_models.py:164
+msgid "A gép és a terület csak azonos farmhoz tartozhat."
+msgstr "A gép és a terület csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:198
+msgid "A növénynév kötelező."
+msgstr "A növénynév kötelező."
+
+#: portal/domain_models.py:202
+msgid "Vetésforgó csak mezőgazdasági területhez rögzíthető."
+msgstr "Vetésforgó csak mezőgazdasági területhez rögzíthető."
+
+#: portal/domain_models.py:204
+msgid "A vetés dátuma nem lehet későbbi a várható befejezésnél."
+msgstr "A vetés dátuma nem lehet későbbi a várható befejezésnél."
+
+#: portal/domain_models.py:206
+msgid "Legfeljebb 2000 karakter."
+msgstr "Legfeljebb 2000 karakter."
+
+#: portal/domain_models.py:212 portal/domain_views.py:365
+#: portal/domain_views.py:389
+msgid "Ezen a területen már van ilyen állapotú ciklus."
+msgstr "Ezen a területen már van ilyen állapotú ciklus."
+
+#: portal/domain_models.py:221 portal/domain_models.py:392
+msgid "Legeltetés"
+msgstr "Legeltetés"
+
+#: portal/domain_models.py:221
+msgid "Etetés / takarmányozás"
+msgstr "Etetés / takarmányozás"
+
+#: portal/domain_models.py:222
+msgid "Egészségügyi teendő"
+msgstr "Egészségügyi teendő"
+
+#: portal/domain_models.py:222
+msgid "Egyéb állatmunka"
+msgstr "Egyéb állatmunka"
+
+#: portal/domain_models.py:225 portal/models.py:171
+#: portal/templates/portal/actions.html:5
+#: portal/templates/portal/dashboard.html:32
+msgid "Nyitott"
+msgstr "Nyitott"
+
+#: portal/domain_models.py:225 portal/models.py:171
+#: portal/templates/portal/actions.html:6
+#: portal/templates/portal/dashboard.html:33
+#: portal/templates/portal/livestock_detail.html:17
+msgid "Kész"
+msgstr "Kész"
+
+#: portal/domain_models.py:259
+msgid "Ismeretlen képesség."
+msgstr "Ismeretlen képesség."
+
+#: portal/domain_models.py:262
+msgid "Ismeretlen állapot."
+msgstr "Ismeretlen állapot."
+
+#: portal/domain_models.py:265
+msgid "A kezdés nem lehet későbbi a befejezésnél."
+msgstr "A kezdés nem lehet későbbi a befejezésnél."
+
+#: portal/domain_models.py:269
+msgid "Az állatmunka nem kapcsolódhat vetésforgóhoz."
+msgstr "Az állatmunka nem kapcsolódhat vetésforgóhoz."
+
+#: portal/domain_models.py:272
+msgid "Ismeretlen állatmunka-típus."
+msgstr "Ismeretlen állatmunka-típus."
+
+#: portal/domain_models.py:279 portal/domain_models.py:440
+#: portal/domain_models.py:486
+msgid "A csoport csak azonos farmhoz tartozhat."
+msgstr "A csoport csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:286 portal/livestock_views.py:289
+msgid "Archivált csoportra nem tervezhető munka."
+msgstr "Archivált csoportra nem tervezhető munka."
+
+#: portal/domain_models.py:290
+msgid "Állatmunka-típus csak csoportos munkánál adható meg."
+msgstr "Állatmunka-típus csak csoportos munkánál adható meg."
+
+#: portal/domain_models.py:293
+msgid "Vetésforgó vagy állatcsoport kötelező."
+msgstr "Vetésforgó vagy állatcsoport kötelező."
+
+#: portal/domain_models.py:296
+msgid "Terület kötelező."
+msgstr "Terület kötelező."
+
+#: portal/domain_models.py:299
+msgid "A művelet csak azonos farm ciklusához tartozhat."
+msgstr "A művelet csak azonos farm ciklusához tartozhat."
+
+#: portal/domain_models.py:302
+msgid "A művelet csak azonos farm területéhez tartozhat."
+msgstr "A művelet csak azonos farm területéhez tartozhat."
+
+#: portal/domain_models.py:305
+msgid "A gép csak azonos farmhoz tartozhat."
+msgstr "A gép csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:313
+msgid "A kapcsolt esemény csak azonos farmhoz tartozhat."
+msgstr "A kapcsolt esemény csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:323
+msgid "Permetezés"
+msgstr "Permetezés"
+
+#: portal/domain_models.py:324
+msgid "Tápanyag-utánpótlás"
+msgstr "Tápanyag-utánpótlás"
+
+#: portal/domain_models.py:328
+msgid "Gyomirtás / növényvédelem"
+msgstr "Gyomirtás / növényvédelem"
+
+#: portal/domain_models.py:369
+msgid "A vetésforgó csak azonos farmhoz tartozhat."
+msgstr "A vetésforgó csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:371
+msgid "A vetésforgó csak ugyanahhoz a területhez tartozhat."
+msgstr "A vetésforgó csak ugyanahhoz a területhez tartozhat."
+
+#: portal/domain_models.py:373 portal/domain_models.py:431
+#: portal/domain_models.py:501
+msgid "Ismeretlen eseménytípus."
+msgstr "Ismeretlen eseménytípus."
+
+#: portal/domain_models.py:376
+msgid "A mennyiség nem lehet negatív."
+msgstr "A mennyiség nem lehet negatív."
+
+#: portal/domain_models.py:378
+msgid "Mennyiség megadásakor a mértékegység kötelező."
+msgstr "Mennyiség megadásakor a mértékegység kötelező."
+
+#: portal/domain_models.py:380
+msgid "A kezelt terület nem lehet negatív."
+msgstr "A kezelt terület nem lehet negatív."
+
+#: portal/domain_models.py:389
+msgid "Születés"
+msgstr "Születés"
+
+#: portal/domain_models.py:389
+msgid "Vásárlás"
+msgstr "Vásárlás"
+
+#: portal/domain_models.py:390
+msgid "Eladás"
+msgstr "Eladás"
+
+#: portal/domain_models.py:390
+msgid "Elhullás"
+msgstr "Elhullás"
+
+#: portal/domain_models.py:391
+msgid "Átmozgatás"
+msgstr "Átmozgatás"
+
+#: portal/domain_models.py:391
+msgid "Egészségügyi beavatkozás"
+msgstr "Egészségügyi beavatkozás"
+
+#: portal/domain_models.py:433
+msgid "Születés/vásárlás csak pozitív létszámmal rögzíthető."
+msgstr "Születés/vásárlás csak pozitív létszámmal rögzíthető."
+
+#: portal/domain_models.py:435
+msgid "Eladás/elhullás/átmozgatás csak negatív létszámmal rögzíthető."
+msgstr "Eladás/elhullás/átmozgatás csak negatív létszámmal rögzíthető."
+
+#: portal/domain_models.py:437
+msgid "Egészségügyi/legeltetési/egyéb esemény nem mozgat létszámot."
+msgstr "Egészségügyi/legeltetési/egyéb esemény nem mozgat létszámot."
+
+#: portal/domain_models.py:442 portal/domain_models.py:503
+msgid "Archivált csoportra nem rögzíthető esemény."
+msgstr "Archivált csoportra nem rögzíthető esemény."
+
+#: portal/domain_models.py:446 portal/domain_models.py:506
+msgid "Átmozgatáshoz célcsoport kötelező."
+msgstr "Átmozgatáshoz célcsoport kötelező."
+
+#: portal/domain_models.py:448 portal/domain_models.py:508
+msgid "A célcsoport nem lehet azonos a forrással."
+msgstr "A célcsoport nem lehet azonos a forrással."
+
+#: portal/domain_models.py:450 portal/domain_models.py:494
+msgid "A célcsoport csak azonos farmhoz tartozhat."
+msgstr "A célcsoport csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:452 portal/domain_models.py:510
+msgid "Archivált csoportba nem mozgatható."
+msgstr "Archivált csoportba nem mozgatható."
+
+#: portal/domain_models.py:454
+msgid "Célcsoport csak átmozgatásnál adható meg."
+msgstr "Célcsoport csak átmozgatásnál adható meg."
+
+#: portal/domain_models.py:468 portal/domain_models.py:499
+msgid "A naplóbejegyzés csak azonos farmhoz tartozhat."
+msgstr "A naplóbejegyzés csak azonos farmhoz tartozhat."
+
+#: portal/domain_models.py:513
+msgid "Az esemény dátuma nem lehet korábbi a csoport legutóbbi eseményénél."
+msgstr "Az esemény dátuma nem lehet korábbi a csoport legutóbbi eseményénél."
+
+#: portal/domain_models.py:517
+msgid ""
+"Az esemény dátuma nem lehet korábbi a célcsoport legutóbbi eseményénél."
+msgstr ""
+"Az esemény dátuma nem lehet korábbi a célcsoport legutóbbi eseményénél.Az "
+"esemény dátuma nem lehet korábbi a célcsoport legutóbbi eseményénél."
+
+#: portal/domain_models.py:520
+msgid "Az esemény negatívba vinné a csoport létszámát."
+msgstr "Az esemény negatívba vinné a csoport létszámát."
+
+#: portal/domain_models.py:525
+msgid "Naplóbejegyzéshez terület kell (esemény-terület vagy szállás)."
+msgstr "Naplóbejegyzéshez terület kell (esemény-terület vagy szállás)."
+
+#: portal/domain_models.py:567
+msgid "Az esemény már vissza lett vonva."
+msgstr "Kész. Az esemény már rögzítve volt."
+
+#: portal/domain_models.py:582
+msgid "Csak a csoport legutóbbi eseménye vonható vissza."
+msgstr "Csak a csoport legutóbbi eseménye vonható vissza."
+
+#: portal/domain_models.py:587
+msgid "Az átmozgatás nem vonható vissza: a célcsoporton újabb esemény van."
+msgstr ""
+"Az átmozgatás nem vonható vissza: a célcsoporton újabb esemény van.Az "
+"átmozgatás nem vonható vissza: a célcsoporton újabb esemény van.Az "
+"átmozgatás nem vonható vissza: a célcsoport létszáma negatívba menne."
+
+#: portal/domain_models.py:590
+msgid "Archivált csoport eseménye nem vonható vissza."
+msgstr "Archivált csoportba nem mozgatható."
+
+#: portal/domain_models.py:593
+msgid "Az esemény elvégzett munkához kapcsolódik, ezért nem vonható vissza."
+msgstr "Az esemény elvégzett munkához kapcsolódik, ezért nem vonható vissza."
+
+#: portal/domain_models.py:596
+msgid "Az esemény nem vonható vissza: a csoport létszáma negatívba menne."
+msgstr "Az esemény nem vonható vissza: a csoport létszáma negatívba menne."
+
+#: portal/domain_models.py:600
+msgid ""
+"Az átmozgatás nem vonható vissza: a célcsoport létszáma negatívba menne."
+msgstr ""
+"Az átmozgatás nem vonható vissza: a célcsoport létszáma negatívba menne."
+
+#: portal/domain_models.py:609
+msgid "Szarvasmarha"
+msgstr "Szarvasmarha"
+
+#: portal/domain_models.py:609
+msgid "Juh"
+msgstr "Juh"
+
+#: portal/domain_models.py:610
+msgid "Kecske"
+msgstr "Kecske"
+
+#: portal/domain_models.py:610
+msgid "Sertés"
+msgstr "Sertés"
+
+#: portal/domain_models.py:611
+msgid "Baromfi"
+msgstr "Baromfi"
+
+#: portal/domain_models.py:611
+msgid "Ló"
+msgstr "Ló"
+
+#: portal/domain_models.py:612
+msgid "Méh"
+msgstr "Méh"
+
+#: portal/domain_models.py:648
+msgid "Ismeretlen faj."
+msgstr "Ismeretlen faj."
+
+#: portal/domain_models.py:650
+msgid "A létszám nem lehet negatív."
+msgstr "A létszám nem lehet negatív."
+
+#: portal/domain_models.py:699
+msgid "Telefon vagy e-mail megadása kötelező."
+msgstr "Telefon vagy e-mail megadása kötelező."
+
+#: portal/domain_models.py:701
+msgid "A telefonszám túl rövid."
+msgstr "A telefonszám túl rövid."
+
+#: portal/domain_models.py:706
+msgid "Legalább egy kérhető munka megadása kötelező."
+msgstr "Legalább egy kérhető munka megadása kötelező."
+
+#: portal/domain_models.py:710
+#, fuzzy
+#| msgid "Kérdés (legfeljebb 2000 karakter)"
+msgid "A leírás legfeljebb 1000 karakter lehet."
+msgstr "Kérdés (legfeljebb 2000 karakter)"
+
+#: portal/domain_views.py:60 portal/domain_views.py:79
+#: portal/domain_views.py:217 portal/domain_views.py:239
+#: portal/domain_views.py:291 portal/domain_views.py:314
+#: portal/domain_views.py:360 portal/domain_views.py:384
+#: portal/event_views.py:163 portal/event_views.py:190
+#: portal/livestock_views.py:129 portal/livestock_views.py:162
+#: portal/livestock_views.py:303 portal/livestock_views.py:345
+msgid "Mentve."
+msgstr "Mentve."
+
+#: portal/domain_views.py:83
+msgid "Helyszín szerkesztése"
+msgstr "Helyszín szerkesztése"
+
+#: portal/domain_views.py:98 portal/domain_views.py:260
+#: portal/domain_views.py:334 portal/domain_views.py:406
+#: portal/event_views.py:217 portal/livestock_views.py:234
+#: portal/livestock_views.py:427
+msgid "Törölve."
+msgstr "Törölve."
+
+#: portal/domain_views.py:101
+msgid ""
+"Nem törölhető: tartozik hozzá terület. Előbb törölje vagy helyezze át "
+"azokat."
+msgstr ""
+"Nem törölhető: tartozik hozzá terület. Előbb törölje vagy helyezze át "
+"azokat."
+
+#: portal/domain_views.py:102 portal/domain_views.py:104
+msgid "Helyszín törlése"
+msgstr "Helyszín törlése"
+
+#: portal/domain_views.py:245
+msgid "Terület szerkesztése"
+msgstr "Terület szerkesztése"
+
+#: portal/domain_views.py:263
+msgid "Nem törölhető: tartozik hozzá vetésforgó vagy kapcsolódó adat."
+msgstr "Nem törölhető: tartozik hozzá vetésforgó vagy kapcsolódó adat."
+
+#: portal/domain_views.py:264 portal/domain_views.py:266
+msgid "Terület törlése"
+msgstr "Terület törlése"
+
+#: portal/domain_views.py:320
+msgid "Gép szerkesztése"
+msgstr "Gép szerkesztése"
+
+#: portal/domain_views.py:336
+msgid "Gép törlése"
+msgstr "Gép törlése"
+
+#: portal/domain_views.py:392
+msgid "Vetésforgó szerkesztése"
+msgstr "Vetésforgó szerkesztése"
+
+#: portal/domain_views.py:408
+msgid "Vetésforgó törlése"
+msgstr "Vetésforgó törlése"
+
+#: portal/domain_views.py:430 portal/domain_views.py:436
+#: portal/templates/portal/cycle_observe.html:1
+msgid "Megfigyelés rögzítése"
+msgstr "Megfigyelés rögzítése"
+
+#: portal/domain_views.py:432
+msgid "Megfigyelés rögzítve."
+msgstr "Megfigyelés rögzítve."
+
+#: portal/event_views.py:170 portal/templates/portal/event_list.html:11
+msgid "Új bejegyzés"
+msgstr "Új bejegyzés"
+
+#: portal/event_views.py:197
+msgid "Bejegyzés szerkesztése"
+msgstr "Bejegyzés szerkesztése"
+
+#: portal/event_views.py:220
+msgid "Bejegyzés törlése"
+msgstr "Bejegyzés törlése"
+
+#: portal/external_contact_views.py:68 portal/external_contact_views.py:90
+#, fuzzy
+#| msgid "Érvénytelen meghívó-adatok."
+msgid "Érvénytelen kapcsolattartó-adatok."
+msgstr "Érvénytelen meghívó-adatok."
+
+#: portal/external_contact_views.py:76
+msgid "Külső kapcsolattartó létrehozva."
+msgstr "Külső kapcsolattartó létrehozva."
+
+#: portal/external_contact_views.py:97
+msgid "Külső kapcsolattartó frissítve."
+msgstr "Külső kapcsolattartó frissítve."
+
+#: portal/external_contact_views.py:113
+msgid "Külső kapcsolattartó törölve."
+msgstr "Külső kapcsolattartó törölve."
+
+#: portal/forms.py:10 portal/forms.py:33 portal/forms.py:89
+msgid "E-mail cím"
+msgstr "E-mail cím"
+
+#: portal/forms.py:11 portal/forms.py:34
+msgid "Jelszó"
+msgstr "Jelszó"
+
+#: portal/forms.py:12
+msgid "Jelszó újra"
+msgstr "Jelszó újra"
+
+#: portal/forms.py:13
+msgid "Elfogadom az ÁSZF-et és az adatkezelési tájékoztatót."
+msgstr "Elfogadom az ÁSZF-et és az adatkezelési tájékoztatót."
+
+#: portal/forms.py:14
+msgid ""
+"Hozzájárulok, hogy profiladataimat tanácsadás céljából a modellszolgáltató "
+"felhőjébe küldjék. (Később visszavonható.)"
+msgstr ""
+"Hozzájárulok, hogy profiladataimat tanácsadás céljából a modellszolgáltató "
+"felhőjébe küldjék. (Később visszavonható.)"
+
+#: portal/forms.py:18
+msgid "Ezzel az e-mail címmel már létezik fiók."
+msgstr "Ezzel az e-mail címmel már létezik fiók."
+
+#: portal/forms.py:24
+msgid "A két jelszó nem egyezik."
+msgstr "A két jelszó nem egyezik."
+
+#: portal/forms.py:40
+msgid "Gazdaság neve"
+msgstr "Gazdaság neve"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Régió, tájegység (saját szavakkal)"
+msgstr "Régió, tájegység (saját szavakkal)"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Éghajlati jellemzés"
+msgstr "Éghajlati jellemzés"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Fő gazdálkodási irány"
+msgstr "Fő gazdálkodási irány"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Talaj és saját megfigyelések"
+msgstr "Talaj és saját megfigyelések"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Vízellátás módja és korlátai"
+msgstr "Vízellátás módja és korlátai"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Növények, vetésszerkezet, állatállomány"
+msgstr "Növények, vetésszerkezet, állatállomány"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Gépek, bérmunka, munkaerő, időkeret"
+msgstr "Gépek, bérmunka, munkaerő, időkeret"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Célok"
+msgstr "Célok"
+
+#: portal/forms.py:40 portal/models.py:71
+msgid "Korlátok, költségvetés nagysága, kockázat, bizonytalanságok"
+msgstr "Korlátok, költségvetés nagysága, kockázat, bizonytalanságok"
+
+#: portal/forms.py:41
+msgid ""
+"Adja meg gazdasága nevét. Nem kötelező valós földrajzi név; példa: Tanyám."
+msgstr ""
+"Adja meg gazdasága nevét. Nem kötelező valós földrajzi név; példa: Tanyám."
+
+#: portal/forms.py:42
+#, fuzzy
+#| msgid "Írja le saját szavaival, hol gazdálkodik."
+msgid ""
+"Írja le saját szavaival, hol gazdálkodik. Opcionális; példa: Duna–Tisza "
+"köze."
+msgstr "Írja le saját szavaival, hol gazdálkodik."
+
+#: portal/forms.py:43
+msgid ""
+"Éghajlati jellemzés saját szavakkal. Opcionális; példa: aszályos nyarak."
+msgstr ""
+"Éghajlati jellemzés saját szavakkal. Opcionális; példa: aszályos nyarak."
+
+#: portal/forms.py:44
+msgid "Fő gazdálkodási irány. Opcionális; példa: szántó + kis állatállomány."
+msgstr "Fő gazdálkodási irány. Opcionális; példa: szántó + kis állatállomány."
+
+#: portal/forms.py:45
+#, fuzzy
+#| msgid "Saját megfigyelések, nem laboratóriumi adat."
+msgid "Saját megfigyelések, nem laboratóriumi adat. Opcionális."
+msgstr "Saját megfigyelések, nem laboratóriumi adat."
+
+#: portal/forms.py:46
+msgid ""
+"Vízellátás módja és korlátai. Opcionális; példa: fúrt kút, öntözés nincs."
+msgstr ""
+
+#: portal/forms.py:47
+#, fuzzy
+#| msgid "Növények, vetésszerkezet, állatállomány"
+msgid "Növények, vetésszerkezet, állatállomány. Opcionális."
+msgstr "Növények, vetésszerkezet, állatállomány"
+
+#: portal/forms.py:48
+msgid ""
+"Gépek, bérmunka, munkaerő, időkeret. Opcionális; időkeret órában, "
+"gépkapacitás megadható."
+msgstr ""
+
+#: portal/forms.py:49
+msgid "Célok saját szavakkal. Opcionális."
+msgstr "Célok saját szavakkal. Opcionális."
+
+#: portal/forms.py:50
+#, fuzzy
+#| msgid "Korlátok, költségvetés nagysága, kockázat, bizonytalanságok"
+msgid ""
+"Korlátok, költségvetés nagysága, kockázat, bizonytalanságok. Opcionális; "
+"terület hektárban, költségvetés helyi pénznemben megadható."
+msgstr "Korlátok, költségvetés nagysága, kockázat, bizonytalanságok"
+
+#: portal/forms.py:59 portal/views.py:169
+msgid "A gazdaság neve kötelező."
+msgstr "A gazdaság neve kötelező."
+
+#: portal/forms.py:66
+msgid "Legfeljebb 4000 karakter."
+msgstr "Legfeljebb 4000 karakter."
+
+#: portal/forms.py:79
+msgid "Teendő szövege"
+msgstr "Teendő szövege"
+
+#: portal/forms.py:84
+msgid "A teendő 1–2000 karakter legyen."
+msgstr "A teendő 1–2000 karakter legyen."
+
+#: portal/forms.py:90
+msgid "Szerep"
+msgstr "Szerep"
+
+#: portal/geometry.py:65
+msgid "Csak egyetlen Polygon típusú geometria menthető."
+msgstr "Csak egyetlen Polygon típusú geometria menthető."
+
+#: portal/geometry.py:68
+msgid "A Polygon pontosan egy zárt gyűrűt tartalmazhat."
+msgstr "A Polygon pontosan egy zárt gyűrűt tartalmazhat."
+
+#: portal/geometry.py:71
+msgid "A gyűrű legalább 4 pozícióból álljon."
+msgstr "A gyűrű legalább 4 pozícióból álljon."
+
+#: portal/geometry.py:73
+msgid "A gyűrű legfeljebb 200 pozícióból állhat."
+msgstr "A gyűrű legfeljebb 200 pozícióból állhat."
+
+#: portal/geometry.py:77
+msgid "Minden koordináta pontosan két szám legyen."
+msgstr "Minden koordináta pontosan két szám legyen."
+
+#: portal/geometry.py:80 portal/geometry.py:123 portal/geometry.py:146
+msgid "A koordináták véges számok legyenek."
+msgstr "A koordináták véges számok legyenek."
+
+#: portal/geometry.py:88
+msgid "A gyűrű legyen zárt (első = utolsó pont)."
+msgstr "A gyűrű legyen zárt (első = utolsó pont)."
+
+#: portal/geometry.py:91
+msgid "A gyűrű legalább 3 különböző csúcsot tartalmazzon."
+msgstr "A gyűrű legalább 3 különböző csúcsot tartalmazzon."
+
+#: portal/geometry.py:94
+msgid "Egymást követő duplikált pont nem megengedett."
+msgstr "Egymást követő duplikált pont nem megengedett."
+
+#: portal/geometry.py:99
+msgid "Ismétlődő csúcs nem megengedett."
+msgstr "Ismétlődő csúcs nem megengedett."
+
+#: portal/geometry.py:103 portal/geometry.py:106
+msgid "A polygon nem nyúlhat át az antimeridiánon."
+msgstr "A polygon nem nyúlhat át az antimeridiánon."
+
+#: portal/geometry.py:110
+msgid "A polygon területe nem lehet nulla (kollineáris pontok)."
+msgstr "A polygon területe nem lehet nulla (kollineáris pontok)."
+
+#: portal/geometry.py:118
+msgid "A polygon nem metszheti önmagát."
+msgstr "A polygon nem metszheti önmagát."
+
+#: portal/geometry.py:137
+msgid "A ponthoz szélesség és hosszúság együtt kell."
+msgstr "A ponthoz szélesség és hosszúság együtt kell."
+
+#: portal/geometry.py:139 portal/geometry.py:144
+msgid "Érvénytelen koordináta."
+msgstr "Érvénytelen koordináta."
+
+#: portal/livestock_views.py:127 portal/livestock_views.py:160
+msgid "Ilyen nevű csoport már létezik ezen a farmon."
+msgstr "Ilyen nevű csoport már létezik ezen a farmon."
+
+#: portal/livestock_views.py:134 portal/templates/portal/livestock_list.html:3
+msgid "Új állatcsoport"
+msgstr "Új állatcsoport"
+
+#: portal/livestock_views.py:146
+msgid "Archivált csoport nem szerkeszthető. Előbb állítsa vissza."
+msgstr "Archivált csoportra nem tervezhető munka."
+
+#: portal/livestock_views.py:167
+msgid "Állatcsoport szerkesztése"
+msgstr "Állatcsoport szerkesztése"
+
+#: portal/livestock_views.py:188
+msgid "Archiválva. Az előzmények megmaradtak."
+msgstr "Archiválva. Az előzmények megmaradtak."
+
+#: portal/livestock_views.py:193
+msgid "Visszaállítva."
+msgstr "Visszaállítva."
+
+#: portal/livestock_views.py:197
+msgid "Állatcsoport archiválása"
+msgstr "Állatcsoport archiválása"
+
+#: portal/livestock_views.py:199
+msgid "Állatcsoport visszaállítása"
+msgstr "Állatcsoport archiválása"
+
+#: portal/livestock_views.py:207
+msgid "esemény-előzmény tartozik hozzá"
+msgstr "esemény-előzmény tartozik hozzá"
+
+#: portal/livestock_views.py:209
+msgid "más csoportból ide mozgatott állatok nyoma van"
+msgstr "más csoportból ide mozgatott állatok nyoma van"
+
+#: portal/livestock_views.py:211
+msgid "tervezett vagy elvégzett állatmunka kapcsolódik hozzá"
+msgstr "tervezett vagy elvégzett állatmunka kapcsolódik hozzá"
+
+#: portal/livestock_views.py:213
+msgid "élő állományt tart nyilván"
+msgstr "élő állományt tart nyilván"
+
+#: portal/livestock_views.py:227
+#, python-format
+msgid "Nem törölhető (%s). Archiválja a csoportot."
+msgstr "Nem törölhető (%s). Archiválja a csoportot."
+
+#: portal/livestock_views.py:237
+msgid "Állatcsoport törlése"
+msgstr "Állatcsoport törlése"
+
+#: portal/livestock_views.py:271
+msgid "Esemény rögzítve."
+msgstr "Esemény rögzítve."
+
+#: portal/livestock_views.py:276
+msgid "Új állatesemény"
+msgstr "Új állatesemény"
+
+#: portal/livestock_views.py:310
+#: portal/templates/portal/livestock_detail.html:18
+msgid "Új tervezett állatmunka"
+msgstr "Új tervezett állatmunka"
+
+#: portal/livestock_views.py:332
+msgid ""
+"Archivált csoport munkája nem módosítható. Előbb állítsa vissza a csoportot."
+msgstr ""
+"Archivált csoport munkája nem módosítható. Előbb állítsa vissza a csoportot."
+
+#: portal/livestock_views.py:353
+msgid "Tervezett állatmunka szerkesztése"
+msgstr "Tervezett állatmunka szerkesztése"
+
+#: portal/livestock_views.py:367
+msgid ""
+"Archivált csoport munkája nem zárható le. Előbb állítsa vissza a csoportot."
+msgstr ""
+"Archivált csoport munkája nem zárható le. Előbb állítsa vissza a csoportot."
+
+#: portal/livestock_views.py:375
+msgid "Kész. Az esemény már rögzítve volt."
+msgstr "Kész. Az esemény már rögzítve volt."
+
+#: portal/livestock_views.py:379 portal/livestock_views.py:408
+msgid "Tervezett állatmunka elvégzése"
+msgstr "Tervezett állatmunka elvégzése"
+
+#: portal/livestock_views.py:402
+msgid "Kész. Az elvégzés eseményként rögzítve."
+msgstr "Kész. Az elvégzés eseményként rögzítve."
+
+#: portal/livestock_views.py:421
+msgid ""
+"Archivált csoport munkája nem törölhető. Előbb állítsa vissza a csoportot."
+msgstr ""
+"Archivált csoport munkája nem törölhető. Előbb állítsa vissza a csoportot."
+
+#: portal/livestock_views.py:433
+msgid "Tervezett állatmunka törlése"
+msgstr "Tervezett állatmunka törlése"
+
+#: portal/livestock_views.py:455
+msgid "Esemény visszavonva (a naplóbejegyzés megmaradt)."
+msgstr "Esemény visszavonva (a naplóbejegyzés megmaradt)."
+
+#: portal/livestock_views.py:458
+msgid "Állatesemény visszavonása"
+msgstr "Állatesemény visszavonása"
+
+#: portal/models.py:9
+msgid "E-mail cím szükséges."
+msgstr "E-mail cím szükséges."
+
+#: portal/models.py:93
+msgid "A pillanatkép megváltoztathatatlan."
+msgstr "A pillanatkép megváltoztathatatlan."
+
+#: portal/models.py:96
+msgid "A pillanatkép közvetlenül nem törölhető."
+msgstr "A pillanatkép közvetlenül nem törölhető."
+
+#: portal/models.py:160 portal/models.py:167
+msgid "A forráslépés csak azonos farmhoz tartozhat."
+msgstr "A forráslépés csak azonos farmhoz tartozhat."
+
+#: portal/models.py:196
+msgid "A hozzájárulási esemény megváltoztathatatlan."
+msgstr "A hozzájárulási esemény megváltoztathatatlan."
+
+#: portal/plan_summary.py:29
+msgid ""
+"Túlterhelés esetén a heti feladatok egy része másik hétre is áthelyezhető."
+msgstr ""
+"Túlterhelés esetén a heti feladatok egy része másik hétre is áthelyezhető."
+
+#: portal/plan_summary.py:30
+msgid ""
+"Túlterhelés esetén a heti kapacitás további erőforrás bevonásával is "
+"növelhető."
+msgstr ""
+"Túlterhelés esetén a heti kapacitás további erőforrás bevonásával is "
+"növelhető."
+
+#: portal/planning.py:26 portal/templates/portal/plans.html:2
+msgid ""
+"Oktatási célú ütemezési segédlet – nem helyettesíti a szakértői véleményt, "
+"garancia nincs."
+msgstr ""
+"Oktatási célú ütemezési segédlet – nem helyettesíti a szakértői véleményt, "
+"garancia nincs."
+
+#: portal/planning.py:27
+msgid "A terv teljességére és minden kockázat felismerésére garancia nincs."
+msgstr "A terv teljességére és minden kockázat felismerésére garancia nincs."
+
+#: portal/planning.py:30 portal/planning.py:44 portal/planning.py:54
+msgid "Talaj-előkészítés"
+msgstr "Talaj-előkészítés"
+
+#: portal/planning.py:34 portal/planning.py:48
+msgid "Ápolás/öntözés"
+msgstr "Ápolás/öntözés"
+
+#: portal/planning.py:46
+msgid "Palántázás/vetés"
+msgstr "Palántázás/vetés"
+
+#: portal/planning.py:50
+msgid "Szedés/betakarítás"
+msgstr "Szedés/betakarítás"
+
+#: portal/planning.py:56
+msgid "Takarónövény vetése"
+msgstr "Takarónövény vetése"
+
+#: portal/planning.py:58
+msgid "Takarónövény lezárása"
+msgstr "Takarónövény lezárása"
+
+#: portal/planning.py:62
+msgid "Legeltetési rotáció"
+msgstr "Legeltetési rotáció"
+
+#: portal/planning.py:64
+msgid "Gyepápolás/kaszálás"
+msgstr "Gyepápolás/kaszálás"
+
+#: portal/planning.py:66
+msgid "Kerítés/állatjóléti ellenőrzés"
+msgstr "Kerítés/állatjóléti ellenőrzés"
+
+#: portal/planning.py:70
+msgid "Metszés/koronaápolás"
+msgstr "Metszés/koronaápolás"
+
+#: portal/planning.py:72
+msgid "Öntözés/tápanyag-utánpótlás"
+msgstr "Öntözés/tápanyag-utánpótlás"
+
+#: portal/planning.py:74
+msgid "Szüret"
+msgstr "Szüret"
+
+#: portal/plans_views.py:109
+msgid "Terv elkészült."
+msgstr "Terv elkészült."
+
+#: portal/provenance.py:82 portal/templates/portal/_provenance.html:10
+#: portal/templates/portal/_provenance.html:11
+#: portal/templates/portal/_provenance.html:12
+#: portal/templates/portal/_provenance.html:14
+#: portal/templates/portal/_provenance.html:15
+#, fuzzy
+#| msgid "Megfigyelés rögzítve."
+msgid "nincs rögzítve"
+msgstr "Megfigyelés rögzítve."
+
+#: portal/rule_views.py:51 portal/rule_views.py:80
+msgid "Érvénytelen szabályadatok."
+msgstr "Érvénytelen szabályadatok."
+
+#: portal/rule_views.py:60
+msgid "Szabályleírás létrehozva."
+msgstr "Szabályleírás létrehozva."
+
+#: portal/rule_views.py:91
+msgid "A szabály priváttá vált; más farmok telepítései deaktiválva."
+msgstr "A szabály priváttá vált; más farmok telepítései deaktiválva."
+
+#: portal/rule_views.py:92
+msgid "Szabályleírás frissítve."
+msgstr "Szabályleírás frissítve."
+
+#: portal/rule_views.py:146
+msgid "Szabály aktiválva."
+msgstr "Szabály aktiválva."
+
+#: portal/rule_views.py:160
+msgid "Szabály deaktiválva."
+msgstr "Szabály deaktiválva."
+
+#: portal/rule_views.py:170
+msgid "Érvénytelen kategóriaadatok."
+msgstr "Érvénytelen kategóriaadatok."
+
+#: portal/rule_views.py:176
+msgid "Kategória létrehozva."
+msgstr "Kategória létrehozva."
+
+#: portal/services.py:13
+msgid "A tanácsadás időtúllépés miatt nem sikerült. Kérjük, próbálja újra."
+msgstr "A tanácsadás időtúllépés miatt nem sikerült. Kérjük, próbálja újra."
+
+#: portal/services.py:14
+msgid ""
+"A tanácsadó szolgáltatás átmenetileg nem elérhető. Kérjük, próbálja újra "
+"később."
+msgstr ""
+"A tanácsadó szolgáltatás átmenetileg nem elérhető. Kérjük, próbálja újra "
+"később."
+
+#: portal/services.py:15
+msgid ""
+"A tanács formátuma nem volt megfelelő, ezért nem jelenítjük meg. Kérjük, "
+"próbálja újra."
+msgstr ""
+"A tanács formátuma nem volt megfelelő, ezért nem jelenítjük meg. Kérjük, "
+"próbálja újra."
+
+#: portal/services.py:16
+msgid ""
+"A kapott tanács nem felelt meg a biztonsági szabályoknak, ezért nem "
+"jelenítjük meg."
+msgstr ""
+"A kapott tanács nem felelt meg a biztonsági szabályoknak, ezért nem "
+"jelenítjük meg."
+
+#: portal/services.py:17
+msgid "Tanácshoz felhőadat-kezelési hozzájárulás szükséges."
+msgstr "Tanácshoz felhőadat-kezelési hozzájárulás szükséges."
+
+#: portal/services.py:18
+msgid "A hozzájárulás visszavonásra került, ezért a tanács nem készült el."
+msgstr "A hozzájárulás visszavonásra került, ezért a tanács nem készült el."
+
+#: portal/services.py:19
+msgid "Elérte a tanácskérési keretet. Kérjük, próbálja később."
+msgstr "Elérte a tanácskérési keretet. Kérjük, próbálja később."
+
+#: portal/services.py:21
+msgid "A korábbi tanácskérés megszakadt. Kérjük, próbálja újra."
+msgstr "A korábbi tanácskérés megszakadt. Kérjük, próbálja újra."
+
+#: portal/services.py:325
+msgid "Hiba történt."
+msgstr "Hiba történt."
+
+#: portal/staff_views.py:53
+msgid "Érvénytelen meghívó-adatok."
+msgstr "Érvénytelen meghívó-adatok."
+
+#: portal/staff_views.py:59
+msgid "Ehhez az e-mailhez már van függő meghívó."
+msgstr "Ehhez az e-mailhez már van függő meghívó."
+
+#: portal/staff_views.py:65
+msgid "Ez a felhasználó már aktív tag."
+msgstr "Ez a felhasználó már aktív tag."
+
+#: portal/staff_views.py:91
+msgid "Érvénytelen szerep."
+msgstr "Érvénytelen szerep."
+
+#: portal/templates/portal/_property_overview_map.html:1
+msgid "Területek áttekintő térképe"
+msgstr "Területek áttekintő térképe"
+
+#: portal/templates/portal/_property_overview_map.html:1
+msgid ""
+"A térkép OpenStreetMap csempéket tölt be; eközben a böngésző az OSM "
+"szervereivel kommunikál (IP-cím, nézett terület)."
+msgstr ""
+"A térkép OpenStreetMap csempéket tölt be; eközben a böngésző az OSM "
+"szervereivel kommunikál (IP-cím, nézett terület)."
+
+#: portal/templates/portal/_property_overview_map.html:1
+msgid "A térkép JavaScript nélkül nem jeleníthető meg; a lista alatta teljes."
+msgstr ""
+"A térkép JavaScript nélkül nem jeleníthető meg; a lista alatta teljes."
+
+#: portal/templates/portal/_provenance.html:5
+msgid "Hogyan készült ez a válasz?"
+msgstr "Hogyan készült ez a válasz?"
+
+#: portal/templates/portal/_provenance.html:6
+msgid "Tervezett rögzítés – még nem történeti adat"
+msgstr "Tervezett rögzítés – még nem történeti adat"
+
+#: portal/templates/portal/_provenance.html:7
+msgid ""
+"A küldés pillanatában rögzítendő adatok előnézete. Történeti adatként csak a"
+" leadott kérés után értelmezhető."
+msgstr ""
+"A küldés pillanatában rögzítendő adatok előnézete. Történeti adatként csak a"
+" leadott kérés után értelmezhető."
+
+#: portal/templates/portal/_provenance.html:8
+msgid "Eredetadatok (történeti, a rögzítés pillanatából)"
+msgstr "Eredetadatok (történeti, a rögzítés pillanatából)"
+
+#: portal/templates/portal/_provenance.html:10
+#: portal/templates/portal/advice_detail.html:5
+msgid "Forrás:"
+msgstr "Forrás:"
+
+#: portal/templates/portal/_provenance.html:10
+#: portal/templates/portal/advice_detail.html:5
+msgid "minta (seed)"
+msgstr "minta (seed)"
+
+#: portal/templates/portal/_provenance.html:10
+msgid "szolgáltatói kérés"
+msgstr "szolgáltatói kérés"
+
+#: portal/templates/portal/_provenance.html:10
+msgid "Kérés időpontja"
+msgstr "Kérés időpontja"
+
+#: portal/templates/portal/_provenance.html:10
+#, fuzzy
+#| msgid "Kért modell:"
+msgid "Kért modell"
+msgstr "Kért modell:"
+
+#: portal/templates/portal/_provenance.html:10
+msgid "Válaszoló modell"
+msgstr "Válaszoló modell"
+
+#: portal/templates/portal/_provenance.html:11
+#, fuzzy
+#| msgid "Profilverzió (pillanatkép):"
+msgid "Profilpillanatkép:"
+msgstr "Profilverzió (pillanatkép):"
+
+#: portal/templates/portal/_provenance.html:11
+#, python-format
+msgid "verzió %(v)s, rögzítve: %(t)s"
+msgstr "verzió %(v)s, rögzítve: %(t)s"
+
+#: portal/templates/portal/_provenance.html:12
+#, fuzzy
+#| msgid "Közös feltételezések"
+msgid "Bizonytalanság, feltételezések:"
+msgstr "Közös feltételezések"
+
+#: portal/templates/portal/_provenance.html:13
+msgid "Költség, felhasználás:"
+msgstr "Költség, felhasználás:"
+
+#: portal/templates/portal/_provenance.html:13
+#, python-format
+msgid "bemeneti token: %(i)s, kimeneti token: %(o)s"
+msgstr "bemeneti token: %(i)s, kimeneti token: %(o)s"
+
+#: portal/templates/portal/_provenance.html:13
+msgid "tokenadat nincs rögzítve"
+msgstr "tokenadat nincs rögzítve"
+
+#: portal/templates/portal/_provenance.html:13
+msgid "pénzben kifejezett költség nem ismert, a rendszer díjfigurát nem közöl"
+msgstr ""
+"pénzben kifejezett költség nem ismert, a rendszer díjfigurát nem közöl"
+
+#: portal/templates/portal/_provenance.html:14
+msgid "Küldési felhatalmazás:"
+msgstr "Küldési felhatalmazás:"
+
+#: portal/templates/portal/_provenance.html:14
+#, python-format
+msgid "felhatalmazva: %(t)s, hozzájárulási esemény #%(c)s"
+msgstr "felhatalmazva: %(t)s, hozzájárulási esemény #%(c)s"
+
+#: portal/templates/portal/_provenance.html:15
+#, fuzzy
+#| msgid "Törlés megerősítése"
+msgid "Emberi megerősítés:"
+msgstr "Törlés megerősítése"
+
+#: portal/templates/portal/_provenance.html:15
+msgid ""
+"A szolgáltatói küldés engedélyezve volt; a gazdaság adatainak módosítása "
+"külön megerősítést igényel."
+msgstr ""
+
+#: portal/templates/portal/account.html:3
+msgid "Fiók és adatvédelem"
+msgstr "Fiók és adatvédelem"
+
+#: portal/templates/portal/account.html:4
+msgid "E-mail:"
+msgstr "E-mail:"
+
+#: portal/templates/portal/account.html:5
+msgid "Felhőadat-kezelési hozzájárulás"
+msgstr "Felhőadat-kezelési hozzájárulás"
+
+#: portal/templates/portal/account.html:6
+#: portal/templates/portal/advice_detail.html:5
+msgid "Állapot:"
+msgstr "Állapot:"
+
+#: portal/templates/portal/account.html:6
+#: portal/templates/portal/advice_request.html:20
+#: portal/templates/portal/dashboard.html:15
+msgid "megadva"
+msgstr "megadva"
+
+#: portal/templates/portal/account.html:6
+msgid "nincs megadva / visszavonva"
+msgstr "nincs megadva / visszavonva"
+
+#: portal/templates/portal/account.html:6
+msgid "Utolsó esemény:"
+msgstr "Utolsó esemény:"
+
+#: portal/templates/portal/account.html:6
+msgid "visszavonva"
+msgstr "visszavonva"
+
+#: portal/templates/portal/account.html:7
+msgid ""
+"A hozzájárulás csak a profiladatok modellfelhőbe küldésére vonatkozik "
+"tanácsadás céljából. Nem azonos az ÁSZF elfogadással. Visszavonás után új "
+"tanács nem kérhető; korábbi tanácsai és teendői megmaradnak."
+msgstr ""
+"A hozzájárulás csak a profiladatok modellfelhőbe küldésére vonatkozik "
+"tanácsadás céljából. Nem azonos az ÁSZF elfogadással. Visszavonás után új "
+"tanács nem kérhető; korábbi tanácsai és teendői megmaradnak."
+
+#: portal/templates/portal/account.html:9
+msgid "Hozzájárulás visszavonása"
+msgstr "Hozzájárulás visszavonása"
+
+#: portal/templates/portal/account.html:9
+msgid "Hozzájárulás megadása"
+msgstr "Hozzájárulás megadása"
+
+#: portal/templates/portal/account.html:12
+msgid "Saját adatok exportja"
+msgstr "Saját adatok exportja"
+
+#: portal/templates/portal/account.html:12
+msgid ""
+"Profil, pillanatképek, tanácsok lépésekkel, teendők és hozzájárulási "
+"események JSON formában."
+msgstr ""
+"Profil, pillanatképek, tanácsok lépésekkel, teendők és hozzájárulási "
+"események JSON formában."
+
+#: portal/templates/portal/account.html:12
+#, fuzzy
+#| msgid "Tájékoztatók"
+msgid "Export tájékoztató"
+msgstr "Tájékoztatók"
+
+#: portal/templates/portal/account.html:13
+msgid "Elfogadott tájékoztató-verziók"
+msgstr "Elfogadott tájékoztató-verziók"
+
+#: portal/templates/portal/account.html:13
+msgid "Nincs rögzített elfogadás."
+msgstr "Nincs rögzített elfogadás."
+
+#: portal/templates/portal/account.html:14
+msgid "Veszélyzóna – fiók törlése"
+msgstr "Veszélyzóna – fiók törlése"
+
+#: portal/templates/portal/account.html:14
+msgid ""
+"A fiók törlése véglegesen törli gazdaságát, tanácsait, teendőit és "
+"munkameneteit érvényteleníti."
+msgstr ""
+"A fiók törlése véglegesen törli gazdaságát, tanácsait, teendőit és "
+"munkameneteit érvényteleníti."
+
+#: portal/templates/portal/account.html:14
+msgid "Fiókom törlése…"
+msgstr "Fiókom törlése…"
+
+#: portal/templates/portal/account_delete.html:1
+msgid "Fiók végleges törlése"
+msgstr "Fiók végleges törlése"
+
+#: portal/templates/portal/account_delete.html:1
+msgid ""
+"Ez a művelet nem vonható vissza. Minden adata törlődik, és "
+"kijelentkeztetjük."
+msgstr ""
+"Ez a művelet nem vonható vissza. Minden adata törlődik, és "
+"kijelentkeztetjük."
+
+#: portal/templates/portal/account_delete.html:1
+msgid "Erősítse meg a TORLES szó beírásával:"
+msgstr "Erősítse meg a TORLES szó beírásával:"
+
+#: portal/templates/portal/account_delete.html:1
+msgid "Fiókom végleges törlése"
+msgstr "Fiókom végleges törlése"
+
+#: portal/templates/portal/account_delete.html:1
+#: portal/templates/portal/action_delete.html:1
+#: portal/templates/portal/document_confirm_delete.html:7
+#: portal/templates/portal/document_form.html:7
+#: portal/templates/portal/external_contact_confirm_delete.html:7
+#: portal/templates/portal/external_contact_form.html:7
+#: portal/templates/portal/livestock_confirm_archive.html:3
+#: portal/templates/portal/livestock_confirm_delete.html:3
+#: portal/templates/portal/livestock_event_confirm_delete.html:4
+#: portal/templates/portal/livestock_event_form.html:2
+#: portal/templates/portal/livestock_form.html:2
+#: portal/templates/portal/livestock_work_confirm_delete.html:3
+#: portal/templates/portal/livestock_work_done.html:4
+#: portal/templates/portal/livestock_work_form.html:2
+#: portal/templates/portal/rule_category_form.html:7
+#: portal/templates/portal/rule_form.html:8
+msgid "Mégse"
+msgstr "Mégse"
+
+#: portal/templates/portal/action_delete.html:1
+msgid "Teendő törlése"
+msgstr "Teendő törlése"
+
+#: portal/templates/portal/action_delete.html:1
+msgid "Biztosan törli ezt a teendőt? A törlés végleges."
+msgstr "Biztosan törli ezt a teendőt? A törlés végleges."
+
+#: portal/templates/portal/action_delete.html:1
+msgid "Igen, véglegesen törlöm"
+msgstr "Igen, véglegesen törlöm"
+
+#: portal/templates/portal/action_edit.html:1
+msgid "Teendő szerkesztése"
+msgstr "Teendő szerkesztése"
+
+#: portal/templates/portal/action_edit.html:1
+#: portal/templates/portal/cycle_observe.html:1
+#: portal/templates/portal/document_form.html:6
+#: portal/templates/portal/domain_form.html:1
+#: portal/templates/portal/event_form.html:1
+#: portal/templates/portal/external_contact_form.html:6
+#: portal/templates/portal/livestock_form.html:2
+#: portal/templates/portal/livestock_work_form.html:2
+#: portal/templates/portal/property_form.html:2
+#: portal/templates/portal/rule_category_form.html:6
+#: portal/templates/portal/rule_form.html:7
+msgid "Mentés"
+msgstr "Mentés"
+
+#: portal/templates/portal/action_edit.html:1
+#: portal/templates/portal/cycle_observe.html:1
+#: portal/templates/portal/domain_confirm_delete.html:1
+#: portal/templates/portal/domain_form.html:1
+#: portal/templates/portal/event_confirm_delete.html:1
+#: portal/templates/portal/event_form.html:1
+#: portal/templates/portal/property_form.html:2
+msgid "Vissza"
+msgstr "Vissza"
+
+#: portal/templates/portal/actions.html:4
+msgid "Új saját teendő"
+msgstr "Új saját teendő"
+
+#: portal/templates/portal/actions.html:4
+msgid "Teendő mentése"
+msgstr "Teendő mentése"
+
+#: portal/templates/portal/actions.html:4
+msgid ""
+"A teendő az Ön saját vállalása. Határidő és emlékeztető ebben a verzióban "
+"nincs."
+msgstr ""
+"A teendő az Ön saját vállalása. Határidő és emlékeztető ebben a verzióban "
+"nincs."
+
+#: portal/templates/portal/actions.html:4
+#: portal/templates/portal/advice_detail.html:6
+#: portal/templates/portal/advice_history.html:5
+#: portal/templates/portal/advice_request.html:16
+#: portal/templates/portal/dashboard.html:18
+#: portal/templates/portal/farm.html:11 portal/templates/portal/info.html:13
+msgid ""
+"A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan."
+msgstr ""
+"A mentett tartalom az eredeti nyelvén marad, nem fordítjuk automatikusan."
+
+#: portal/templates/portal/actions.html:5
+#: portal/templates/portal/document_detail.html:12
+#: portal/templates/portal/domain_list.html:4
+#: portal/templates/portal/domain_list.html:7
+#: portal/templates/portal/domain_list.html:9
+#: portal/templates/portal/domain_list.html:11
+#: portal/templates/portal/event_list.html:23
+#: portal/templates/portal/external_contact_detail.html:18
+#: portal/templates/portal/livestock_detail.html:6
+#: portal/templates/portal/livestock_detail.html:17
+#: portal/templates/portal/rule_detail.html:11
+msgid "Szerkesztés"
+msgstr "Szerkesztés"
+
+#: portal/templates/portal/actions.html:5
+msgid "Késznek jelölöm"
+msgstr "Késznek jelölöm"
+
+#: portal/templates/portal/actions.html:5
+#: portal/templates/portal/document_confirm_delete.html:6
+#: portal/templates/portal/document_detail.html:13
+#: portal/templates/portal/domain_list.html:4
+#: portal/templates/portal/domain_list.html:7
+#: portal/templates/portal/domain_list.html:9
+#: portal/templates/portal/domain_list.html:11
+#: portal/templates/portal/event_confirm_delete.html:1
+#: portal/templates/portal/event_list.html:23
+#: portal/templates/portal/external_contact_detail.html:19
+#: portal/templates/portal/livestock_confirm_delete.html:3
+#: portal/templates/portal/livestock_detail.html:6
+#: portal/templates/portal/livestock_detail.html:17
+#: portal/templates/portal/livestock_work_confirm_delete.html:3
+msgid "Törlés"
+msgstr "Törlés"
+
+#: portal/templates/portal/actions.html:5
+#: portal/templates/portal/dashboard.html:8
+#: portal/templates/portal/dashboard.html:32
+msgid "Nincs nyitott teendő."
+msgstr "Nincs nyitott teendő."
+
+#: portal/templates/portal/actions.html:6
+msgid "Újranyitom"
+msgstr "Újranyitom"
+
+#: portal/templates/portal/actions.html:6
+#: portal/templates/portal/dashboard.html:33
+msgid "Még nincs kész teendő."
+msgstr "Még nincs kész teendő."
+
+#: portal/templates/portal/advice_detail.html:3
+msgid "Tanács részletei"
+msgstr "Tanács részletei"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "Idő:"
+msgstr "Idő:"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "élő modellhívás"
+msgstr "élő modellhívás"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "Kért modell:"
+msgstr "Kért modell:"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "Közölt modell:"
+msgstr "Közölt modell:"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "nem közölt"
+msgstr "nem közölt"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "Profilverzió (pillanatkép):"
+msgstr "Profilverzió (pillanatkép):"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "Prompt:"
+msgstr "Prompt:"
+
+#: portal/templates/portal/advice_detail.html:5
+msgid "Nyelv:"
+msgstr "Nyelv:"
+
+#: portal/templates/portal/advice_detail.html:7
+#: portal/templates/portal/dashboard.html:22
+msgid ""
+"Általános, oktató jellegű tájékoztatás – nem gazdaságspecifikus előírás"
+msgstr ""
+"Általános, oktató jellegű tájékoztatás – nem gazdaságspecifikus "
+"előírásÁltalános, oktató jellegű tájékoztatás – nem gazdaságspecifikus "
+"előírás"
+
+#: portal/templates/portal/advice_detail.html:12
+#: portal/templates/portal/dashboard.html:25
+msgid "Indoklás:"
+msgstr "Indoklás:"
+
+#: portal/templates/portal/advice_detail.html:13
+msgid "Feltételezések:"
+msgstr "Feltételezések:"
+
+#: portal/templates/portal/advice_detail.html:13
+#: portal/templates/portal/advice_request.html:9
+#: portal/templates/portal/advice_request.html:10
+#: portal/templates/portal/advice_request.html:11
+#: portal/templates/portal/advice_request.html:12
+#: portal/templates/portal/advice_request.html:13
+#: portal/templates/portal/advice_request.html:20
+#: portal/templates/portal/dashboard.html:15
+#: portal/templates/portal/dashboard.html:16
+msgid "nincs megadva"
+msgstr "nincs megadva"
+
+#: portal/templates/portal/advice_detail.html:14
+#: portal/templates/portal/dashboard.html:25
+msgid "Kockázat:"
+msgstr "Kockázat:"
+
+#: portal/templates/portal/advice_detail.html:15
+msgid "Szakértő:"
+msgstr "Szakértő:"
+
+#: portal/templates/portal/advice_detail.html:16
+msgid "Már teendőként mentve"
+msgstr "Már teendőként mentve"
+
+#: portal/templates/portal/advice_detail.html:17
+msgid "Akcióként mentem"
+msgstr "Akcióként mentem"
+
+#: portal/templates/portal/advice_detail.html:20
+msgid "Közös feltételezések"
+msgstr "Közös feltételezések"
+
+#: portal/templates/portal/advice_detail.html:21
+msgid "Hiányzó adatok – célzott kérdések"
+msgstr "Hiányzó adatok – célzott kérdések"
+
+#: portal/templates/portal/advice_detail.html:23
+msgid ""
+"Ez a tanács oktató jellegű; szakmai határnál kérje szakember (agronómus, "
+"növényorvos, állatorvos, talajtani szakember) véleményét. Nincs teljességi "
+"garancia."
+msgstr ""
+"Ez a tanács oktató jellegű; szakmai határnál kérje szakember (agronómus, "
+"növényorvos, állatorvos, talajtani szakember) véleményét. Nincs teljességi "
+"garancia."
+
+#: portal/templates/portal/advice_detail.html:24
+msgid "Vissza az előzményekhez"
+msgstr "Vissza az előzményekhez"
+
+#: portal/templates/portal/advice_history.html:3
+msgid "Előzmények – utolsó 5 tanács"
+msgstr "Előzmények – utolsó 5 tanács"
+
+#: portal/templates/portal/advice_history.html:8
+msgid "modell:"
+msgstr "modell:"
+
+#: portal/templates/portal/advice_history.html:8
+#: portal/templates/portal/advice_request.html:6
+msgid "profilverzió:"
+msgstr "profilverzió:"
+
+#: portal/templates/portal/advice_history.html:8
+msgid "nyelv:"
+msgstr "nyelv:"
+
+#: portal/templates/portal/advice_history.html:9
+msgid "Még nincs tanácskísérlet."
+msgstr "Még nincs tanácskísérlet."
+
+#: portal/templates/portal/advice_request.html:5
+#: portal/templates/portal/advice_request.html:7
+msgid "Küldendő profilösszefoglaló"
+msgstr "Küldendő profilösszefoglaló"
+
+#: portal/templates/portal/advice_request.html:8
+msgid "Mező"
+msgstr "Mező"
+
+#: portal/templates/portal/advice_request.html:8
+msgid "Érték"
+msgstr "Érték"
+
+#: portal/templates/portal/advice_request.html:9
+msgid "Régió"
+msgstr "Régió"
+
+#: portal/templates/portal/advice_request.html:10
+msgid "Éghajlat"
+msgstr "Éghajlat"
+
+#: portal/templates/portal/advice_request.html:11
+msgid "Irány"
+msgstr "Irány"
+
+#: portal/templates/portal/advice_request.html:12
+msgid "Talaj"
+msgstr "Talaj"
+
+#: portal/templates/portal/advice_request.html:13
+msgid "Víz"
+msgstr "Víz"
+
+#: portal/templates/portal/advice_request.html:15
+msgid ""
+"Csak a tanácshoz szükséges profiladatok mennek a modellszolgáltatóhoz. A "
+"profilszövegben szereplő utasításokat a rendszer adatként kezeli."
+msgstr ""
+"Csak a tanácshoz szükséges profiladatok mennek a modellszolgáltatóhoz. A "
+"profilszövegben szereplő utasításokat a rendszer adatként kezeli."
+
+#: portal/templates/portal/advice_request.html:19
+msgid "Feltételek"
+msgstr "Feltételek"
+
+#: portal/templates/portal/advice_request.html:20
+msgid "Hozzájárulás:"
+msgstr "Hozzájárulás:"
+
+#: portal/templates/portal/advice_request.html:20
+msgid "tanács nem kérhető."
+msgstr "tanács nem kérhető."
+
+#: portal/templates/portal/advice_request.html:20
+msgid "Megadás a Fiók oldalon"
+msgstr "Megadás a Fiók oldalon"
+
+#: portal/templates/portal/advice_request.html:21
+#, fuzzy, python-format
+#| msgid ""
+#| "Keret: elmúlt órában %(hc)s/%(mh)s, elmúlt 24 órában %(dc)s/%(md)s kísérlet "
+#| "(a függő és sikertelen kísérletek is számítanak). Egy kérés időkorlátja "
+#| "érvényes; hiba esetén profilja nem vész el."
+msgid ""
+"Keret (tanáccsal közös, a csevegőoldallal azonos lekérdezési logika): elmúlt"
+" órában %(hc)s/%(mh)s, elmúlt 24 órában %(dc)s/%(md)s kísérlet (a függő és "
+"sikertelen kísérletek is számítanak). Pénzben kifejezett költség nem ismert,"
+" a rendszer díjfigurát nem közöl. Egy kérés időkorlátja érvényes; hiba "
+"esetén profilja nem vész el."
+msgstr ""
+"Keret: elmúlt órában %(hc)s/%(mh)s, elmúlt 24 órában %(dc)s/%(md)s kísérlet "
+"(a függő és sikertelen kísérletek is számítanak). Egy kérés időkorlátja "
+"érvényes; hiba esetén profilja nem vész el."
+
+#: portal/templates/portal/advice_request.html:22
+#: portal/templates/portal/chat.html:19
+msgid "Keretadatok időpontja:"
+msgstr "Keretadatok időpontja:"
+
+#: portal/templates/portal/advice_request.html:26
+msgid "Tanács kérése (pontosan 3 lépés)"
+msgstr "Tanács kérése (pontosan 3 lépés)"
+
+#: portal/templates/portal/advice_request.html:28
+msgid ""
+"Dupla kattintás nem dupláz: ugyanaz a kéréskulcs ugyanazt a kísérletet adja "
+"vissza."
+msgstr ""
+"Dupla kattintás nem dupláz: ugyanaz a kéréskulcs ugyanazt a kísérletet adja "
+"vissza."
+
+#: portal/templates/portal/advice_request.html:28
+#: portal/templates/portal/chat.html:52
+msgid "Segítség: kérdés és tanács különbsége"
+msgstr "Segítség: kérdés és tanács különbsége"
+
+#: portal/templates/portal/base.html:10
+msgid "Ugrás a tartalomra"
+msgstr "Ugrás a tartalomra"
+
+#: portal/templates/portal/base.html:12
+msgid "Regeneratív átállás"
+msgstr "Regeneratív átállás"
+
+#: portal/templates/portal/base.html:13
+msgid "Nyelvválasztás"
+msgstr "Nyelvválasztás"
+
+#: portal/templates/portal/base.html:19 portal/templates/portal/base.html:31
+msgid "Gazdaság"
+msgstr "Gazdaság"
+
+#: portal/templates/portal/base.html:19
+msgid "Váltás"
+msgstr "Váltás"
+
+#: portal/templates/portal/base.html:27
+msgid "Menü"
+msgstr "Menü"
+
+#: portal/templates/portal/base.html:28 portal/templates/portal/base.html:29
+msgid "Fő navigáció"
+msgstr "Fő navigáció"
+
+#: portal/templates/portal/base.html:31
+#: portal/templates/portal/dashboard.html:3
+#: portal/templates/portal/event_list.html:1
+msgid "Gazdálkodási napló"
+msgstr "Gazdálkodási napló"
+
+#: portal/templates/portal/base.html:31
+#: portal/templates/portal/livestock_list.html:1
+msgid "Állatállomány"
+msgstr "Állatállomány"
+
+#: portal/templates/portal/base.html:32
+msgid "Tervezés"
+msgstr "Tervezés"
+
+#: portal/templates/portal/base.html:32 portal/templates/portal/plans.html:9
+#: portal/templates/portal/utilization.html:2
+msgid "Kihasználtság"
+msgstr "Kihasználtság"
+
+#: portal/templates/portal/base.html:33
+msgid "Tudástár"
+msgstr "Tudástár"
+
+#: portal/templates/portal/base.html:33
+#: portal/templates/portal/rule_detail.html:10
+#: portal/templates/portal/rule_list.html:2
+#: portal/templates/portal/rule_list.html:4
+msgid "Szabályleírások"
+msgstr "Szabályleírások"
+
+#: portal/templates/portal/base.html:33
+#: portal/templates/portal/farm_rule_list.html:2
+#: portal/templates/portal/farm_rule_list.html:4
+msgid "Farm szabályai"
+msgstr "Farm szabályai"
+
+#: portal/templates/portal/base.html:33
+#: portal/templates/portal/document_detail.html:11
+#: portal/templates/portal/document_list.html:2
+#: portal/templates/portal/document_list.html:4
+msgid "Dokumentumtár"
+msgstr "Dokumentumtár"
+
+#: portal/templates/portal/base.html:34
+msgid "Segítség"
+msgstr "Segítség"
+
+#: portal/templates/portal/base.html:34
+#: portal/templates/portal/domain_list.html:7
+msgid "Előzmények"
+msgstr "Előzmények"
+
+#: portal/templates/portal/base.html:35
+msgid "Csapat és fiók"
+msgstr "Csapat és fiók"
+
+#: portal/templates/portal/base.html:35
+#: portal/templates/portal/external_contact_detail.html:5
+#: portal/templates/portal/external_contact_list.html:2
+#: portal/templates/portal/members.html:16
+msgid "Külső kapcsolattartók"
+msgstr "Külső kapcsolattartók"
+
+#: portal/templates/portal/base.html:35
+msgid "Kilépés"
+msgstr "Kilépés"
+
+#: portal/templates/portal/base.html:46
+msgid ""
+"Oktatási célú tanácsadás – nem helyettesíti a szakértői véleményt. A "
+"tanácsok teljességére és minden kockázat felismerésére garancia nincs."
+msgstr ""
+"Oktatási célú tanácsadás – nem helyettesíti a szakértői véleményt. A "
+"tanácsok teljességére és minden kockázat felismerésére garancia nincs."
+
+#: portal/templates/portal/chat.html:6
+msgid "Navigáció (rögzített hivatkozások)"
+msgstr "Navigáció (rögzített hivatkozások)"
+
+#: portal/templates/portal/chat.html:8
+msgid "Oldaltérkép (összes modul)"
+msgstr "Oldaltérkép (összes modul)"
+
+#: portal/templates/portal/chat.html:15
+msgid "Aktuális környezet"
+msgstr "Aktuális környezet"
+
+#: portal/templates/portal/chat.html:16
+msgid "szerep:"
+msgstr "szerep:"
+
+#: portal/templates/portal/chat.html:17
+#, python-format
+msgid ""
+"Környezet mérete: %(n)s karakter. A GET nézet nem hív szolgáltatót és nem ír"
+" adatbázisba; költség csak a kifejezett küldéssel keletkezik."
+msgstr ""
+"Környezet mérete: %(n)s karakter. A GET nézet nem hív szolgáltatót és nem ír"
+" adatbázisba; költség csak a kifejezett küldéssel keletkezik."
+
+#: portal/templates/portal/chat.html:18
+#, fuzzy, python-format
+#| msgid ""
+#| "Keret (tanáccsal közös): elmúlt órában %(hc)s/%(mh)s, elmúlt 24 órában "
+#| "%(dc)s/%(md)s (a függő és sikertelen kísérletek is számítanak)."
+msgid ""
+"Keret (tanáccsal közös, a tanácsoldallal azonos lekérdezési logika): elmúlt "
+"órában %(hc)s/%(mh)s, elmúlt 24 órában %(dc)s/%(md)s (a függő és sikertelen "
+"kísérletek is számítanak). Pénzben kifejezett költség nem ismert, a rendszer"
+" díjfigurát nem közöl."
+msgstr ""
+"Keret (tanáccsal közös): elmúlt órában %(hc)s/%(mh)s, elmúlt 24 órában "
+"%(dc)s/%(md)s (a függő és sikertelen kísérletek is számítanak)."
+
+#: portal/templates/portal/chat.html:22
+msgid "Üzenet küldése"
+msgstr "Üzenet küldése"
+
+#: portal/templates/portal/chat.html:26
+msgid "Kérdés (legfeljebb 2000 karakter)"
+msgstr "Kérdés (legfeljebb 2000 karakter)"
+
+#: portal/templates/portal/chat.html:28
+msgid ""
+"Kifejezetten megerősítem a küldést és a költség/hozzájárulás feltételeit."
+msgstr ""
+"Kifejezetten megerősítem a küldést és a költség/hozzájárulás feltételeit."
+
+#: portal/templates/portal/chat.html:29
+msgid "Küldés"
+msgstr "Küldés"
+
+#: portal/templates/portal/chat.html:31
+msgid ""
+"A válasz csak adat-előnézet: az írási javaslatok külön jóváhagyó gombbal, "
+"ellenőrzött POST-tal hajthatók végre."
+msgstr ""
+"A válasz csak adat-előnézet: az írási javaslatok külön jóváhagyó gombbal, "
+"ellenőrzött POST-tal hajthatók végre."
+
+#: portal/templates/portal/chat.html:34
+msgid "Előzmények (utolsó 5 kísérlet)"
+msgstr "Előzmények (utolsó 5 kísérlet)"
+
+#: portal/templates/portal/chat.html:38
+msgid "Kérdés:"
+msgstr "Kérdés:"
+
+#: portal/templates/portal/chat.html:39
+msgid "Válasz (adat, nem végrehajtás):"
+msgstr "Válasz (adat, nem végrehajtás):"
+
+#: portal/templates/portal/chat.html:44
+msgid "Javaslat"
+msgstr "Javaslat"
+
+#: portal/templates/portal/chat.html:44
+msgid "cél: kész"
+msgstr "cél: kész"
+
+#: portal/templates/portal/chat.html:44
+msgid "cél: nyitott"
+msgstr "cél: nyitott"
+
+#: portal/templates/portal/chat.html:46
+msgid "Javaslat végrehajtása"
+msgstr "Javaslat végrehajtása"
+
+#: portal/templates/portal/chat.html:51
+msgid "Még nincs csevegési előzmény."
+msgstr "Még nincs csevegési előzmény."
+
+#: portal/templates/portal/chat.html:52
+msgid "Az előzmény kiszolgálói renderelés, külön GET API-hívás nélkül."
+msgstr "Az előzmény kiszolgálói renderelés, külön GET API-hívás nélkül."
+
+#: portal/templates/portal/dashboard.html:5
+msgid "Még nincs gazdasága"
+msgstr "Még nincs gazdasága"
+
+#: portal/templates/portal/dashboard.html:5
+msgid "Hozza létre egyetlen gazdaságát a kezdéshez."
+msgstr "Hozza létre egyetlen gazdaságát a kezdéshez."
+
+#: portal/templates/portal/dashboard.html:5
+#: portal/templates/portal/farm.html:8
+msgid "Gazdaság létrehozása"
+msgstr "Gazdaság létrehozása"
+
+#: portal/templates/portal/dashboard.html:8
+#, fuzzy
+#| msgid "Következő időszak"
+msgid "Következő teendő"
+msgstr "Következő időszak"
+
+#: portal/templates/portal/dashboard.html:9
+#, fuzzy
+#| msgid "Időjárás"
+msgid "Időjárás-állapot"
+msgstr "Időjárás"
+
+#: portal/templates/portal/dashboard.html:9
+#, fuzzy
+#| msgid "Időjárás (gyorsítótár)"
+msgid "Időjárás: nincs gyorsítótárazott adat."
+msgstr "Időjárás (gyorsítótár)"
+
+#: portal/templates/portal/dashboard.html:10
+#: portal/templates/portal/dashboard.html:20
+msgid "Utolsó tanács"
+msgstr "Utolsó tanács"
+
+#: portal/templates/portal/dashboard.html:10
+#, fuzzy
+#| msgid "Még nincs tanácskísérlet."
+msgid "Még nincs sikeres tanács."
+msgstr "Még nincs tanácskísérlet."
+
+#: portal/templates/portal/dashboard.html:15
+msgid "Profilverzió:"
+msgstr "Profilverzió:"
+
+#: portal/templates/portal/dashboard.html:15
+msgid "Felhőhozzájárulás:"
+msgstr "Felhőhozzájárulás:"
+
+#: portal/templates/portal/dashboard.html:16
+msgid "Hiányzó profiltények:"
+msgstr "Hiányzó profiltények:"
+
+#: portal/templates/portal/dashboard.html:17
+msgid "Új tanács kérése"
+msgstr "Új tanács kérése"
+
+#: portal/templates/portal/dashboard.html:17
+msgid "Profil szerkesztése"
+msgstr "Profil szerkesztése"
+
+#: portal/templates/portal/dashboard.html:23
+msgid "Minta (seed) – nem élő modelltanács"
+msgstr "Minta (seed) – nem élő modelltanács"
+
+#: portal/templates/portal/dashboard.html:27
+#: portal/templates/portal/event_list.html:23
+msgid "Részletek és eredetadatok"
+msgstr "Részletek és eredetadatok"
+
+#: portal/templates/portal/dashboard.html:28
+msgid "Még nincs sikeres tanács. Kérjen tanácsot a profilja alapján."
+msgstr "Még nincs sikeres tanács. Kérjen tanácsot a profilja alapján."
+
+#: portal/templates/portal/dashboard.html:32
+msgid "Nyitott teendők"
+msgstr "Nyitott teendők"
+
+#: portal/templates/portal/dashboard.html:32
+msgid "Összes teendő"
+msgstr "Összes teendő"
+
+#: portal/templates/portal/dashboard.html:33
+msgid "Kész teendők"
+msgstr "Kész teendők"
+
+#: portal/templates/portal/document_confirm_delete.html:2
+#: portal/templates/portal/document_confirm_delete.html:4
+#, python-format
+#| msgid "Kapcsolattartó törlése — %(name)s"
+msgid "Dokumentum törlése — %(name)s"
+msgstr "Dokumentum törlése — %(name)s"
+
+#: portal/templates/portal/document_confirm_delete.html:5
+msgid "Biztosan törlöd a dokumentumot? A művelet nem vonható vissza."
+msgstr "Biztosan törlöd a dokumentumot? A művelet nem vonható vissza."
+
+#: portal/templates/portal/document_detail.html:5
+#: portal/templates/portal/document_list.html:13
+#: portal/templates/portal/farm_rule_list.html:13
+#: portal/templates/portal/farm_rule_list.html:30
+#: portal/templates/portal/rule_detail.html:5
+#: portal/templates/portal/rule_list.html:13
+msgid "Nyilvános"
+msgstr "Nyilvános"
+
+#: portal/templates/portal/document_detail.html:5
+#: portal/templates/portal/document_list.html:13
+#: portal/templates/portal/farm_rule_list.html:13
+#: portal/templates/portal/farm_rule_list.html:30
+#: portal/templates/portal/rule_detail.html:5
+#: portal/templates/portal/rule_list.html:13
+msgid "Privát"
+msgstr "Privát"
+
+#: portal/templates/portal/document_detail.html:6
+#: portal/templates/portal/rule_detail.html:6
+#, python-format
+msgid "Frissítve: %(updated)s"
+msgstr "Frissítve: %(updated)s"
+
+#: portal/templates/portal/document_detail.html:6
+msgid "bájt"
+msgstr "bájt"
+
+#: portal/templates/portal/document_detail.html:8
+msgid "Eredeti fájlnév:"
+msgstr "Eredeti fájlnév:"
+
+#: portal/templates/portal/document_detail.html:9
+#| msgid ""
+#| "Tárolt szöveges leírás: a rendszer nem ellenőrzi és nem hajtja végre, jogi "
+#| "megfelelést nem garantál."
+msgid ""
+"Tárolt fájl: a rendszer nem dolgozza fel és nem hajtja végre, jogi "
+"megfelelést nem garantál."
+msgstr ""
+"Tárolt fájl: a rendszer nem dolgozza fel és nem hajtja végre, jogi "
+"megfelelést nem garantál."
+
+#: portal/templates/portal/document_detail.html:10
+#| msgid "Adataim letöltése (JSON)"
+msgid "Letöltés"
+msgstr "Letöltés"
+
+#: portal/templates/portal/document_form.html:2
+#: portal/templates/portal/document_form.html:4
+#, python-format
+#| msgid "Kapcsolattartó szerkesztése — %(name)s"
+msgid "Dokumentum szerkesztése — %(name)s"
+msgstr "Dokumentum szerkesztése — %(name)s"
+
+#: portal/templates/portal/document_form.html:2
+#: portal/templates/portal/document_form.html:4
+#: portal/templates/portal/document_list.html:6
+msgid "Új dokumentum"
+msgstr "Új dokumentum"
+
+#: portal/templates/portal/document_form.html:5
+#| msgid ""
+#| "Add meg a leírás nevét, válassz saját kategóriát vagy hozz létre újat, és "
+#| "mentsd el a hosszú szöveget. Tárolt leírás: a rendszer nem ellenőrzi és nem "
+#| "hajtja végre."
+msgid ""
+"Add meg a dokumentum nevét, válaszd ki a láthatóságot, és tölts fel PDF, "
+"TXT, MD, CSV vagy DOCX fájlt (legfeljebb 10 MiB). Tárolt fájl: a rendszer "
+"nem dolgozza fel és nem hajtja végre."
+msgstr ""
+"Add meg a dokumentum nevét, válaszd ki a láthatóságot, és tölts fel PDF, "
+"TXT, MD, CSV vagy DOCX fájlt (legfeljebb 10 MiB). Tárolt fájl: a rendszer "
+"nem dolgozza fel és nem hajtja végre."
+
+#: portal/templates/portal/document_list.html:5
+#| msgid ""
+#| "Saját leírásaid, valamint mások nyilvános leírásai. Tárolt szöveges leírás: "
+#| "a rendszer nem ellenőrzi és nem hajtja végre, jogi megfelelést nem garantál."
+msgid ""
+"Saját dokumentumaid, valamint mások nyilvános dokumentumai. Tárolt fájlok: a"
+" rendszer nem dolgozza fel és nem hajtja végre őket."
+msgstr ""
+"Saját dokumentumaid, valamint mások nyilvános dokumentumai. Tárolt fájlok: a"
+" rendszer nem dolgozza fel és nem hajtja végre őket."
+
+#: portal/templates/portal/document_list.html:12
+#: portal/templates/portal/farm_rule_list.html:11
+#: portal/templates/portal/farm_rule_list.html:28
+msgid "Saját"
+msgstr "Saját"
+
+#: portal/templates/portal/document_list.html:12
+msgid "Megosztott"
+msgstr "Megosztott"
+
+#: portal/templates/portal/document_list.html:18
+#| msgid "Még nincs kész teendő."
+msgid "Még nincs dokumentum."
+msgstr "Még nincs dokumentum."
+
+#: portal/templates/portal/domain_confirm_delete.html:1
+msgid ""
+"Nem törölhető: kapcsolódó adat védi. Előbb rendezze a kapcsolódó elemeket."
+msgstr ""
+"Nem törölhető: kapcsolódó adat védi. Előbb rendezze a kapcsolódó elemeket."
+
+#: portal/templates/portal/domain_confirm_delete.html:1
+#: portal/templates/portal/livestock_confirm_delete.html:2
+msgid "Biztosan törli?"
+msgstr "Biztosan törli?"
+
+#: portal/templates/portal/domain_confirm_delete.html:1
+#: portal/templates/portal/external_contact_confirm_delete.html:6
+msgid "Törlés megerősítése"
+msgstr "Törlés megerősítése"
+
+#: portal/templates/portal/domain_list.html:1
+msgid "Vetésforgók"
+msgstr "Vetésforgók"
+
+#: portal/templates/portal/domain_list.html:4
+#: portal/templates/portal/domain_list.html:7
+#: portal/templates/portal/domain_list.html:9
+#: portal/templates/portal/domain_list.html:11
+#: portal/templates/portal/event_list.html:23
+#: portal/templates/portal/livestock_list.html:2
+msgid "Nincs elem."
+msgstr "Nincs elem."
+
+#: portal/templates/portal/domain_list.html:7
+msgid "Becsült térképi terület (ha) — nem kataszteri"
+msgstr "Becsült térképi terület (ha) — nem kataszteri"
+
+#: portal/templates/portal/domain_list.html:9
+msgid "Nem elérhető"
+msgstr "Nem elérhető"
+
+#: portal/templates/portal/event_list.html:2
+msgid ""
+"ténylegesen elvégzett műveletek naplója, nem munkaterv. Nem hitelesített, "
+"jogszabály szerinti e-Gazdálkodási Napló, és nem helyettesíti a jogszabályi "
+"adatszolgáltatást."
+msgstr ""
+"ténylegesen elvégzett műveletek naplója, nem munkaterv. Nem hitelesített, "
+"jogszabály szerinti e-Gazdálkodási Napló, és nem helyettesíti a jogszabályi "
+"adatszolgáltatást."
+
+#: portal/templates/portal/event_list.html:6
+msgid "Dátumtól"
+msgstr "Dátumtól"
+
+#: portal/templates/portal/event_list.html:7
+msgid "Dátumig"
+msgstr "Dátumig"
+
+#: portal/templates/portal/event_list.html:8
+#: portal/templates/portal/event_list.html:9
+msgid "mind"
+msgstr "mind"
+
+#: portal/templates/portal/event_list.html:10
+#: portal/templates/portal/utilization.html:13
+msgid "Szűrés"
+msgstr "Szűrés"
+
+#: portal/templates/portal/event_list.html:10
+msgid "Szűrők törlése"
+msgstr "Szűrők törlése"
+
+#: portal/templates/portal/event_list.html:14
+msgid "Gazdálkodási napló bejegyzések"
+msgstr "Gazdálkodási napló bejegyzések"
+
+#: portal/templates/portal/event_list.html:21
+msgid "Műveletek"
+msgstr "Műveletek"
+
+#: portal/templates/portal/event_list.html:23
+msgid "Rögzítette"
+msgstr "Rögzítette"
+
+#: portal/templates/portal/event_list.html:23
+msgid "Frissítve"
+msgstr "Frissítve"
+
+#: portal/templates/portal/event_list.html:26
+msgid "Előző"
+msgstr "Előző"
+
+#: portal/templates/portal/event_list.html:26
+msgid "Következő"
+msgstr "Következő"
+
+#: portal/templates/portal/export_info.html:3
+#, fuzzy
+#| msgid "Tájékoztatók"
+msgid "Adatexport tájékoztató"
+msgstr "Tájékoztatók"
+
+#: portal/templates/portal/export_info.html:5
+msgid ""
+"Az export a profil, pillanatképek, tanácsok lépésekkel, teendők, "
+"hozzájárulási események, helyszínek, területek, gépek, vetésforgók és "
+"gazdálkodási-napló bejegyzések JSON állománya. A tájékoztató oldal csak "
+"magyaráz, a fájl letöltése külön hivatkozással indul."
+msgstr ""
+"Az export a profil, pillanatképek, tanácsok lépésekkel, teendők, "
+"hozzájárulási események, helyszínek, területek, gépek, vetésforgók és "
+"gazdálkodási-napló bejegyzések JSON állománya. A tájékoztató oldal csak "
+"magyaráz, a fájl letöltése külön hivatkozással indul."
+
+#: portal/templates/portal/export_info.html:6
+#, fuzzy
+#| msgid "Adataim letöltése (JSON)"
+msgid "Adataim letöltése (JSON fájl)"
+msgstr "Adataim letöltése (JSON)"
+
+#: portal/templates/portal/external_contact_confirm_delete.html:2
+#: portal/templates/portal/external_contact_confirm_delete.html:4
+#, python-format
+msgid "Kapcsolattartó törlése — %(name)s"
+msgstr "Kapcsolattartó törlése — %(name)s"
+
+#: portal/templates/portal/external_contact_confirm_delete.html:5
+msgid "A törlés végleges, a személy előzmény nélkül eltűnik a listáról."
+msgstr "A törlés végleges, a személy előzmény nélkül eltűnik a listáról."
+
+#: portal/templates/portal/external_contact_detail.html:6
+#: portal/templates/portal/external_contact_detail.html:10
+#, fuzzy
+#| msgid "Elérhető"
+msgid "Elérhetőség"
+msgstr "Elérhető"
+
+#: portal/templates/portal/external_contact_form.html:2
+#: portal/templates/portal/external_contact_form.html:4
+#, python-format
+msgid "Kapcsolattartó szerkesztése — %(name)s"
+msgstr "Kapcsolattartó szerkesztése — %(name)s"
+
+#: portal/templates/portal/external_contact_form.html:2
+#: portal/templates/portal/external_contact_form.html:4
+#: portal/templates/portal/external_contact_list.html:6
+msgid "Új külső kapcsolattartó"
+msgstr "Új külső kapcsolattartó"
+
+#: portal/templates/portal/external_contact_form.html:5
+msgid ""
+"Külső személy: telefon vagy e-mail kötelező, legalább egy kérhető munka "
+"soronként."
+msgstr ""
+"Külső személy: telefon vagy e-mail kötelező, legalább egy kérhető munka "
+"soronként."
+
+#: portal/templates/portal/external_contact_list.html:4
+#, python-format
+msgid "Külső kapcsolattartók — %(name)s"
+msgstr "Külső kapcsolattartók — %(name)s"
+
+#: portal/templates/portal/external_contact_list.html:5
+msgid ""
+"Bérmunkára felbérelhető külső személyek. Nem tagok: nem kapnak belépést, "
+"meghívót vagy szerepet."
+msgstr ""
+"Bérmunkára felbérelhető külső személyek. Nem tagok: nem kapnak belépést, "
+"meghívót vagy szerepet."
+
+#: portal/templates/portal/external_contact_list.html:8
+msgid "Kérhető munkák szerint"
+msgstr "Kérhető munkák szerint"
+
+#: portal/templates/portal/external_contact_list.html:20
+msgid "Még nincs külső kapcsolattartó."
+msgstr "Még nincs külső kapcsolattartó."
+
+#: portal/templates/portal/farm.html:5
+#, python-format
+msgid ""
+"Fiókonként egy gazdaság. Profilverzió: %(ver)s. A hiányzó mezők „nincs "
+"megadva” jelöléssel maradnak – a rendszer nem talál ki értékeket."
+msgstr ""
+"Fiókonként egy gazdaság. Profilverzió: %(ver)s. A hiányzó mezők „nincs "
+"megadva” jelöléssel maradnak – a rendszer nem talál ki értékeket."
+
+#: portal/templates/portal/farm.html:8
+msgid "Profil mentése"
+msgstr "Profil mentése"
+
+#: portal/templates/portal/farm.html:10
+msgid "Hiányok jelenleg:"
+msgstr "Hiányok jelenleg:"
+
+#: portal/templates/portal/farm.html:10
+msgid "nincs hiányzó csoport"
+msgstr "nincs hiányzó csoport"
+
+#: portal/templates/portal/farm_rule_list.html:5
+#: portal/templates/portal/rule_detail.html:7
+msgid ""
+"Tárolt szöveges leírás: a rendszer nem ellenőrzi és nem hajtja végre, jogi "
+"megfelelést nem garantál."
+msgstr ""
+"Tárolt szöveges leírás: a rendszer nem ellenőrzi és nem hajtja végre, jogi "
+"megfelelést nem garantál."
+
+#: portal/templates/portal/farm_rule_list.html:6
+msgid "Aktív szabályok"
+msgstr "Aktív szabályok"
+
+#: portal/templates/portal/farm_rule_list.html:15
+msgid "Deaktiválás"
+msgstr "Deaktiválás"
+
+#: portal/templates/portal/farm_rule_list.html:20
+msgid "Még nincs aktív szabály."
+msgstr "Még nincs aktív szabály."
+
+#: portal/templates/portal/farm_rule_list.html:22
+msgid "Elérhető leírások"
+msgstr "Elérhető leírások"
+
+#: portal/templates/portal/farm_rule_list.html:23
+msgid ""
+"A farm tulajdonosának leírásai és mások nyilvános leírásai telepíthetők."
+msgstr ""
+"A farm tulajdonosának leírásai és mások nyilvános leírásai telepíthetők."
+
+#: portal/templates/portal/farm_rule_list.html:31
+msgid "Aktív"
+msgstr "Aktív"
+
+#: portal/templates/portal/farm_rule_list.html:31
+msgid "Aktiválás"
+msgstr "Aktiválás"
+
+#: portal/templates/portal/farm_rule_list.html:36
+msgid "Nincs elérhető leírás."
+msgstr "Nincs elérhető leírás."
+
+#: portal/templates/portal/info.html:4 portal/templates/portal/login.html:9
+msgid "Tájékoztatók"
+msgstr "Tájékoztatók"
+
+#: portal/templates/portal/info.html:5
+msgid "Adatkezelési tájékoztató (tajekoztato_v1) és ÁSZF (aszf_v1) – kivonat"
+msgstr "Adatkezelési tájékoztató (tajekoztato_v1) és ÁSZF (aszf_v1) – kivonat"
+
+#: portal/templates/portal/info.html:6
+msgid ""
+"Ez a portál bejelentkezett gazdák egyetlen gazdaságának profilját, az arra "
+"épülő tanácsokat és saját teendőket kezeli. Adatait kizárólag saját "
+"fiókjával érheti el. Bármikor exportálhatja és törölheti adatait a Fiók "
+"oldalon."
+msgstr ""
+"Ez a portál bejelentkezett gazdák egyetlen gazdaságának profilját, az arra "
+"épülő tanácsokat és saját teendőket kezeli. Adatait kizárólag saját "
+"fiókjával érheti el. Bármikor exportálhatja és törölheti adatait a Fiók "
+"oldalon."
+
+#: portal/templates/portal/info.html:7
+msgid "Felhőadat-kezelési nyilatkozat (cloud_disclosure_v1)"
+msgstr "Felhőadat-kezelési nyilatkozat (cloud_disclosure_v1)"
+
+#: portal/templates/portal/info.html:8
+msgid ""
+"Tanácskéréskor a mentett gazdaságprofil szükséges adatait a szerver a Meta "
+"modellszolgáltató felhőjébe (api.meta.ai) küldi, kizárólag a strukturált "
+"tanács előállítására. Kulcs vagy jelszó soha nem kerül a modellhez. "
+"Hozzájárulás nélkül tanács nem kérhető, de profilja és teendői használhatók."
+" A hozzájárulás a Fiók oldalon bármikor megadható és visszavonható; a "
+"visszavonás a korábbi tanácsokat nem törli."
+msgstr ""
+"Tanácskéréskor a mentett gazdaságprofil szükséges adatait a szerver a Meta "
+"modellszolgáltató felhőjébe (api.meta.ai) küldi, kizárólag a strukturált "
+"tanács előállítására. Kulcs vagy jelszó soha nem kerül a modellhez. "
+"Hozzájárulás nélkül tanács nem kérhető, de profilja és teendői használhatók."
+" A hozzájárulás a Fiók oldalon bármikor megadható és visszavonható; a "
+"visszavonás a korábbi tanácsokat nem törli."
+
+#: portal/templates/portal/info.html:9
+msgid "Csevegés kérdése és a 3 lépéses tanács"
+msgstr "Csevegés kérdése és a 3 lépéses tanács"
+
+#: portal/templates/portal/info.html:10
+msgid ""
+"A csevegés egyetlen kérdésre ad rövid adat-előnézetet, írás csak külön "
+"jóváhagyással történik. A tanácskérés pontosan 3 lépéses szerkezetű tervet "
+"készít a profilpillanatképből."
+msgstr ""
+"A csevegés egyetlen kérdésre ad rövid adat-előnézetet, írás csak külön "
+"jóváhagyással történik. A tanácskérés pontosan 3 lépéses szerkezetű tervet "
+"készít a profilpillanatképből."
+
+#: portal/templates/portal/info.html:11
+msgid "A tanács határai"
+msgstr "A tanács határai"
+
+#: portal/templates/portal/info.html:12
+msgid ""
+"A tanács oktató jellegű: nem ad jogi megfelelési állítást, adagolást, "
+"diagnózist és nem garantál hozamot vagy bevételt. Szakmai határ esetén "
+"szakemberhez irányít. A rendszer a tiltott tartalom kiszűrésére törekszik, "
+"de minden káros tartalom felismerése nem garantálható."
+msgstr ""
+"A tanács oktató jellegű: nem ad jogi megfelelési állítást, adagolást, "
+"diagnózist és nem garantál hozamot vagy bevételt. Szakmai határ esetén "
+"szakemberhez irányít. A rendszer a tiltott tartalom kiszűrésére törekszik, "
+"de minden káros tartalom felismerése nem garantálható."
+
+#: portal/templates/portal/invitation_accept.html:2
+msgid "Meghívó elfogadása"
+msgstr "Meghívó elfogadása"
+
+#: portal/templates/portal/invitation_accept.html:4
+#, python-format
+msgid "Meghívó: %(farm)s (%(role)s)"
+msgstr "Meghívó: %(farm)s (%(role)s)"
+
+#: portal/templates/portal/invitation_accept.html:5
+msgid "Elfogadom"
+msgstr "Elfogadom"
+
+#: portal/templates/portal/livestock_confirm_archive.html:2
+msgid "Biztosan archiválja?"
+msgstr "Biztosan archiválja?"
+
+#: portal/templates/portal/livestock_confirm_archive.html:2
+msgid "Az előzmények megmaradnak."
+msgstr "Az előzmények megmaradnak."
+
+#: portal/templates/portal/livestock_confirm_archive.html:2
+msgid "Biztosan visszaállítja?"
+msgstr "Biztosan archiválja?"
+
+#: portal/templates/portal/livestock_confirm_archive.html:3
+#: portal/templates/portal/livestock_detail.html:6
+msgid "Archiválás"
+msgstr "Archiválás"
+
+#: portal/templates/portal/livestock_confirm_archive.html:3
+#: portal/templates/portal/livestock_detail.html:6
+msgid "Visszaállítás"
+msgstr "Szállítás"
+
+#: portal/templates/portal/livestock_detail.html:2
+#: portal/templates/portal/livestock_list.html:2
+msgid "Létszám"
+msgstr "Létszám"
+
+#: portal/templates/portal/livestock_detail.html:3
+#: portal/templates/portal/livestock_list.html:2
+msgid "Szállás"
+msgstr "Szállás"
+
+#: portal/templates/portal/livestock_detail.html:5
+msgid "Archivált csoport — az előzmények megmaradtak."
+msgstr "Archivált csoport — az előzmények megmaradtak."
+
+#: portal/templates/portal/livestock_detail.html:7
+msgid "Vissza a listához"
+msgstr "Vissza a listához"
+
+#: portal/templates/portal/livestock_detail.html:9
+msgid "Dátumozott események"
+msgstr "Dátumozott események"
+
+#: portal/templates/portal/livestock_detail.html:10
+msgid "Napló"
+msgstr "Napló"
+
+#: portal/templates/portal/livestock_detail.html:10
+#: portal/templates/portal/livestock_event_confirm_delete.html:4
+msgid "Visszavonás"
+msgstr "Visszavonás"
+
+#: portal/templates/portal/livestock_detail.html:10
+msgid "Nincs esemény."
+msgstr "Nincs esemény."
+
+#: portal/templates/portal/livestock_detail.html:11
+msgid "Új esemény"
+msgstr "Új esemény"
+
+#: portal/templates/portal/livestock_detail.html:13
+msgid "Naplókapcsolat (tényleges)"
+msgstr "Naplókapcsolat (tényleges)"
+
+#: portal/templates/portal/livestock_detail.html:14
+msgid "Nincs kapcsolt naplóbejegyzés."
+msgstr "Nincs kapcsolt naplóbejegyzés."
+
+#: portal/templates/portal/livestock_detail.html:16
+msgid "Tervezett feladatok"
+msgstr "Tervezett feladatok"
+
+#: portal/templates/portal/livestock_detail.html:17
+msgid "Elvégzés"
+msgstr "Elvégzés"
+
+#: portal/templates/portal/livestock_detail.html:17
+msgid "Nincs tervezett feladat."
+msgstr "Nincs tervezett feladat."
+
+#: portal/templates/portal/livestock_event_confirm_delete.html:3
+msgid ""
+"A visszavonás visszafordítja a létszámmozgást. A kapcsolt naplóbejegyzés "
+"megmarad."
+msgstr ""
+"A visszavonás visszafordítja a létszámmozgást. A kapcsolt naplóbejegyzés "
+"megmarad."
+
+#: portal/templates/portal/livestock_event_form.html:2
+msgid "Rögzítés"
+msgstr "Rögzítés"
+
+#: portal/templates/portal/livestock_form.html:2
+#, fuzzy
+#| msgid "Induló létszám"
+msgid "Jelenlegi létszám"
+msgstr "Induló létszám"
+
+#: portal/templates/portal/livestock_form.html:2
+msgid "a létszám csak dátumozott eseménnyel mozog."
+msgstr "a létszám csak dátumozott eseménnyel mozog."
+
+#: portal/templates/portal/livestock_list.html:2
+msgid "Archivált"
+msgstr "Archivált"
+
+#: portal/templates/portal/livestock_list.html:4
+msgid "Aktív csoportok"
+msgstr "Aktív csoportok"
+
+#: portal/templates/portal/livestock_list.html:4
+msgid "Archiváltak mutatása"
+msgstr "Archiváltak mutatása"
+
+#: portal/templates/portal/livestock_work_done.html:3
+msgid ""
+"Az elvégzés egy dátumozott állateseményt is rögzít (létszámmozgatás nélkül)."
+msgstr ""
+"Az elvégzés egy dátumozott állateseményt is rögzít (létszámmozgatás nélkül)."
+
+#: portal/templates/portal/livestock_work_done.html:4
+msgid "Készre jelölés"
+msgstr "Készre jelölés"
+
+#: portal/templates/portal/livestock_work_done.html:5
+msgid "Ehhez a munkához már tartozik rögzített esemény."
+msgstr "Ehhez a munkához már tartozik rögzített esemény."
+
+#: portal/templates/portal/livestock_work_done.html:6
+msgid "Vissza a csoporthoz"
+msgstr "Vissza a csoporthoz"
+
+#: portal/templates/portal/login.html:4
+#: portal/templates/portal/register.html:10
+msgid "Bejelentkezés"
+msgstr "Bejelentkezés"
+
+#: portal/templates/portal/login.html:7
+msgid "Belépés"
+msgstr "Belépés"
+
+#: portal/templates/portal/login.html:9
+msgid "Még nincs fiókja?"
+msgstr "Még nincs fiókja?"
+
+#: portal/templates/portal/login.html:9
+#: portal/templates/portal/register.html:4
+msgid "Regisztráció"
+msgstr "Regisztráció"
+
+#: portal/templates/portal/login.html:10
+msgid ""
+"A bejelentkezés kész, ellenőrzött keretrendszer-hitelesítéssel működik; "
+"jelszavát csak titkosított hash formában tároljuk."
+msgstr ""
+"A bejelentkezés kész, ellenőrzött keretrendszer-hitelesítéssel működik; "
+"jelszavát csak titkosított hash formában tároljuk."
+
+#: portal/templates/portal/members.html:4
+#, python-format
+msgid "Tagok — %(name)s"
+msgstr "Tagok — %(name)s"
+
+#: portal/templates/portal/members.html:5
+msgid "Saját gazdaság — személyzet"
+msgstr "Saját gazdaság — személyzet"
+
+#: portal/templates/portal/members.html:6
+msgid ""
+"Fiókonként egy saját gazdaság hozható létre; tagság révén több gazdaságban "
+"is részt vehet."
+msgstr ""
+"Fiókonként egy saját gazdaság hozható létre; tagság révén több gazdaságban "
+"is részt vehet."
+
+#: portal/templates/portal/members.html:7
+msgid "Szerepkörök és jogosultságok"
+msgstr "Szerepkörök és jogosultságok"
+
+#: portal/templates/portal/members.html:8
+msgid ""
+"A jogosultságokat a szerver oldali szerepkör-ellenőrzés adja (szerepkör-"
+"forrás: farm-tulajdonos, illetve aktív tagság)."
+msgstr ""
+"A jogosultságokat a szerver oldali szerepkör-ellenőrzés adja (szerepkör-"
+"forrás: farm-tulajdonos, illetve aktív tagság)."
+
+#: portal/templates/portal/members.html:9
+msgid "Tulajdonos: teljes jog, meghívás és szerepváltás."
+msgstr "Tulajdonos: teljes jog, meghívás és szerepváltás."
+
+#: portal/templates/portal/members.html:9
+msgid "Menedzser: profil, tanács, csevegés és tervek."
+msgstr "Menedzser: profil, tanács, csevegés és tervek."
+
+#: portal/templates/portal/members.html:9
+msgid ""
+"Munkatárs: teendők és csevegés; a munkaterv olvasható, de nem készíthető "
+"újra. Meghívás nem."
+msgstr ""
+"Munkatárs: teendők és csevegés; a munkaterv olvasható, de nem készíthető "
+"újra. Meghívás nem."
+
+#: portal/templates/portal/members.html:9
+msgid "Megfigyelő: csak olvasás; csevegés-küldés és meghívás nem."
+msgstr "Megfigyelő: csak olvasás; csevegés-küldés és meghívás nem."
+
+#: portal/templates/portal/members.html:10
+#, python-format
+msgid "Meghívó link (%(email)s):"
+msgstr "Meghívó link (%(email)s):"
+
+#: portal/templates/portal/members.html:11
+msgid ""
+"A meghívott e-mail-címével kell regisztrálni vagy bejelentkezni, majd a "
+"meghívólinket megnyitva elfogadni. E-mail értesítést nem küldünk; a linket "
+"itt adjuk át."
+msgstr ""
+"A meghívott e-mail-címével kell regisztrálni vagy bejelentkezni, majd a "
+"meghívólinket megnyitva elfogadni. E-mail értesítést nem küldünk; a linket "
+"itt adjuk át."
+
+#: portal/templates/portal/members.html:12
+msgid "Új meghívó"
+msgstr "Új meghívó"
+
+#: portal/templates/portal/members.html:14
+msgid "Aktív farm váltása"
+msgstr "Aktív farm váltása"
+
+#: portal/templates/portal/members.html:17
+msgid "Külső kapcsolattartók kezelése"
+msgstr "Külső kapcsolattartók kezelése"
+
+#: portal/templates/portal/members.html:18
+msgid "Tagságok"
+msgstr "Tagságok"
+
+#: portal/templates/portal/members.html:20
+msgid "Függő meghívók"
+msgstr "Függő meghívók"
+
+#: portal/templates/portal/plans.html:3
+#: portal/templates/portal/utilization.html:23
+msgid "Terv készítése"
+msgstr "Terv készítése"
+
+#: portal/templates/portal/plans.html:4
+msgid "Készítsd elő a munkaterv gazdagítását a tervadatok alapján."
+msgstr "Készítsd elő a munkaterv gazdagítását a tervadatok alapján."
+
+#: portal/templates/portal/plans.html:4
+msgid "Gazdagítás csevegéssel (előtöltés, küldés nélkül)"
+msgstr "Gazdagítás csevegéssel (előtöltés, küldés nélkül)"
+
+#: portal/templates/portal/plans.html:5
+msgid ""
+"Az előtöltés kifejezett POST-tal kerül a csevegőűrlapba; "
+"fizetős/szolgáltatói hívás csak a csevegőűrlap kifejezett elküldésével "
+"történik."
+msgstr ""
+"Az előtöltés kifejezett POST-tal kerül a csevegőűrlapba; "
+"fizetős/szolgáltatói hívás csak a csevegőűrlap kifejezett elküldésével "
+"történik."
+
+#: portal/templates/portal/plans.html:6
+msgid "Kapacitás-összegzés"
+msgstr "Kapacitás-összegzés"
+
+#: portal/templates/portal/plans.html:7
+msgid "Heti gazdaság-kapacitás"
+msgstr "Heti gazdaság-kapacitás"
+
+#: portal/templates/portal/plans.html:7 portal/templates/portal/plans.html:9
+#: portal/templates/portal/plans.html:11 portal/templates/portal/plans.html:17
+#: portal/templates/portal/utilization.html:19
+#: portal/templates/portal/utilization.html:31
+#: portal/templates/portal/utilization.html:36
+#: portal/templates/portal/utilization.html:37
+#: portal/templates/portal/utilization.html:42
+msgid "óra"
+msgstr "óra"
+
+#: portal/templates/portal/plans.html:8
+msgid "Figyelmeztetés: heti csúcs meghaladja a kapacitást"
+msgstr "Figyelmeztetés: heti csúcs meghaladja a kapacitást"
+
+#: portal/templates/portal/plans.html:9
+msgid "Heti összesített becsült órák"
+msgstr "Heti összesített becsült órák"
+
+#: portal/templates/portal/plans.html:9
+msgid "Hét (év, hét)"
+msgstr "Hét (év, hét)"
+
+#: portal/templates/portal/plans.html:10
+msgid "Gépterhelési csúcsok"
+msgstr "Gépterhelési csúcsok"
+
+#: portal/templates/portal/plans.html:10
+msgid "Gépenkénti heti igény"
+msgstr "Gépenkénti heti igény"
+
+#: portal/templates/portal/plans.html:10 portal/templates/portal/plans.html:17
+#: portal/templates/portal/utilization.html:20
+msgid "Hét"
+msgstr "Hét"
+
+#: portal/templates/portal/plans.html:10
+#: portal/templates/portal/utilization.html:10
+#: portal/templates/portal/utilization.html:47
+msgid "Gép"
+msgstr "Gép"
+
+#: portal/templates/portal/plans.html:10
+#, fuzzy
+#| msgid "Elérhető óra"
+msgid "Igényelt óra"
+msgstr "Elérhető óra"
+
+#: portal/templates/portal/plans.html:10
+#, fuzzy
+#| msgid "Heti gazdaság-kapacitás"
+msgid "Heti kapacitás"
+msgstr "Heti gazdaság-kapacitás"
+
+#: portal/templates/portal/plans.html:11
+msgid "Gépkapacitás-túllépés"
+msgstr "Gépkapacitás-túllépés"
+
+#: portal/templates/portal/plans.html:14
+msgid "Idősor"
+msgstr "Idősor"
+
+#: portal/templates/portal/plans.html:15
+msgid "A táblázatok vízszintesen görgethetők."
+msgstr "A táblázatok vízszintesen görgethetők."
+
+#: portal/templates/portal/plans.html:16
+msgid ""
+"Számítás: a becsült órák egyenletesen oszlanak el a hétköznapokra; a hétvégi"
+" és ismeretlen igény nem számít bele a heti csúcsokba."
+msgstr ""
+"Számítás: a becsült órák egyenletesen oszlanak el a hétköznapokra; a hétvégi"
+" és ismeretlen igény nem számít bele a heti csúcsokba."
+
+#: portal/templates/portal/plans.html:17
+#, fuzzy
+#| msgid "Összes teendő"
+msgid "összesen"
+msgstr "Összes teendő"
+
+#: portal/templates/portal/plans.html:17
+msgid "Hiányzó gép"
+msgstr "Hiányzó gép"
+
+#: portal/templates/portal/plans.html:17
+msgid "Nincs gép"
+msgstr "Nincs gép"
+
+#: portal/templates/portal/plans.html:17
+msgid "Nincs terv. Készíts új tervet."
+msgstr "Nincs terv. Készíts új tervet."
+
+#: portal/templates/portal/plans.html:18
+msgid "Időjárási bizonyíték"
+msgstr "Időjárási bizonyíték"
+
+#: portal/templates/portal/plans.html:19
+#: portal/templates/portal/weather.html:5
+msgid "Forrás"
+msgstr "Forrás"
+
+#: portal/templates/portal/plans.html:19
+msgid ""
+"Gyorsítótárból, csak olvasás; éghajlati adat történeti alap, NEM "
+"előrejelzés."
+msgstr ""
+"Gyorsítótárból, csak olvasás; éghajlati adat történeti alap, NEM "
+"előrejelzés."
+
+#: portal/templates/portal/plans.html:20
+msgid "előrejelzés"
+msgstr "előrejelzés"
+
+#: portal/templates/portal/plans.html:20
+#: portal/templates/portal/weather.html:25
+#: portal/templates/portal/weather.html:39
+msgid "lekérve"
+msgstr "lekérve"
+
+#: portal/templates/portal/plans.html:20
+msgid "éghajlat"
+msgstr "éghajlat"
+
+#: portal/templates/portal/plans.html:20
+msgid "Nincs időjárási bizonyíték."
+msgstr "Nincs időjárási bizonyíték."
+
+#: portal/templates/portal/property_form.html:1
+msgid ""
+"A térkép OpenStreetMap csempéket tölt be; eközben a böngésző az OSM "
+"szervereivel kommunikál (IP-cím, nézett terület). A térkép csak segítség: a "
+"mentett adat kizárólag a lenti mezők tartalma."
+msgstr ""
+"A térkép OpenStreetMap csempéket tölt be; eközben a böngésző az OSM "
+"szervereivel kommunikál (IP-cím, nézett terület). A térkép csak segítség: a "
+"mentett adat kizárólag a lenti mezők tartalma."
+
+#: portal/templates/portal/property_form.html:1
+msgid "Becsült térképi terület"
+msgstr "Becsült térképi terület"
+
+#: portal/templates/portal/property_form.html:1
+msgid "nem kataszteri adat, a megadott terület változatlan"
+msgstr "nem kataszteri adat, a megadott terület változatlan"
+
+#: portal/templates/portal/property_form.html:2
+msgid "Terület térkép"
+msgstr "Terület térkép"
+
+#: portal/templates/portal/property_form.html:2
+msgid ""
+"Rajzolás: polygon és marker. Szerkesztés/mozgatás/törlés a térképen; "
+"mentéskor a mezők frissülnek. A FarmLocation (helyszín-központ) külön adat, "
+"a pont azt nem módosítja."
+msgstr ""
+"Rajzolás: polygon és marker. Szerkesztés/mozgatás/törlés a térképen; "
+"mentéskor a mezők frissülnek. A FarmLocation (helyszín-központ) külön adat, "
+"a pont azt nem módosítja."
+
+#: portal/templates/portal/property_form.html:2
+msgid ""
+"A lenti mezők kézi szerkesztése után a térkép elavult lehet — rajzold újra a"
+" geometriát a térképen, vagy töltsd be újra az oldalt."
+msgstr ""
+"A lenti mezők kézi szerkesztése után a térkép elavult lehet — rajzold újra a"
+" geometriát a térképen, vagy töltsd be újra az oldalt."
+
+#: portal/templates/portal/register.html:5
+msgid ""
+"Kérjük, regisztráció előtt olvassa el a <a "
+"href=\"/tudnivalok/\">tájékoztatókat</a>. Az ÁSZF és az adatkezelési "
+"tájékoztató elfogadása kötelező; a felhőadat-kezelési hozzájárulás külön, "
+"önkéntes és később visszavonható."
+msgstr ""
+"Kérjük, regisztráció előtt olvassa el a <a "
+"href=\"/tudnivalok/\">tájékoztatókat</a>. Az ÁSZF és az adatkezelési "
+"tájékoztató elfogadása kötelező; a felhőadat-kezelési hozzájárulás külön, "
+"önkéntes és később visszavonható."
+
+#: portal/templates/portal/register.html:8
+msgid "Fiók létrehozása"
+msgstr "Fiók létrehozása"
+
+#: portal/templates/portal/register.html:10
+msgid "Már van fiókja?"
+msgstr "Már van fiókja?"
+
+#: portal/templates/portal/rule_category_form.html:5
+msgid ""
+"Saját kategória szabályleírásokhoz. Azonos nevű kategória más felhasználónál"
+" nem ütközik."
+msgstr ""
+"Saját kategória szabályleírásokhoz. Azonos nevű kategória más felhasználónál"
+" nem ütközik."
+
+#: portal/templates/portal/rule_detail.html:6
+#, python-format
+msgid "Kategória: %(cat)s"
+msgstr "Kategória: %(cat)s"
+
+#: portal/templates/portal/rule_form.html:2
+#: portal/templates/portal/rule_form.html:4
+#, python-format
+msgid "Szabályleírás szerkesztése — %(name)s"
+msgstr "Szabályleírás szerkesztése — %(name)s"
+
+#: portal/templates/portal/rule_form.html:2
+#: portal/templates/portal/rule_form.html:4
+#: portal/templates/portal/rule_list.html:6
+msgid "Új szabályleírás"
+msgstr "Új szabályleírás"
+
+#: portal/templates/portal/rule_form.html:5
+msgid ""
+"Add meg a leírás nevét, válassz saját kategóriát vagy hozz létre újat, és "
+"mentsd el a hosszú szöveget. Tárolt leírás: a rendszer nem ellenőrzi és nem "
+"hajtja végre."
+msgstr ""
+"Add meg a leírás nevét, válassz saját kategóriát vagy hozz létre újat, és "
+"mentsd el a hosszú szöveget. Tárolt leírás: a rendszer nem ellenőrzi és nem "
+"hajtja végre."
+
+#: portal/templates/portal/rule_list.html:5
+msgid ""
+"Saját leírásaid, valamint mások nyilvános leírásai. Tárolt szöveges leírás: "
+"a rendszer nem ellenőrzi és nem hajtja végre, jogi megfelelést nem garantál."
+msgstr ""
+"Saját leírásaid, valamint mások nyilvános leírásai. Tárolt szöveges leírás: "
+"a rendszer nem ellenőrzi és nem hajtja végre, jogi megfelelést nem garantál."
+
+#: portal/templates/portal/rule_list.html:18
+msgid "Még nincs szabályleírás."
+msgstr "Még nincs szabályleírás."
+
+#: portal/templates/portal/utilization.html:3
+msgid "Becsült egyenletes eloszlás hétköznapokra, nem megerősített beosztás."
+msgstr "Becsült egyenletes eloszlás hétköznapokra, nem megerősített beosztás."
+
+#: portal/templates/portal/utilization.html:4
+msgid ""
+"Sűrű áttekintő idővonal mentett munkatételekből. Csak olvasható: ez az oldal"
+" soha nem ír és nem kér le élő adatot."
+msgstr ""
+"Sűrű áttekintő idővonal mentett munkatételekből. Csak olvasható: ez az oldal"
+" soha nem ír és nem kér le élő adatot."
+
+#: portal/templates/portal/utilization.html:5
+#, fuzzy
+#| msgid "Szűrés"
+msgid "Szűrők"
+msgstr "Szűrés"
+
+#: portal/templates/portal/utilization.html:9
+#: portal/templates/portal/utilization.html:10
+#: portal/templates/portal/utilization.html:11
+#: portal/templates/portal/utilization.html:12
+msgid "Mind"
+msgstr "Mind"
+
+#: portal/templates/portal/utilization.html:11
+msgid "Területtípus"
+msgstr "Területtípus"
+
+#: portal/templates/portal/utilization.html:12
+msgid "Erőforrás"
+msgstr "Erőforrás"
+
+#: portal/templates/portal/utilization.html:16
+msgid "Előző időszak"
+msgstr "Előző időszak"
+
+#: portal/templates/portal/utilization.html:16
+msgid "nap"
+msgstr "Nap"
+
+#: portal/templates/portal/utilization.html:16
+msgid "Következő időszak"
+msgstr "Következő időszak"
+
+#: portal/templates/portal/utilization.html:17
+msgid "Gazdaság összesen (szűrőktől független hatókör)"
+msgstr "Gazdaság összesen (szűrőktől független hatókör)"
+
+#: portal/templates/portal/utilization.html:18
+msgid "Gazdaság összesen"
+msgstr "Gazdaság összesen"
+
+#: portal/templates/portal/utilization.html:18
+msgid "szűrőktől független hatókör"
+msgstr "szűrőktől független hatókör"
+
+#: portal/templates/portal/utilization.html:19
+msgid "Feladatok"
+msgstr "Feladatok"
+
+#: portal/templates/portal/utilization.html:19
+msgid "Ablak-igény összesen"
+msgstr "Ablak-igény összesen"
+
+#: portal/templates/portal/utilization.html:19
+msgid "Becsült kiosztott az időszakban"
+msgstr "Becsült kiosztott az időszakban"
+
+#: portal/templates/portal/utilization.html:19
+#: portal/templates/portal/utilization.html:20
+#: portal/templates/portal/utilization.html:22
+#: portal/templates/portal/utilization.html:31
+#: portal/templates/portal/utilization.html:37
+#: portal/templates/portal/utilization.html:42
+#: portal/templates/portal/utilization.html:47
+msgid "ismeretlen"
+msgstr "ismeretlen"
+
+#: portal/templates/portal/utilization.html:20
+#, fuzzy
+#| msgid "Heti gazdaság-kapacitás"
+msgid "Heti gazdaság-összegzés"
+msgstr "Heti gazdaság-kapacitás"
+
+#: portal/templates/portal/utilization.html:20
+msgid "Heti gazdaság-összegzés (8 óra/hétköznap = 40 óra/hét feltételezéssel)"
+msgstr ""
+"Heti gazdaság-összegzés (8 óra/hétköznap = 40 óra/hét feltételezéssel)"
+
+#: portal/templates/portal/utilization.html:20
+#: portal/templates/portal/utilization.html:47
+msgid "Kiosztott óra"
+msgstr "Kiosztott óra"
+
+#: portal/templates/portal/utilization.html:20
+msgid "Elérhető óra"
+msgstr "Elérhető óra"
+
+#: portal/templates/portal/utilization.html:20
+msgid "Százalék"
+msgstr "Százalék"
+
+#: portal/templates/portal/utilization.html:20
+msgid "Ismeretlen"
+msgstr "Ismeretlen képesség."
+
+#: portal/templates/portal/utilization.html:22
+msgid "Jelmagyarázat"
+msgstr "Jelmagyarázat"
+
+#: portal/templates/portal/utilization.html:22
+#: portal/templates/portal/utilization.html:31
+#: portal/templates/portal/utilization.html:36
+#: portal/templates/portal/utilization.html:37
+msgid "konfliktus"
+msgstr "konfliktus"
+
+#: portal/templates/portal/utilization.html:22
+#, python-format
+msgid "túlterhelés 100%% felett"
+msgstr "túlterhelés 100%% felett"
+
+#: portal/templates/portal/utilization.html:22
+msgid "rendben"
+msgstr "rendben"
+
+#: portal/templates/portal/utilization.html:22
+#: portal/templates/portal/utilization.html:36
+#: portal/templates/portal/utilization.html:37
+msgid "nem elérhető"
+msgstr "nem elérhető"
+
+#: portal/templates/portal/utilization.html:23
+msgid "Nincs mentett terv. Készíts új tervet"
+msgstr "Nincs mentett terv. Készíts új tervet"
+
+#: portal/templates/portal/utilization.html:24
+msgid "A táblázatok és az idővonal vízszintesen görgethetők."
+msgstr "A táblázatok és az idővonal vízszintesen görgethetők."
+
+#: portal/templates/portal/utilization.html:25
+msgid "Erőforrás-idővonal"
+msgstr "Erőforrás-idővonal"
+
+#: portal/templates/portal/utilization.html:28
+msgid "Properties / Facilities"
+msgstr "Területek / létesítmények"
+
+#: portal/templates/portal/utilization.html:30
+#, python-format
+msgid ""
+"feladatablakkal fedett napok: %(c)s/%(s)s nap (nem ténylegesen foglalt "
+"napok; órakapacitás ismeretlen)"
+msgstr ""
+"feladatablakkal fedett napok: %(c)s/%(s)s nap (nem ténylegesen foglalt "
+"napok; órakapacitás ismeretlen)"
+
+#: portal/templates/portal/utilization.html:30
+msgid "nincs mentett feladat / ismeretlen órakapacitás"
+msgstr "nincs mentett feladat / ismeretlen órakapacitás"
+
+#: portal/templates/portal/utilization.html:31
+#: portal/templates/portal/utilization.html:37
+#: portal/templates/portal/utilization.html:42
+msgid "teljes ablak"
+msgstr "teljes ablak"
+
+#: portal/templates/portal/utilization.html:31
+#: portal/templates/portal/utilization.html:37
+#: portal/templates/portal/utilization.html:42
+msgid "kiosztott az időszakban"
+msgstr "kiosztott az időszakban"
+
+#: portal/templates/portal/utilization.html:31
+#: portal/templates/portal/utilization.html:37
+msgid "Nincs feladat az időszakban."
+msgstr "Nincs feladat az időszakban."
+
+#: portal/templates/portal/utilization.html:32
+msgid "Időjárás (gyorsítótár)"
+msgstr "Időjárás (gyorsítótár)"
+
+#: portal/templates/portal/utilization.html:34
+msgid "Equipment"
+msgstr "Gépek"
+
+#: portal/templates/portal/utilization.html:36
+msgid "Napi"
+msgstr "Napi"
+
+#: portal/templates/portal/utilization.html:39
+msgid "Unassigned"
+msgstr "Hozzárendeletlen"
+
+#: portal/templates/portal/utilization.html:40
+#: portal/templates/portal/utilization.html:41
+msgid "Hozzárendeletlen gépű feladatok"
+msgstr "Hozzárendeletlen gépű feladatok"
+
+#: portal/templates/portal/utilization.html:47
+msgid "Adattábla (képernyőolvasó-barát)"
+msgstr "Adattábla (képernyőolvasó-barát)"
+
+#: portal/templates/portal/utilization.html:47
+msgid "Feladatok az időszakban"
+msgstr "Feladatok az időszakban"
+
+#: portal/templates/portal/utilization.html:47
+msgid "Feladat"
+msgstr "Feladat"
+
+#: portal/templates/portal/weather.html:5
+msgid "Olvasás gyorsítótárból; frissítés csak gombnyomásra."
+msgstr "Olvasás gyorsítótárból; frissítés csak gombnyomásra."
+
+#: portal/templates/portal/weather.html:8
+msgid "Aktuális + éghajlati"
+msgstr "Aktuális + éghajlati"
+
+#: portal/templates/portal/weather.html:9
+msgid "Csak aktuális"
+msgstr "Csak aktuális"
+
+#: portal/templates/portal/weather.html:10
+msgid "Csak éghajlati"
+msgstr "Csak éghajlati"
+
+#: portal/templates/portal/weather.html:12
+msgid "Frissítés"
+msgstr "Frissítés"
+
+#: portal/templates/portal/weather.html:18
+msgid "Előrejelzés hiányzik – kérjen frissítést."
+msgstr "Előrejelzés hiányzik – kérjen frissítést."
+
+#: portal/templates/portal/weather.html:20
+msgid "Gyorsítótárazott / elavult adat."
+msgstr "Gyorsítótárazott / elavult adat."
+
+#: portal/templates/portal/weather.html:26
+#, fuzzy
+#| msgid "előrejelzés"
+msgid "Napi előrejelzés"
+msgstr "előrejelzés"
+
+#: portal/templates/portal/weather.html:27
+msgid "Nap"
+msgstr "Nap"
+
+#: portal/templates/portal/weather.html:27
+msgid "Max"
+msgstr "Max"
+
+#: portal/templates/portal/weather.html:27
+msgid "Min"
+msgstr "Min"
+
+#: portal/templates/portal/weather.html:27
+msgid "Csapadék"
+msgstr "Csapadék"
+
+#: portal/templates/portal/weather.html:27
+msgid "Szél max"
+msgstr "Szél max"
+
+#: portal/templates/portal/weather.html:36
+msgid "Éghajlati alap hiányzik."
+msgstr "Éghajlati alap hiányzik."
+
+#: portal/templates/portal/weather.html:41
+#, fuzzy
+#| msgid "Csak éghajlati"
+msgid "Havi éghajlati átlagok"
+msgstr "Csak éghajlati"
+
+#: portal/templates/portal/weather.html:42
+msgid "Hó"
+msgstr "Hó"
+
+#: portal/templates/portal/weather.html:42
+msgid "Átlag max"
+msgstr "Átlag max"
+
+#: portal/templates/portal/weather.html:42
+msgid "Átlag min"
+msgstr "Átlag min"
+
+#: portal/templates/portal/weather.html:42
+msgid "Csapadék átlag"
+msgstr "Csapadék átlag"
+
+#: portal/templates/portal/weather.html:51
+msgid "Nincs helyszín."
+msgstr "Nincs helyszín."
+
+#: portal/test_i18n.py:199 portal/views.py:82
+msgid "Saját gazdaságom"
+msgstr "Saját gazdaságom"
+
+#: portal/utilization.py:159
+msgid "unavailable machine"
+msgstr "nem elérhető gép"
+
+#: portal/utilization.py:162
+msgid "capability mismatch"
+msgstr "képesség-eltérés"
+
+#: portal/utilization.py:164
+msgid "not assigned to this property"
+msgstr "nincs ehhez a területhez rendelve"
+
+#: portal/utilization_views.py:174
+msgid "missing machine"
+msgstr "hiányzó gép"
+
+#: portal/utilization_views.py:178
+msgid "no equipment assigned"
+msgstr "nincs gép hozzárendelve"
+
+#: portal/utilization_views.py:180
+msgid "unknown"
+msgstr "ismeretlen"
+
+#: portal/utilization_views.py:182
+msgid "ok"
+msgstr "rendben"
+
+#: portal/views.py:60
+msgid "Túl sok sikertelen próbálkozás. Kérjük, várjon 15 percet."
+msgstr "Túl sok sikertelen próbálkozás. Kérjük, várjon 15 percet."
+
+#: portal/views.py:69
+msgid "Hibás e-mail cím vagy jelszó."
+msgstr "Hibás e-mail cím vagy jelszó."
+
+#: portal/views.py:71
+msgid "Kérjük, ellenőrizze a megadott adatokat."
+msgstr "Kérjük, ellenőrizze a megadott adatokat."
+
+#: portal/views.py:86
+msgid "Üdvözöljük! Először töltse ki gazdasága profilját."
+msgstr "Üdvözöljük! Először töltse ki gazdasága profilját."
+
+#: portal/views.py:146
+msgid "Időjárás: nincs helyszín, gyorsítótárazott adat nincs."
+msgstr "Időjárás: nincs helyszín, gyorsítótárazott adat nincs."
+
+#: portal/views.py:152
+msgid "friss"
+msgstr "friss"
+
+#: portal/views.py:152
+msgid "elavult"
+msgstr "elavult"
+
+#: portal/views.py:152
+#, fuzzy
+#| msgid "nincs megadva"
+msgid "nincs adat"
+msgstr "nincs megadva"
+
+#: portal/views.py:154
+#, fuzzy
+#| msgid "Gyorsítótárazott / elavult adat."
+msgid "nincs gyorsítótárazott adat"
+msgstr "Gyorsítótárazott / elavult adat."
+
+#: portal/views.py:155
+#, fuzzy
+#| msgid "Időjárás (gyorsítótár)"
+msgid "Időjárás gyorsítótárból: "
+msgstr "Időjárás (gyorsítótár)"
+
+#: portal/views.py:172
+msgid "Gazdaság létrehozva. Most kitöltheti a részleteket."
+msgstr "Gazdaság létrehozva. Most kitöltheti a részleteket."
+
+#: portal/views.py:179
+msgid "Profil mentve."
+msgstr "Profil mentve."
+
+#: portal/views.py:203
+msgid "A tanács nem készült el."
+msgstr "A tanács nem készült el."
+
+#: portal/views.py:244
+msgid "Teendő mentve."
+msgstr "Teendő mentve."
+
+#: portal/views.py:246
+msgid "A teendő szövege érvénytelen (1–2000 karakter)."
+msgstr "A teendő szövege érvénytelen (1–2000 karakter)."
+
+#: portal/views.py:259
+msgid "Teendő frissítve."
+msgstr "Teendő frissítve."
+
+#: portal/views.py:288
+msgid "Teendő törölve."
+msgstr "Teendő törölve."
+
+#: portal/views.py:301
+msgid "Teendő mentve a tanácslépésből."
+msgstr "Teendő mentve a tanácslépésből."
+
+#: portal/views.py:326
+msgid "Felhőadat-kezelési hozzájárulás megadva."
+msgstr "Felhőadat-kezelési hozzájárulás megadva."
+
+#: portal/views.py:329
+msgid ""
+"Felhőadat-kezelési hozzájárulás visszavonva. Új tanács nem kérhető, korábbi "
+"adatai megmaradnak."
+msgstr ""
+"Felhőadat-kezelési hozzájárulás visszavonva. Új tanács nem kérhető, korábbi "
+"adatai megmaradnak."
+
+#: portal/views.py:368
+msgid "A törléshez írja be pontosan: TORLES"
+msgstr "A törléshez írja be pontosan: TORLES"
+
+#: portal/weather.py:164
+msgid "single-year baseline, not a climate normal"
+msgstr "egyéves alapállapot, nem éghajlati normál (not a climate normal)"
+
+#: portal/weather.py:165
+msgid "multi-year monthly means; not a 30-year normal"
+msgstr "többéves havi átlagok; nem 30 éves normál (not a 30-year normal)"
+
+#: portal/weather.py:166
+msgid "10-year monthly baseline; not a 30-year normal"
+msgstr "10 éves havi alapállapot; nem 30 éves normál (not a 30-year normal)"
+
+#: portal/weather.py:169
+msgid "historical climate baseline (NOT forecast)"
+msgstr "történeti éghajlati alapállapot (NEM előrejelzés / NOT forecast)"
+
+#: portal/weather.py:252
+msgid "Időjárási adat hiányzik – terv óvatosan értelmezendő."
+msgstr "Időjárási adat hiányzik – terv óvatosan értelmezendő."
+
+#: portal/weather.py:257
+#, python-format
+msgid "Csapadékos nap %(date)s (%(mm)s mm) – talajmunka korlát lehet."
+msgstr "Csapadékos nap %(date)s (%(mm)s mm) – talajmunka korlát lehet."
+
+#: portal/weather.py:260
+#, python-format
+msgid "Erős szél %(date)s (%(v)s km/h) – permetezés/szórás korlát."
+msgstr "Erős szél %(date)s (%(v)s km/h) – permetezés/szórás korlát."
+
+#: portal/weather.py:263
+#, python-format
+msgid "Fagyveszély %(date)s (%(t)s °C) – érzékeny munkák halasztandók."
+msgstr "Fagyveszély %(date)s (%(t)s °C) – érzékeny munkák halasztandók."
+
+#: portal/weather.py:264
+msgid "Tájékoztató jellegű – talajmunkára garancia nincs."
+msgstr "Tájékoztató jellegű – talajmunkára garancia nincs."
+
+#: portal/weather_views.py:61
+#, python-format
+msgid "Időjárás frissítve (%(n)s lekérés)."
+msgstr "Időjárás frissítve (%(n)s lekérés)."
+
+msgid "Farm tudásbázisa"
+msgstr "Farm tudásbázisa"
+
+msgid "Aktív dokumentumok"
+msgstr "Aktív dokumentumok"
+
+msgid "Elérhető dokumentumok"
+msgstr "Elérhető dokumentumok"
+
+msgid ""
+"A tudásbázis csak kezelésre szolgál: a bejegyzések nem vesznek részt "
+"döntéshozatalban."
+msgstr ""
+"A tudásbázis csak kezelésre szolgál: a bejegyzések nem vesznek részt "
+"döntéshozatalban."
+
+msgid ""
+"Tárolt dokumentumok: a rendszer a fájlokat nem dolgozza fel és nem hajtja "
+"végre, jogi megfelelést nem garantál."
+msgstr ""
+"Tárolt dokumentumok: a rendszer a fájlokat nem dolgozza fel és nem hajtja "
+"végre, jogi megfelelést nem garantál."
+
+msgid ""
+"A farm tulajdonosának dokumentumai és mások nyilvános dokumentumai adhatók "
+"hozzá."
+msgstr ""
+"A farm tulajdonosának dokumentumai és mások nyilvános dokumentumai adhatók "
+"hozzá."
+
+msgid "Még nincs hozzáadott dokumentum."
+msgstr "Még nincs hozzáadott dokumentum."
+
+msgid "Nincs elérhető dokumentum."
+msgstr "Nincs elérhető dokumentum."
+
+msgid "Hozzáadás"
+msgstr "Hozzáadás"
+
+msgid "Eltávolítás"
+msgstr "Eltávolítás"
+
+msgid "Dokumentum hozzáadva."
+msgstr "Dokumentum hozzáadva."
+
+msgid "Dokumentum eltávolítva."
+msgstr "Dokumentum eltávolítva."
+
+#: portal/news_views.py:1
+msgid "Hírforrások"
+msgstr "Hírforrások"
+
+#: portal/news_views.py:1
+msgid "Új hírforrás"
+msgstr "Új hírforrás"
+
+#: portal/news_views.py:1
+msgid "Portál neve"
+msgstr "Portál neve"
+
+#: portal/news_views.py:1
+msgid "Portál URL-je"
+msgstr "Portál URL-je"
+
+#: portal/news_views.py:1
+msgid "Jegyzet"
+msgstr "Jegyzet"
+
+#: portal/news_views.py:1
+msgid "Inaktív"
+msgstr "Inaktív"
+
+#: portal/news_views.py:1
+msgid "Megnyitás"
+msgstr "Megnyitás"
+
+#: portal/news_views.py:1
+msgid "Még nincs hírforrás."
+msgstr "Még nincs hírforrás."
+
+#: portal/news_views.py:1
+msgid "Inaktiválás"
+msgstr "Inaktiválás"
+
+#: portal/news_views.py:1
+msgid "Érvénytelen hírforrás-adatok."
+msgstr "Érvénytelen hírforrás-adatok."
+
+#: portal/news_views.py:1
+msgid "Hírforrás felvéve."
+msgstr "Hírforrás felvéve."
+
+#: portal/news_views.py:1
+msgid "Hírforrás frissítve."
+msgstr "Hírforrás frissítve."
+
+#: portal/news_views.py:1
+msgid "Hírforrás törölve."
+msgstr "Hírforrás törölve."
+
+#: portal/news_views.py:1
+msgid "Hírforrás aktiválva."
+msgstr "Hírforrás aktiválva."
+
+#: portal/news_views.py:1
+msgid "Hírforrás inaktiválva."
+msgstr "Hírforrás inaktiválva."
+
+#: portal/news_views.py:1
+msgid "Ilyen URL már szerepel a gyűjteményedben."
+msgstr "Ilyen URL már szerepel a gyűjteményedben."
+
+#: portal/news_views.py:1
+msgid "Érvénytelen URL."
+msgstr "Érvénytelen URL."
+
+#: portal/news_views.py:1
+msgid "Csak http és https URL tárolható."
+msgstr "Csak http és https URL tárolható."
+
+#: portal/news_views.py:1
+msgid "Érvénytelen URL: hiányzó hoszt."
+msgstr "Érvénytelen URL: hiányzó hoszt."
+
+#: portal/news_views.py:1
+msgid "Az URL nem tartalmazhat felhasználói adatot."
+msgstr "Az URL nem tartalmazhat felhasználói adatot."
+
+#: portal/news_views.py:1
+msgid "Érvénytelen port az URL-ben."
+msgstr "Érvénytelen port az URL-ben."
+
+#: portal/news_views.py:1
+msgid "Csak nyilvános című hoszt tárolható."
+msgstr "Csak nyilvános című hoszt tárolható."
+
+#: portal/news_views.py:1
+msgid "Érvénytelen hosztnév az URL-ben."
+msgstr "Érvénytelen hosztnév az URL-ben."
+
+#: portal/news_views.py:1
+msgid "Az URL nem tartalmazhat szóközt vagy vezérlőkaraktert."
+msgstr "Az URL nem tartalmazhat szóközt vagy vezérlőkaraktert."
+
+#: portal/news_views.py:1
+msgid "Az URL legfeljebb 2000 karakter lehet."
+msgstr "Az URL legfeljebb 2000 karakter lehet."
+
+#: portal/news_views.py:1
+msgid "Csak nyilvános http(s) cím, például https://example.com/feed."
+msgstr "Csak nyilvános http(s) cím, például https://example.com/feed."
+
+#: portal/news_views.py:1
+msgid "Rövid jegyzet a portálról."
+msgstr "Rövid jegyzet a portálról."
+
+#: portal/news_views.py:1
+msgid "Kikapcsolva a portál a gyűjteményben marad, de inaktív."
+msgstr "Kikapcsolva a portál a gyűjteményben marad, de inaktív."
+
+#: portal/news_views.py:1
+msgid ""
+"Add meg a portál nevét és nyilvános http(s) címét. A gyűjtemény későbbi "
+"automatikus feldolgozásra szolgál; most nincs ütemezett pásztázás."
+msgstr ""
+"Add meg a portál nevét és nyilvános http(s) címét. A gyűjtemény későbbi "
+"automatikus feldolgozásra szolgál; most nincs ütemezett pásztázás."
+
+#: portal/news_views.py:1
+msgid ""
+"Saját hírportál-gyűjteményed. Ez a gyűjtemény későbbi automatikus "
+"feldolgozásra szolgál: most nincs ütemezett pásztázás, hálózati lekérés vagy"
+" ajánlatkészítés, a jövőbeli napi feldolgozás jelenleg nem fut."
+msgstr ""
+"Saját hírportál-gyűjteményed. Ez a gyűjtemény későbbi automatikus "
+"feldolgozásra szolgál: most nincs ütemezett pásztázás, hálózati lekérés vagy"
+" ajánlatkészítés, a jövőbeli napi feldolgozás jelenleg nem fut."
+
+#: portal/news_views.py:1
+msgid ""
+"Tárolt gyűjtemény: a rendszer most nem pásztázza a portált, nem kér le "
+"hálózati tartalmat, és nem készít ajánlatot."
+msgstr ""
+"Tárolt gyűjtemény: a rendszer most nem pásztázza a portált, nem kér le "
+"hálózati tartalmat, és nem készít ajánlatot."
+
+#: portal/news_views.py:1
+msgid "Biztosan törlöd a hírforrást? A művelet nem vonható vissza."
+msgstr "Biztosan törlöd a hírforrást? A művelet nem vonható vissza."
+
+#: portal/news_views.py:1
+msgid "A jegyzet legfeljebb 2000 karakter."
+msgstr "A jegyzet legfeljebb 2000 karakter."
+
+#: portal/news_views.py:1
+#, python-format
+msgid "Hírforrás szerkesztése — %(name)s"
+msgstr "Hírforrás szerkesztése — %(name)s"
+
+#: portal/news_views.py:1
+#, python-format
+msgid "Hírforrás törlése — %(name)s"
+msgstr "Hírforrás törlése — %(name)s"
+
+#: portal/task1:1
+msgid "Saját mezők"
+msgstr "Saját mezők"
+
+#: portal/task1:1
+msgid "Legfeljebb 20 saját mező, egyedi megnevezéssel."
+msgstr "Legfeljebb 20 saját mező, egyedi megnevezéssel."
+
+#: portal/task1:1
+msgid "Megnevezés"
+msgstr "Megnevezés"
+
+#: portal/task1:1
+msgid "Rövid, egyedi megnevezés (legfeljebb 64 karakter)."
+msgstr "Rövid, egyedi megnevezés (legfeljebb 64 karakter)."
+
+#: portal/task1:1
+msgid "A mező értéke (legfeljebb 500 karakter)."
+msgstr "A mező értéke (legfeljebb 500 karakter)."
+
+#: portal/task1:1
+msgid "A megnevezés kötelező."
+msgstr "A megnevezés kötelező."
+
+#: portal/task1:1
+msgid "Ez a megnevezés már szerepel."
+msgstr "Ez a megnevezés már szerepel."
+
+#: portal/task1:1
+msgid "Érvénytelen mezőazonosító."
+msgstr "Érvénytelen mezőazonosító."
+
+msgid "Azonosítás"
+msgstr "Azonosítás"
+
+msgid "Főbb adatok"
+msgstr "Főbb adatok"
+
+msgid "Célok és korlátok"
+msgstr "Célok és korlátok"
+
+msgid ""
+"Önnek csak olvasási joga van ehhez a gazdasághoz, ezért a mezők nem "
+"szerkeszthetők."
+msgstr ""
+"Önnek csak olvasási joga van ehhez a gazdasághoz, ezért a mezők nem "
+"szerkeszthetők."
+
+msgid "Derült"
+msgstr "Derült"
+
+msgid "Többnyire derült"
+msgstr "Többnyire derült"
+
+msgid "Változóan felhős"
+msgstr "Változóan felhős"
+
+msgid "Borult"
+msgstr "Borult"
+
+msgid "Köd"
+msgstr "Köd"
+
+msgid "Szitálás"
+msgstr "Szitálás"
+
+msgid "Ónos szitálás"
+msgstr "Ónos szitálás"
+
+msgid "Eső"
+msgstr "Eső"
+
+msgid "Ónos eső"
+msgstr "Ónos eső"
+
+msgid "Havazás"
+msgstr "Havazás"
+
+msgid "Hódara"
+msgstr "Hódara"
+
+msgid "Zápor"
+msgstr "Zápor"
+
+msgid "Hózápor"
+msgstr "Hózápor"
+
+msgid "Zivatar"
+msgstr "Zivatar"
+
+msgid "Jégeső"
+msgstr "Jégeső"
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid "Kérés küldése…"
+msgstr "Kérés küldése…"
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid "A tanács generálása folyamatban…"
+msgstr "A tanács generálása folyamatban…"
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid "Várakozás az eredményre…"
+msgstr "Várakozás az eredményre…"
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid "A tanács elkészült."
+msgstr "A tanács elkészült."
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid "A tanácskérés sikertelen."
+msgstr "A tanácskérés sikertelen."
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid "A munkamenet lejárt, kérjük, jelentkezzen be újra."
+msgstr "A munkamenet lejárt, kérjük, jelentkezzen be újra."
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+msgid ""
+"Hálózati hiba: az eredmény ismeretlen. Próbálja újra ugyanazzal a "
+"kéréskulccsal."
+msgstr ""
+"Hálózati hiba: az eredmény ismeretlen. Próbálja újra ugyanazzal a "
+"kéréskulccsal."
+
+#: portal/templates/portal/advice_request.html
+#: portal/templates/portal/advice_detail.html
+#: portal/templates/portal/advice_detail.html
+#: portal/templates/portal/advice_request.html
+msgid "Új kérés új kulccsal"
+msgstr "Új kérés új kulccsal"
+
+msgid "Folytatás ugyanazzal a kulccsal"
+msgstr "Folytatás ugyanazzal a kulccsal"
+
+#: portal/templates/portal/advice_detail.html
+msgid "Oldal frissítése"
+msgstr "Oldal frissítése"
+
+#: portal/templates/portal/advice_detail.html
+msgid ""
+"JavaScript nélkül az oldal nem frissül automatikusan; az állapothoz "
+"frissítse az oldalt kézzel."
+msgstr ""
+"JavaScript nélkül az oldal nem frissül automatikusan; az állapothoz "
+"frissítse az oldalt kézzel."
+
+#: portal/templates/portal/advice_detail.html
+msgid ""
+"Ha a szerver újraindul, a függő kérés megszakadhat; ilyenkor új kérést kell "
+"indítani."
+msgstr ""
+"Ha a szerver újraindul, a függő kérés megszakadhat; ilyenkor új kérést kell "
+"indítani."
+
+msgid "Tényleges vetések"
+msgstr "Tényleges vetések"
+
+msgid "Tervezett vetések"
+msgstr "Tervezett vetések"
+
+msgid "Korábbi rögzítések"
+msgstr "Korábbi rögzítések"
+
+msgid "Vetett növény"
+msgstr "Vetett növény"
+
+msgid "Vetésnél a vetett növény megadása kötelező."
+msgstr "Vetésnél a vetett növény megadása kötelező."
+
+msgid "Ellenőrzés alatt"
+msgstr "Ellenőrzés alatt"
+
+msgid "A vetés és a terv összevetése folyamatban. Ez még nem döntés."
+msgstr "A vetés és a terv összevetése folyamatban. Ez még nem döntés."
+
+msgid "Megerősített eltérések"
+msgstr "Megerősített eltérések"
+
+msgid "Megerősített eltérés"
+msgstr "Megerősített eltérés"
+
+msgid "Megtartott eltérés"
+msgstr "Megtartott eltérés"
+
+msgid "Újrapróbálás"
+msgstr "Újrapróbálás"
+
+msgid "Megtartás"
+msgstr "Megtartás"
+
+msgid "Terv elrejtése"
+msgstr "Terv elrejtése"
+
+msgid "A ténylegesen vetett növény neve. Vetésnél kötelező."
+msgstr "A ténylegesen vetett növény neve. Vetésnél kötelező."
+
+msgid "Újrapróbálás elindítva."
+msgstr "Újrapróbálás elindítva."
+
+msgid "Eltérés megtartva."
+msgstr "Eltérés megtartva."
+
+msgid "Terv elrejtve."
+msgstr "Terv elrejtve."
+
+msgid "Elavult összevetés lezárva."
+msgstr "Elavult összevetés lezárva."
+
+msgid "Nincs szükség újrapróbálásra."
+msgstr "Nincs szükség újrapróbálásra."
+
+msgid "Megtartott eltérések"
+msgstr "Megtartott eltérések"
+
+msgid "sorban áll"
+msgstr "sorban áll"
+
+msgid "generálás folyamatban"
+msgstr "generálás folyamatban"
+
+msgid ""
+"Ha a szerver újraindul, a sorban álló kérés megmarad és feldolgozásra kerül;"
+" a folyamatban lévő hívás megszakadhat, ilyenkor új kérést kell indítani."
+msgstr ""
+"Ha a szerver újraindul, a sorban álló kérés megmarad és feldolgozásra kerül;"
+" a folyamatban lévő hívás megszakadhat, ilyenkor új kérést kell indítani."
+
+msgid "Parcellák kiválasztása"
+msgstr "Parcellák kiválasztása"
+
+msgid "Ha nincs kiválasztva semmi, az egész gazdaság a hatókör."
+msgstr "Ha nincs kiválasztva semmi, az egész gazdaság a hatókör."
+
+msgid "Egész gazdaság"
+msgstr "Egész gazdaság"
+
+msgid "Hatókör:"
+msgstr "Hatókör:"
+
+msgid ""
+"Részleges hatókörben a csevegés csak tervjavaslatokat és navigációt ad, nem "
+"végez gazdaság-szintű írásokat."
+msgstr ""
+"Részleges hatókörben a csevegés csak tervjavaslatokat és navigációt ad, nem "
+"végez gazdaság-szintű írásokat."
+
+msgid "Egész gazdaság — nincs parcella kiválasztva"
+msgstr "Egész gazdaság — nincs parcella kiválasztva"
+
+msgid "Kiválasztva: {n} parcella"
+msgstr "Kiválasztva: {n} parcella"
+
+msgid ""
+"Részleges hatókörben a válasz szöveges tervjavaslatot is tartalmazhat, de "
+"végrehajtható írási javaslat nem készül; végrehajtható javaslatként csak "
+"navigáció érhető el."
+msgstr ""
+"Részleges hatókörben a válasz szöveges tervjavaslatot is tartalmazhat, de "
+"végrehajtható írási javaslat nem készül; végrehajtható javaslatként csak "
+"navigáció érhető el."
+
+msgid "Költség csak a kifejezett küldéssel keletkezik."
+msgstr "Költség csak a kifejezett küldéssel keletkezik."
+
+msgid "Keret és környezeti részletek"
+msgstr "Keret és környezeti részletek"
+
+msgid "Parcellák listája"
+msgstr "Parcellák listája"
+
+#: portal/templates/portal/external_contact_list.html:1
+msgid "Részletek"
+msgstr "Részletek"
+
+msgid "Markdown-előnézet"
+msgstr "Markdown-előnézet"
+
+msgid "Előnézet"
+msgstr "Előnézet"
+
+msgid "Markdown-előnézet tartalma"
+msgstr "Markdown-előnézet tartalma"
+
+msgid "Az előnézet csonkolt: az első 256 KiB látható. A teljes tartalom letölthető."
+msgstr "Az előnézet csonkolt: az első 256 KiB látható. A teljes tartalom letölthető."
+
+msgid "Az előnézet nem érhető el."
+msgstr "Az előnézet nem érhető el."

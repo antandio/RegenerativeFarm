@@ -1,0 +1,17 @@
+{% load i18n %}
+{# Reusable 6-point historical provenance panel. Persisted-only: #}
+{# every value comes from `prov`; current profile/consent/quota #}
+{# are never passed in. Missing renders as "not recorded". #}
+<details class="card provenance"><summary>{% trans "Hogyan készült ez a válasz?" %}</summary>
+{% if prov.prospective %}<h3>{% trans "Tervezett rögzítés – még nem történeti adat" %}</h3>
+<p class="muted">{% trans "A küldés pillanatában rögzítendő adatok előnézete. Történeti adatként csak a leadott kérés után értelmezhető." %}</p>
+{% else %}<h3>{% trans "Eredetadatok (történeti, a rögzítés pillanatából)" %}</h3>{% endif %}
+<ul>
+<li><strong>{% trans "Forrás:" %}</strong> {% if prov.source == 'seed' %}{% trans "minta (seed)" %}{% elif prov.source %}{% trans "szolgáltatói kérés" %}{% else %}{% trans "nincs rögzítve" %}{% endif %} · {% trans "Kérés időpontja" %}: {{ prov.attempt_time|default:"—" }} · {% trans "Kért modell" %}: {{ prov.requested_model|default:"—" }} · {% trans "Válaszoló modell" %}: {{ prov.actual_model|default:"—" }}</li>
+<li><strong>{% trans "Profilpillanatkép:" %}</strong> {% if prov.snapshot_version %}{% blocktrans with v=prov.snapshot_version t=prov.snapshot_time %}verzió {{ v }}, rögzítve: {{ t }}{% endblocktrans %}{% else %}{% trans "nincs rögzítve" %}{% endif %}</li>
+<li><strong>{% trans "Bizonytalanság, feltételezések:" %}</strong> {% for a in prov.uncertainty %}{{ a }}{% if not forloop.last %}; {% endif %}{% empty %}{% trans "nincs rögzítve" %}{% endfor %}</li>
+<li><strong>{% trans "Költség, felhasználás:" %}</strong> {% if prov.usage_in or prov.usage_out %}{% blocktrans with i=prov.usage_in o=prov.usage_out %}bemeneti token: {{ i }}, kimeneti token: {{ o }}{% endblocktrans %}{% else %}{% trans "tokenadat nincs rögzítve" %}{% endif %} · {% trans "pénzben kifejezett költség nem ismert, a rendszer díjfigurát nem közöl" %}</li>
+<li><strong>{% trans "Küldési felhatalmazás:" %}</strong> {% if prov.dispatch_at %}{% blocktrans with t=prov.dispatch_at c=prov.dispatch_consent_id %}felhatalmazva: {{ t }}, hozzájárulási esemény #{{ c }}{% endblocktrans %}{% else %}{% trans "nincs rögzítve" %}{% endif %}</li>
+<li><strong>{% trans "Emberi megerősítés:" %}</strong> {% if prov.human_confirmed %}{% trans "A szolgáltatói küldés engedélyezve volt; a gazdaság adatainak módosítása külön megerősítést igényel." %}{% else %}{% trans "nincs rögzítve" %}{% endif %}</li>
+</ul>
+</details>

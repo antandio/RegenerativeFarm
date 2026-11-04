@@ -1,0 +1,12 @@
+{% extends "portal/base.html" %}{% load i18n %}
+{% block title %}{{ obj.name }}{% endblock %}
+{% block content %}
+<h1>{{ obj.name }}
+{% if obj.is_active %}<span class="badge">{% trans "Aktív" %}</span>{% else %}<span class="muted">{% trans "Inaktív" %}</span>{% endif %}</h1>
+<div class="table-scroll" tabindex="0" role="region" aria-label="{{ obj.name }}"><table class="domain-table knowledge-meta"><caption>{{ obj.name }}</caption><tbody><tr><th scope="row">{% trans "Név" %}</th><td>{{ obj.name }}</td></tr><tr><th scope="row">{% trans "Portál URL-je" %}</th><td><a href="{{ obj.url }}" rel="noopener noreferrer" target="_blank">{{ obj.url }}</a></td></tr><tr><th scope="row">{% trans "Állapot" %}</th><td>{% if obj.is_active %}<span class="badge">{% trans "Aktív" %}</span>{% else %}<span class="muted">{% trans "Inaktív" %}</span>{% endif %}</td></tr></tbody></table></div><p class="scroll-hint">{% trans "A táblázatok vízszintesen görgethetők." %}</p>
+{% if obj.notes %}<p>{{ obj.notes }}</p>{% endif %}
+<p class="muted">{% trans "Tárolt gyűjtemény: a rendszer most nem pásztázza a portált, nem kér le hálózati tartalmat, és nem készít ajánlatot." %}</p>
+<p><a class="btn secondary" href="{% url 'news_source_list' %}">{% trans "Hírforrások" %}</a>
+<a class="btn secondary" href="{% url 'news_source_edit' pk=obj.pk %}">{% trans "Szerkesztés" %}</a>
+<a class="btn secondary" href="{% url 'news_source_delete' pk=obj.pk %}">{% trans "Törlés" %}</a></p>
+{% endblock %}

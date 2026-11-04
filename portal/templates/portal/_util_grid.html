@@ -1,0 +1,1 @@
+{% load l10n %}<div class="util-grid" aria-hidden="true">{% for d in days %}<span class="util-day{% if d.is_weekend %} is-weekend{% endif %}{% if d.is_monday %} is-monday{% endif %}" style="left:{{ d.left }}%;width:{{ d.width }}%"></span>{% endfor %}</div>

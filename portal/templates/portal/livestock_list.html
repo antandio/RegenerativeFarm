@@ -1,0 +1,5 @@
+{% extends "portal/base.html" %}{% load i18n %}{% block content %}<div class="card"><h1>{% trans "Állatállomány" %}</h1>
+<ul class="entity-list">{% for o in items %}<li class="entity-row" id="livestock-{{ o.pk }}"><a href="{% url 'livestock_detail' pk=o.pk %}">{{ o.name }}</a> — {{ o.get_species_display }}{% if o.breed_label %} ({{ o.breed_label }}){% endif %}, {% trans "Létszám" %}: {{ o.headcount }}{% if o.housing_property %}, {% trans "Szállás" %}: {{ o.housing_property.name }}{% endif %}{% if not o.is_active %} <span class="muted">{% trans "Archivált" %}</span>{% endif %}</li>{% empty %}<li class="muted">{% trans "Nincs elem." %}</li>{% endfor %}</ul>
+{% if can_manage %}<p><a class="btn" href="{% url 'livestock_new' %}">{% trans "Új állatcsoport" %}</a></p>{% endif %}
+{% if show_archived %}<p><a href="{% url 'livestock_list' %}">{% trans "Aktív csoportok" %}</a></p>{% else %}<p><a href="{% url 'livestock_list' %}?archived=1">{% trans "Archiváltak mutatása" %}</a></p>{% endif %}
+</div>{% endblock %}
